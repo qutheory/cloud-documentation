@@ -18,10 +18,8 @@ POST /api/deploy
     "project": STRING (Git repository name)
     "environment": STRING (The environment wanted)
     "replicas": INT (Amount of pods to be started)
-    "version": INT (This needs to be unique for each project, if the
-    same version is pushed again, it won't update the code)
-    "type": STRING
-    (image=deploy-code,replicas=update-replicas,domain=add-new-domains)
+    "version": INT (This needs to be unique for each project, if the same version is pushed again, it won't update the code)
+    "type": STRING (image=deploy-code,replicas=update-replicas,domain=add-new-domains)
     "gitUrl": STRING (e.g.: git@git.nodescloud.com:josc/vapor-test4.git)
     "gitBranch": STRING (Not used atm. Always deploys master)
     "domains": STRING (See domains documentation)
