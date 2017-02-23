@@ -27,6 +27,7 @@ swift_version: 3.0.2
 `default is: 3.0.2`
 
 Currently supported versions:
+
 - 3.0.2
 
 - 3.1.0
