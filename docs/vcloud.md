@@ -27,8 +27,9 @@ swift_version: 3.0.2
 `default is: 3.0.2`
 
 Currently supported versions:
-* 3.0.2
-* 3.1.0
+- 3.0.2
+
+- 3.1.0
 
 ### Unit tests
 
@@ -50,6 +51,7 @@ webroot: "/dist"
 ```
 
 This will create a simple webserver running
+
 - Apache 2.x
 
 And load a file from `/dist`
@@ -68,4 +70,5 @@ This will run:
 `npm install`
 
 On staging env: `npm run build:aot:staging`
+
 On production env: `npm run build:aot:prod`
