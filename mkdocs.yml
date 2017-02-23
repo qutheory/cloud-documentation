@@ -3,6 +3,7 @@ pages:
 - Home: 'index.md'
 - VCloud CLI: 'vcloud-cli.md'
 - API Documentation:
+    - 'Introduction': 'api/introduction.md'
     - 'Admin API': 'api/admin-api.md'
 - Configuring deployment:
     - 'Introduction to .vcloud.yml': 'configuring-deployment/introduction-to-vcloud.yml.md'
