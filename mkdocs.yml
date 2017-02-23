@@ -11,4 +11,4 @@ pages:
     - 'Vapor': 'configuring-deployment/vapor.md'
     - 'Blank': 'configuring-deployment/blank.md'
 theme: null
-theme_dir: '/tmp/foo'
+theme_dir: 'mkdocs-material'
