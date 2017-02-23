@@ -1,7 +1,7 @@
 site_name: 'Vapor Cloud'
 pages:
 - Home: 'index.md'
-  VCloud CLI: 'vcloud-cli.yml'
+  VCloud CLI: 'vcloud-cli.md'
 - API Documentation:
     - 'Admin API': 'api/admin-api.md'
 - Configuring deployment:
