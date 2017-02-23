@@ -1,5 +1,4 @@
 site_name: 'Vapor Cloud'
-theme: 'material'
 pages:
 - Home: 'index.md'
 - VCloud CLI: 'vcloud-cli.md'
@@ -10,3 +9,4 @@ pages:
     - 'General': 'configuring-deployment/general.md'
     - 'Vapor': 'configuring-deployment/vapor.md'
     - 'Blank': 'configuring-deployment/blank.md'
+theme: 'material'
