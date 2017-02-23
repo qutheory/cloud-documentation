@@ -1,5 +1,0 @@
-pages:
-    - 'Introduction to .vcloud.yml': 'introduction-to-vcloud.yml.md'
-    - 'General': 'general.md'
-    - 'Vapor': 'vapor.md'
-    - 'Blank': 'blank.md'
