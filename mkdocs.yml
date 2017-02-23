@@ -1,7 +1,7 @@
 site_name: 'Vapor Cloud'
 pages:
 - Home: 'index.md'
-  Configuring deployment:
+- Configuring deployment:
     - ['configuring-deployment/introduction-to-vcloud.yml.md']
     - ['configuring-deployment/general.md']
     - ['configuring-deployment/vapor.md']
