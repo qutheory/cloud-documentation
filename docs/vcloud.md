@@ -5,6 +5,17 @@ To customize the deployment process, it's possible to setup a
 
 This file need to be in your project root.
 
+## General
+
+### Force HTTPS
+
+If you want your project to force users on https setup:
+```
+force_tls: true
+```
+
+*IMPORTANT* this will make a 301 (permanent) redirect from http to https
+
 ## Vapor
 
 For Vapor, you can specify:
