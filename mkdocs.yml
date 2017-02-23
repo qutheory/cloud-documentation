@@ -1,0 +1,7 @@
+pages:
+- Home: 'index.md'
+  Configuring deployment:
+    - ['configuring-deployment/introduction-to-vcloud.yml.md']
+    - ['configuring-deployment/general.md']
+    - ['configuring-deployment/vapor.md']
+    - ['configuring-deployment/blank.md']
