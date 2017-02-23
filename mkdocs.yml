@@ -9,4 +9,3 @@ pages:
     - 'General': 'configuring-deployment/general.md'
     - 'Vapor': 'configuring-deployment/vapor.md'
     - 'Blank': 'configuring-deployment/blank.md'
-theme: 'material'
