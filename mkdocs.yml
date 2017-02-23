@@ -1,3 +1,4 @@
+site_name: 'Vapor Cloud'
 pages:
 - Home: 'index.md'
   Configuring deployment:
