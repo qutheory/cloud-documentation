@@ -1,6 +1,8 @@
 site_name: 'Vapor Cloud'
 pages:
 - Home: 'index.md'
+- API Documentation:
+    - 'Admin API': 'api/admin-api.md'
 - Configuring deployment:
     - 'Introduction to .vcloud.yml': 'configuring-deployment/introduction-to-vcloud.yml.md'
     - 'General': 'configuring-deployment/general.md'
