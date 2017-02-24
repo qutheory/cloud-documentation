@@ -13,8 +13,10 @@ extra_css:
       - 'stylesheets/extra.css'
 
 
+repo_url: https://github.com/vapor/vapor
+
 extra:
-      logo: 'images/droplet.svg'
+      logo: 'images/white-cloud-icon.svg'
       social:
         - type: 'twitter'
           link: 'https://twitter.com/@codevapor'
