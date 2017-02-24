@@ -15,13 +15,15 @@ POST /api/deploy
 ```
 {
     "id": INT (Deploy ID - Not used atm.)
-    "project": STRING (Git repository name)
-    "environment": STRING (The environment wanted)
+    "repoName": STRING (Git repository name)
+    "environmentName": STRING (The environment wanted)
     "replicas": INT (Amount of pods to be started)
     "version": INT (This needs to be unique for each project, if the same version is pushed again, it won't update the code)
-    "type": STRING (image=deploy-code,replicas=update-replicas,domain=add-new-domains)
+    "type": STRING (code-incremental,code-clean,scale,domain)
     "gitUrl": STRING (e.g.: git@git.nodescloud.com:josc/vapor-test4.git)
     "gitBranch": STRING (Not used atm. Always deploys master)
+    "databaseUsername": STRING (Database username from environments table)
+    "databasePassword": STRING (Database password from environments table)
     "domains": STRING (See domains documentation)
 }
 ```
