@@ -49,7 +49,7 @@ If we take the full example, we need to add the `VAR` to a file in our `Config/`
 
 Lets take `Config/test.json` as an example:
 
-```
+```JSON
 {
     "var1": "$VAR1",
     "var2": "$VAR2",
