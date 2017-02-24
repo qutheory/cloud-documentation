@@ -32,5 +32,7 @@ pages:
 - Configuring deployment:
     - 'Introduction to .vcloud.yml': 'configuring-deployment/introduction-to-vcloud.yml.md'
     - 'General': 'configuring-deployment/general.md'
-    - 'Vapor': 'configuring-deployment/vapor.md'
+    - Vapor:
+        - 'Basic': 'configuring-deployment/vapor/basic.md'
+        - 'Custom config': 'configuring-deployment/vapor/custom-config.md'
     - 'Blank': 'configuring-deployment/blank.md'
