@@ -8,24 +8,16 @@ If you are on Mac, make sure Ruby is up-to-date
 brew install ruby
 ```
 
-Install the bundler gem, this way it will be easier to download and
-install required gems
+Setup the private GEM repository
 
 ```
-sudo gem install bundler
+sudo gem sources -a http://gems.nodesmanager.io
 ```
 
-Clone the vcloud repo
+Install vcloud-cli
 
 ```
-git clone git@github.com:vapor-cloud/vcloud.git
-```
-
-Run the setup script
-
-```
-cd vcloud
-./setup.sh
+sudo gem install vcloud-cli
 ```
 
 ## Usage
@@ -40,9 +32,6 @@ From anywhere to start the tool
 
 ## Update
 
-Go to the vcloud folder, you checked out in install, and run setup again
-
-```
-cd vcloud
-./setup.sh
-```
+You will automatically get a message in the tool if a new update is
+available. If you get that, simply click the "Update" menu item, it will
+update the gem.
