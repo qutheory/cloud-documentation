@@ -1,5 +1,5 @@
 site_name: 'Vapor Cloud'
-copyright: 'Copyright &copy; 2017 Qutheory'
+copyright: 'Copyright &copy; 2017 Vapor Cloud'
 markdown_extensions:
       - admonition
       - codehilite(guess_lang=false)
