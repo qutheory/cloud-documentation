@@ -1,4 +1,26 @@
 site_name: 'Vapor Cloud'
+copyright: 'Copyright &copy; 2017 Qutheory'
+markdown_extensions:
+      - admonition
+      - codehilite(guess_lang=false)
+      - footnotes
+      - meta
+      - toc(permalink=true)
+
+theme: 'material'
+
+extra_css:
+      - 'stylesheets/extra.css'
+
+
+extra:
+      logo: 'images/droplet.svg'
+      social:
+        - type: 'twitter'
+          link: 'https://twitter.com/@codevapor'
+        - type: 'slack'
+          link: 'http://vapor.team/'
+
 pages:
 - Home: 'index.md'
 - VCloud CLI: 'vcloud-cli.md'
@@ -10,4 +32,3 @@ pages:
     - 'General': 'configuring-deployment/general.md'
     - 'Vapor': 'configuring-deployment/vapor.md'
     - 'Blank': 'configuring-deployment/blank.md'
-theme: 'material'
