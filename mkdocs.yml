@@ -2,7 +2,7 @@ site_name: 'Vapor Cloud'
 copyright: 'Copyright &copy; 2017 Vapor Cloud'
 markdown_extensions:
       - admonition
-      - codehilite(guess_lang=false)
+      - codehilite(guess_lang=true)
       - footnotes
       - meta
       - toc(permalink=true)
