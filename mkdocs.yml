@@ -36,3 +36,8 @@ pages:
         - 'Basic': 'configuring-deployment/vapor/basic.md'
         - 'Custom config': 'configuring-deployment/vapor/custom-config.md'
     - 'Blank': 'configuring-deployment/blank.md'
+- Server setup:
+    - General:
+        - 'About our server setup': 'server-setup/general/about-our-server-setup.md'
+    - Loadbalancer:
+        - 'SSL/TLS': 'server-setup/loadbalancer/ssl-tls.md'
