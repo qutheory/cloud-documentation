@@ -28,7 +28,7 @@ config:
         smtp_fromName: "My awesome APP"
 ```
 
-The following settings would setup the following in
+This will automatically generate the following file in
 `Config/secrets/mail.json`
 
 ```JSON
