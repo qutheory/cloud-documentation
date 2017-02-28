@@ -12,24 +12,16 @@ limited to this list.
 - SendGrid (From $9.95/month)
 - Amazon SES ($0.10 per 1000 emails)
 
+Simply create an account, and setup the details from the provider in
+your Vapor project
+
 ## Use E-mail provider through Vapor
 
-To setup an external mail provider, setup the following in your
-.vcloud.yml file:
+Create the following file:
 
-```
-config:
-    all:
-        smtp_host: "my.smtp.host",
-        smtp_port: "465",
-        smtp_user: "my@smtp.user",
-        smtp_password: "kjn4kj32n4jkn423",
-        smtp_fromEmail: "my@domain.com",
-        smtp_fromName: "My awesome APP"
-```
+`Config/mail.json`
 
-This will automatically generate the following file in
-`Config/secrets/mail.json`
+And add the content below.
 
 ```JSON
 {
@@ -41,3 +33,6 @@ This will automatically generate the following file in
     "fromName": "My awesome APP"
 }
 ```
+
+It's also possible to use the custom configuration, see more under
+`Vapor` documentation
