@@ -1,5 +1,5 @@
 site_name: 'Vapor Cloud'
-copyright: 'Copyright &copy; 2017 Vapor Cloud'
+copyright: 'Copyright &copy; 2017 Qutheory, LLC'
 markdown_extensions:
       - admonition
       - codehilite(guess_lang=true)
@@ -7,11 +7,10 @@ markdown_extensions:
       - meta
       - toc(permalink=true)
 
+
+
 theme: 'material'
-
-extra_css:
-      - 'stylesheets/extra.css'
-
+theme_dir: 'vapor-material'
 
 repo_url: https://github.com/vapor/vapor
 
@@ -22,6 +21,7 @@ extra:
           link: 'https://twitter.com/@codevapor'
         - type: 'slack'
           link: 'http://vapor.team/'
+      font: 'none'
 
 pages:
 - Home: 'index.md'
