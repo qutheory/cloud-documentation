@@ -19,7 +19,12 @@ extra:
           link: 'https://twitter.com/@codevapor'
         - type: 'slack'
           link: 'http://vapor.team/'
-      font: 'none'
+      font:
+        text: 'Roboto Slab'
+        code: 'Source Code Pro'
+
+extra_css:
+  - 'stylesheets/extra.css'
 
 pages:
 - Overview: 'index.md'
