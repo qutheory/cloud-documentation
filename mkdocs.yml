@@ -1,4 +1,4 @@
-site_name: 'Vapor Cloud'
+site_name: 'Vapor Cloud Docs'
 copyright: 'Copyright &copy; 2017 Qutheory, LLC'
 markdown_extensions:
       - admonition
@@ -6,8 +6,6 @@ markdown_extensions:
       - footnotes
       - meta
       - toc(permalink=true)
-
-
 
 theme: 'material'
 theme_dir: 'vapor-material'
@@ -24,19 +22,19 @@ extra:
       font: 'none'
 
 pages:
-- Home: 'index.md'
-- VCloud CLI: 'vcloud-cli.md'
-- API Documentation:
-    - 'Introduction': 'api/introduction.md'
-    - 'Admin API': 'api/admin-api.md'
-- Configuring deployment:
+- Overview: 'index.md'
+- Toolbox: 'vcloud-cli.md'
+- Deploying:
     - 'Introduction to .vcloud.yml': 'configuring-deployment/introduction-to-vcloud.yml.md'
     - 'General': 'configuring-deployment/general.md'
     - Vapor:
         - 'Basic': 'configuring-deployment/vapor/basic.md'
         - 'Custom config': 'configuring-deployment/vapor/custom-config.md'
     - 'Blank': 'configuring-deployment/blank.md'
-- Server setup:
+- APIs:
+    - 'Introduction': 'api/introduction.md'
+    - 'Admin API': 'api/admin-api.md'
+- Advanced:
     - General:
         - 'About our server setup': 'server-setup/general/about-our-server-setup.md'
         - 'Sending E-mails (SMTP)': 'server-setup/general/sending-emails.md'
