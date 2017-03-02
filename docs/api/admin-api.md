@@ -1,6 +1,6 @@
 # Admin API
 
-Vapor Cloud microservice for managing projects, billing, and authorization.
+Microservice for managing projects, billing, and authorization.
 
 ## Overview
 
@@ -11,6 +11,7 @@ The Admin API is responsible for enrolling new users, allowing users to manage t
 ### Tokens
 
 Two tokens are created when a user logs in:
+
 - Access token
 - Refresh token
 

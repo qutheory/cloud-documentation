@@ -1,5 +1,5 @@
-site_name: 'Vapor Cloud'
-copyright: 'Copyright &copy; 2017 Vapor Cloud'
+site_name: 'Vapor Cloud Docs'
+copyright: 'Copyright &copy; 2017 Qutheory, LLC'
 markdown_extensions:
       - admonition
       - codehilite(guess_lang=true)
@@ -8,10 +8,7 @@ markdown_extensions:
       - toc(permalink=true)
 
 theme: 'material'
-
-extra_css:
-      - 'stylesheets/extra.css'
-
+theme_dir: 'vapor-material'
 
 repo_url: https://github.com/vapor/vapor
 
@@ -22,21 +19,28 @@ extra:
           link: 'https://twitter.com/@codevapor'
         - type: 'slack'
           link: 'http://vapor.team/'
+      font:
+        text: 'Roboto Slab'
+        code: 'Source Code Pro'
+
+extra_css:
+  - 'stylesheets/extra.css'
 
 pages:
-- Home: 'index.md'
-- VCloud CLI: 'vcloud-cli.md'
-- API Documentation:
-    - 'Introduction': 'api/introduction.md'
-    - 'Admin API': 'api/admin-api.md'
-- Configuring deployment:
+- Overview: 'index.md'
+- Toolbox: 'vcloud-cli.md'
+- Deploying:
     - 'Introduction to .vcloud.yml': 'configuring-deployment/introduction-to-vcloud.yml.md'
     - 'General': 'configuring-deployment/general.md'
     - Vapor:
         - 'Basic': 'configuring-deployment/vapor/basic.md'
         - 'Custom config': 'configuring-deployment/vapor/custom-config.md'
     - 'Blank': 'configuring-deployment/blank.md'
-- Server setup:
+- APIs:
+    - 'Introduction': 'api/introduction.md'
+    - 'Admin API': 'api/admin-api.md'
+    - 'Application API': 'api/application-api.md'
+- Advanced:
     - General:
         - 'About our server setup': 'server-setup/general/about-our-server-setup.md'
         - 'Sending E-mails (SMTP)': 'server-setup/general/sending-emails.md'
