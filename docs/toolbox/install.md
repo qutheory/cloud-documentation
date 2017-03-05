@@ -20,6 +20,10 @@ sudo gem install vcloud-cli
 
 ## Update
 
-You will automatically get a message in the tool if a new update is
-available. If you get that, simply click the "Update" menu item, it will
-update the gem.
+Just write:
+
+```
+vcloud update
+```
+
+If there are any updates, they will automatically be installed.
