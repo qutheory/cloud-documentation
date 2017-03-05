@@ -28,7 +28,9 @@ extra_css:
 
 pages:
 - Overview: 'index.md'
-- Toolbox: 'vcloud-cli.md'
+- Toolbox:
+    - 'Install': 'toolbox/install.md'
+    - 'Usage': 'toolbox/usage.md'
 - Deploying:
     - 'Introduction to .vcloud.yml': 'configuring-deployment/introduction-to-vcloud.yml.md'
     - 'General': 'configuring-deployment/general.md'
