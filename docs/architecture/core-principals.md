@@ -10,9 +10,9 @@ A project is a collection of one or more applications, and don't have a lot more
 For example:
 
 - My cool project (Project)
- - my-cool-backend (Application - Vapor APP)
- - my-cool-ios-app (Application - iOS APP)
- - my-cool-android-app (Application - Android APP)
+    - my-cool-backend (Application - Vapor APP)
+    - my-cool-ios-app (Application - iOS APP)
+    - my-cool-android-app (Application - Android APP)
 
 In the above example, we have our project, and below that 3 apps (Vapor API, iOS app and Android app)
 
