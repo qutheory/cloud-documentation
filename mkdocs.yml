@@ -46,6 +46,7 @@ pages:
     - 'Application API': 'api/application-api.md'
 - Advanced:
     - General:
+        - 'How do cronjobs work': 'server-setup/how-do-cronjobs-work.md'
         - 'About our server setup': 'server-setup/general/about-our-server-setup.md'
         - 'Sending E-mails (SMTP)': 'server-setup/general/sending-emails.md'
     - Loadbalancer:
