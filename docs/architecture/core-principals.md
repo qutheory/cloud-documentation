@@ -35,7 +35,7 @@ I have `my-cool-backend` hosted on `my-cool-backend.vapor.cloud`
 
 If i create an environment called `staging` the URL will be:
 
-`staging.my-cool-backend.vapor.cloud`
+`my-cool-backend-staging.vapor.cloud`
 
 All environments are mostly separated from each other. They have their own databases, and run inside their own containers.
 
