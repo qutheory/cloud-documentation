@@ -16,7 +16,8 @@ If you want your project to force users on https setup:
 force_tls: true
 ```
 
-*IMPORTANT* this will make a 301 (permanent) redirect from http to https
+!!! warning
+    this will make a 301 (permanent) redirect from http to https. So make sure your client can follow redirects before using this.
 
 ## Cronjobs
 
