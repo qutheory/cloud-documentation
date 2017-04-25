@@ -20,7 +20,7 @@ To specify a swift version, add it like this:
 swift_version: 3.0.2
 ```
 
-`default is: 3.0.2`
+`default is: 3.1.0`
 
 Currently supported versions:
 
@@ -36,4 +36,3 @@ this:
 ```
 unit_test: true
 ```
-
