@@ -1,4 +1,4 @@
-# Core principals
+# Core principles
 
 ## Projects and applications
 

@@ -29,7 +29,7 @@ extra_css:
 pages:
 - Overview: 'index.md'
 - Architecture:
-    - 'Core principals': 'architecture/core-principals.md'
+    - 'Core principles': 'architecture/core-principles.md'
 - Toolbox:
     - 'Install': 'toolbox/install.md'
     - 'Usage': 'toolbox/usage.md'
