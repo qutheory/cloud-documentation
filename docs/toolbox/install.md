@@ -1,29 +1,13 @@
 # Install VCloud Toolbox
 
-If you are on Mac, make sure Ruby is up-to-date
+## Mac OS X install
 
 ```
-brew install ruby
+eval "$(curl -sL https://toolbox.vapor.cloud/mac.sh)"
 ```
 
-Setup the private GEM repository
+## Linux install
 
 ```
-sudo gem sources -a http://gems.nodesmanager.io
+eval "$(curl -sL https://toolbox.vapor.cloud/linux.sh)"
 ```
-
-Install vcloud-cli
-
-```
-sudo gem install vcloud-cli
-```
-
-## Update
-
-Just write:
-
-```
-vcloud update
-```
-
-If there are any updates, they will automatically be installed.
