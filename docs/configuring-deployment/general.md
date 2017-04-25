@@ -18,3 +18,24 @@ force_tls: true
 
 *IMPORTANT* this will make a 301 (permanent) redirect from http to https
 
+## Cronjobs
+
+To setup cronjobs, add the following to .vcloud.yml:
+
+```
+cronjobs:     
+   <environment>:         
+        <name>:             
+             time: "<time>"
+             command: "<command>"
+```
+
+So if i e.g. want to run `vapor run prepare` every 5 minutes in production, i am going to add:
+
+```
+cronjobs:     
+   production:         
+        prepare:             
+             time: "*/5 * * * *"
+             command: "prepare"
+```
