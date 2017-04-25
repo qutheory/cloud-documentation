@@ -16,15 +16,15 @@ inside that. After the job is finished, we will terminate the replica again.
 This way you only pay for the time while the job is running. This replica
 won't receive any web requests, so it won't slow down your requests.
 
-`NB:` Be aware that when the job is starting, it might take 5-30 seconds for the
-job to start, because we need to spin up the replica.
+!!! note
+    Be aware that when the job is starting, it might take 5-30 seconds for the job to start, because we need to spin up the replica.
 
 ## Cronjob syntax
 
 ### Command
 
-`IMPORTANT` Never prefix your job with `vapor` or `App` etc. We will do this for
-you.
+!!! note
+    Never prefix your job with `vapor` or `App` etc. We will do this for you.
 
 So if i want to run `prepare` in a cronjob, simply set command to:
 ```

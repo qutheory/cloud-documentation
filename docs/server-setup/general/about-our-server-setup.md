@@ -35,8 +35,8 @@ And this will never be shared with any other clients.
 * PostgreSQL 9.5 and up
 * MariaDB 10.0 and up
 
-`NB:` Patch version is always the latest. When a new Patch is issued, we will
-make sure to update your server automatically.
+!!! note
+    Patch version is always the latest. When a new Patch is issued, we will make sure to update your server automatically.
 
 ### Supported Cache
 

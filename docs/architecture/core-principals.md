@@ -22,7 +22,8 @@ Applications consists of:
 - `User friendly name`: This is just a name, to make it easier to find.
 - `gitUrl`: A URL for your git repository in SSH format e.g. `git@github.com:my-name/my-repo.git`
 
-`NB:` If you don't have your project on GIT, and want it private, you are able to use our free secure GIT server for your Vapor Cloud application.
+!!! note
+    If your GIT is private, please contact us, and we will help you setup access for our setup to your repository
 
 ## Environments
 
@@ -41,4 +42,5 @@ All environments are mostly separated from each other. They have their own datab
 
 The only thing shared is S3 bucket, we advice people to separate this by adding folders based on the environment, but it is possible to share uploaded files between environments.
 
-`NB:` All applications are automatically created with a `Production` environment. This is accessible on the root domain e.g. `my-cool-backend.vapor.cloud`
+!!! note
+    All applications are automatically created with a `Production` environment. This is accessible on the root domain e.g. `my-cool-backend.vapor.cloud`
