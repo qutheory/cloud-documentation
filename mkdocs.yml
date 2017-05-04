@@ -50,5 +50,6 @@ pages:
         - 'How do cronjobs work': 'server-setup/general/how-do-cronjobs-work.md'
         - 'Sending E-mails (SMTP)': 'server-setup/general/sending-emails.md'
         - 'Using private git repository': 'server-setup/general/using-private-git.md'
+        - 'Running load tests': 'server-setup/general/load-testing.md'
     - Loadbalancer:
         - 'SSL/TLS': 'server-setup/loadbalancer/ssl-tls.md'

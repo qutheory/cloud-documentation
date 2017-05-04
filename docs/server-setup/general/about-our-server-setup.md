@@ -2,13 +2,9 @@
 
 ## Setup in general
 
-![vaporcloud-server](https://cloud.githubusercontent.com/assets/2535140/24201453/5b6a9f56-0f10-11e7-9053-436fae365bc3.png)
+Our setup is build on Amazon Web Services (AWS). Our core is using Docker to seperate applications. Our system will automatically rollout containers on Node servers with free capacity, we will never assign more containers to a Node server than there is capacity to handle.
 
-Our server setup is build on the container technology Docker, and build on AWS.
-
-A request gets in through our DNS, to our loadbalancers, here we have `Ingress controllers` inside containers, to direct the requests to the application.
-
-On our Node servers, the applications is started inside containers. Our `Replica scheduler` makes sure to start the `Replicas` on servers that is most suited to handle the requests.
+Our loadbalancers are configured with NGinx, and is terminating TLS, this way we only have the Vapor application running inside the container, this way we can limit the memory usage in each Vapor container to a minimal.
 
 ## What is a replica
 
