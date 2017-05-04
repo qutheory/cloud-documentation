@@ -14,9 +14,8 @@ container on one of our Node servers.
 If you spin up two or more, our Replica Scheduler will try to the best of it's
 ability to place them on different Node servers.
 
-`NB:` We always suggest two or more replicas for production workloads.
-If you only have one, and the Node server it's located on goes down, there might
-be 30-120 seconds downtime.
+!!! note
+    We always suggest two or more replicas for production workloads. If you only have one, and the Node server it's located on goes down, there might be 30-120 seconds downtime.
 
 ## Database and Cache
 
