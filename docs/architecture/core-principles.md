@@ -23,7 +23,7 @@ Applications consists of:
 - `gitUrl`: A URL for your git repository in SSH format e.g. `git@github.com:my-name/my-repo.git`
 
 !!! note
-    If your GIT is private, please contact us, and we will help you setup access for our setup to your repository
+    If your GIT repository is private, read more about setup [here](../server-setup/general/using-private-git.md)
 
 ## Environments
 
