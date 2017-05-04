@@ -32,14 +32,13 @@ pages:
     - 'Core principles': 'architecture/core-principles.md'
 - Toolbox:
     - 'Install': 'toolbox/install.md'
-    - 'Usage': 'toolbox/usage.md'
-- Deploying:
-    - 'Introduction to .vcloud.yml': 'configuring-deployment/introduction-to-vcloud.yml.md'
-    - 'General': 'configuring-deployment/general.md'
+    - 'Getting Started': 'toolbox/getting-started.md'
+- cloud.yml:
+    - 'General': 'configuration/general.md'
     - Vapor:
-        - 'Basic': 'configuring-deployment/vapor/basic.md'
-        - 'Custom config': 'configuring-deployment/vapor/custom-config.md'
-    - 'Blank': 'configuring-deployment/blank.md'
+        - 'Basic': 'configuration/vapor/basic.md'
+        - 'Custom config': 'configuration/vapor/custom-config.md'
+    - 'Blank': 'configuration/blank.md'
 - APIs:
     - 'Introduction': 'api/introduction.md'
     - 'Admin API': 'api/admin-api.md'

@@ -1,13 +1,23 @@
 # General
 
+Adding custom configurations to your project like cronjobs is made easy with `cloud.yml`.
+
+!!! tip
+	The `cloud.yml` file is optional and not required for deployment.
+
+## Setting up a cloud.yml
+
+Add a file in your project root called: `cloud.yml`. Make sure to commit it to git.
+
+Vapor Cloud will automatically detect the file and apply the settings on the next deploy.
+
 ## Type
 
-If you create your .vcloud.yml file, you need to set a type. Types right
+If you create your `cloud.yml` file, you need to set a type. Types right
 now are:
 
-- vapor (See more under `Vapor`
-
-- blank (See more under `Blank`)
+- [vapor](vapor/basic.md)
+- [blank](blank.md)
 
 ## Force HTTPS
 
