@@ -50,5 +50,6 @@ pages:
         - 'Sending E-mails (SMTP)': 'server-setup/general/sending-emails.md'
         - 'Using private git repository': 'server-setup/general/using-private-git.md'
         - 'Running load tests': 'server-setup/general/load-testing.md'
+        - 'TLS With Lets Encrypt': 'server-setup/general/tls-with-letsencrypt.md'
     - Loadbalancer:
         - 'SSL/TLS': 'server-setup/loadbalancer/ssl-tls.md'
