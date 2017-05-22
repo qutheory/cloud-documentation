@@ -47,8 +47,8 @@ staging.example.com CNAME my-example-staging.vapor.cloud
 We will now setup certificates for the domains we setup in previous step. Go to your terminal, and run the following commands:
 
 ```
-vapor cloud create ssl
+vapor cloud create tls
 ```
 
 !!! info
-    Use `vapor cloud create ssl --force` if you wan't it to force https with a 301 redirect
+    Use `vapor cloud create tls --force` if you wan't it to force https with a 301 redirect
