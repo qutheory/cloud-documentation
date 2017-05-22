@@ -17,7 +17,10 @@ Let's Encrypt is an easy way to get https on your domain, with absolutely no mai
 
 ## Step 1 - Attach domain to application
 
-You need to attach your domain to your application (This isn't supported yet..)
+`vapor cloud create domain`
+
+!!! info
+    At the moment, after adding the domain, you need to redeploy your application, for our systems to recongnize it.
 
 ## Step 2 - Add DNS record
 
@@ -41,6 +44,7 @@ staging.example.com CNAME my-example-staging.vapor.cloud
 
 We will now setup certificates for the domains we setup in previous step. Go to your terminal, and run the following commands:
 
-`vapor cloud letsencrypt --app=my-example --env=production --domain="example.com,www.example.com"`
+`vapor cloud create ssl`
 
-`vapor cloud letsencrypt --app=my-example --env=staging --domain="staging.example.com"`
+!!! info
+    Use `vapor cloud create ssl --force` if you wan't it to force https with a 301 redirect
