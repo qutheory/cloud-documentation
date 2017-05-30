@@ -53,3 +53,6 @@ pages:
         - 'TLS With Lets Encrypt': 'server-setup/general/tls-with-letsencrypt.md'
     - Loadbalancer:
         - 'SSL/TLS': 'server-setup/loadbalancer/ssl-tls.md'
+    - Storage:
+        - 'Store files on S3': 'server-setup/storage/store-files-on-s3.md'
+        - 'Accessing files through CDN': 'server-setup/storage/accessing-files-through-cdn.md'
