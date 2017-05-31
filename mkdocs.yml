@@ -56,3 +56,7 @@ pages:
     - Storage:
         - 'Store files on S3': 'server-setup/storage/store-files-on-s3.md'
         - 'Accessing files through CDN': 'server-setup/storage/accessing-files-through-cdn.md'
+    - Security:
+        - 'Responsibilities': 'server-setup/security/responsibilities.md'
+        - 'Your responsibilities': 'server-setup/security/your-responsibilities.md'
+        - 'Vapor Cloud security': 'server-setup/security/vapor-cloud-security.md'
