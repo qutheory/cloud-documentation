@@ -23,3 +23,7 @@ All our systems is logging both internally and externally, and everything is aud
 ## Backup
 
 We perform regular backups of all our systems, both internally and externally, we perform backups of the entire servers, and custom backup e.g. Each applications databases individually. These backups can be provided upon request.
+
+## AWS Certified
+
+Our team is highly trained in using AWS in a secure way. All our Operations team are AWS certified, and regularly tested in using and securing AWS systems. Our team have been setting up production work loads on AWS for many years, and know the system inside and out.
