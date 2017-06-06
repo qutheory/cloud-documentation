@@ -60,3 +60,5 @@ pages:
         - 'Responsibilities': 'server-setup/security/responsibilities.md'
         - 'Your responsibilities': 'server-setup/security/your-responsibilities.md'
         - 'Vapor Cloud security': 'server-setup/security/vapor-cloud-security.md'
+    - Limitation:
+        - 'Requests': "server-setup/limitation/requests.md"
