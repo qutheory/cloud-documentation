@@ -12,6 +12,7 @@ With at least the following information:
 
 **Subject:** Increased requests for: **[Application slug]**
 
+- Environment
 - Domains (If custom domain) the requests will be directed at
 - Date and time frame for the event
 - Expected requests during the time frame

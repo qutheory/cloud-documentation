@@ -62,3 +62,7 @@ pages:
         - 'Vapor Cloud security': 'server-setup/security/vapor-cloud-security.md'
     - Limitation:
         - 'Requests': "server-setup/limitation/requests.md"
+- Troubleshooting:
+    - 'Troubleshooting': 'troubleshooting/troubleshooting.md'
+    - 'Redis': 'troubleshooting/redis.md'
+    - 'MySQL': 'troubleshooting/mysql.md'
