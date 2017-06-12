@@ -6,7 +6,9 @@ There are two methods to get basic support.
 
 To get personal/private support, you can contact our support team on Email.
 
-`Email: support@vapor.cloud`
+**Contact form:** [here](https://qutheory.freshdesk.com/support/tickets/new)
+
+**Email:** support@vapor.cloud
 
 Remember to give as much information as possible in the Email.
 
