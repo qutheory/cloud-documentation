@@ -4,7 +4,7 @@ There are two methods to get basic support.
 
 ## Support plans
 
-|   | Basic plan | Advanced plan | Business |
+|   | Basic plan | Advanced plan | Business plan |
 |:-:|:----------:|:-------------:|:--------:|
 | **Slack** | Yes | Yes | Yes |
 | **E-mail** | Yes | Yes | Yes |
