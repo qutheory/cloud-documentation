@@ -2,7 +2,17 @@
 
 There are two methods to get basic support.
 
-## 1 Email support
+## Support plans
+
+|   | Basic plan | Advanced plan | Business |
+|:-:|:----------:|:-------------:|:--------:|
+| **Slack** | Yes | Yes | Yes |
+| **E-mail** | Yes | Yes | Yes |
+| **Phone** | No | Basic | Priority |
+| **Email response** | < 24 hours | < 12 hours | < 3 hours |
+| **Price** | Free | TBA | TBA |
+
+## Email support
 
 To get personal/private support, you can contact our support team on Email.
 
@@ -15,13 +25,7 @@ Remember to give as much information as possible in the Email.
 !!! info
     To give a faster response, please include your application slug in the Email subject.
 
-### Response times
-
-| Support plan  | Response time |
-| ------------- |:-------------:|
-| Basic         | < 24 hours    |
-
-## 2 Slack support
+## Slack support
 
 You can always contact us on Slack in the channel:
 
