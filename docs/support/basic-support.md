@@ -13,6 +13,12 @@ Remember to give as much information as possible in the Email.
 !!! info
     To give a faster response, please include your application slug in the Email subject.
 
+### Response times
+
+| Support plan  | Response time |
+| ------------- |:-------------:|
+| Basic         | < 24 hours    |
+
 ## 2 Slack support
 
 You can always contact us on Slack in the channel:
