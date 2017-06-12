@@ -45,23 +45,24 @@ pages:
     - 'Application API': 'api/application-api.md'
 - Advanced:
     - General:
-        - 'About our server setup': 'server-setup/general/about-our-server-setup.md'
-        - 'How do cronjobs work': 'server-setup/general/how-do-cronjobs-work.md'
-        - 'Sending E-mails (SMTP)': 'server-setup/general/sending-emails.md'
-        - 'Using private git repository': 'server-setup/general/using-private-git.md'
-        - 'Running load tests': 'server-setup/general/load-testing.md'
-        - 'TLS With Lets Encrypt': 'server-setup/general/tls-with-letsencrypt.md'
+        - 'About our server setup': 'advanced/general/about-our-server-setup.md'
+        - 'How do cronjobs work': 'advanced/general/how-do-cronjobs-work.md'
+        - 'Sending E-mails (SMTP)': 'advanced/general/sending-emails.md'
+        - 'Using private git repository': 'advanced/general/using-private-git.md'
+        - 'Running load tests': 'advanced/general/load-testing.md'
+        - 'Custom domain': 'advanced/general/custom-domain.md'
+        - 'TLS With Lets Encrypt': 'advanced/general/tls-with-letsencrypt.md'
     - Loadbalancer:
-        - 'SSL/TLS': 'server-setup/loadbalancer/ssl-tls.md'
+        - 'SSL/TLS': 'advanced/loadbalancer/ssl-tls.md'
     - Storage:
-        - 'Store files on S3': 'server-setup/storage/store-files-on-s3.md'
-        - 'Accessing files through CDN': 'server-setup/storage/accessing-files-through-cdn.md'
+        - 'Store files on S3': 'advanced/storage/store-files-on-s3.md'
+        - 'Accessing files through CDN': 'advanced/storage/accessing-files-through-cdn.md'
     - Security:
-        - 'Responsibilities': 'server-setup/security/responsibilities.md'
-        - 'Your responsibilities': 'server-setup/security/your-responsibilities.md'
-        - 'Vapor Cloud security': 'server-setup/security/vapor-cloud-security.md'
+        - 'Responsibilities': 'advanced/security/responsibilities.md'
+        - 'Your responsibilities': 'advanced/security/your-responsibilities.md'
+        - 'Vapor Cloud security': 'advanced/security/vapor-cloud-security.md'
     - Limitation:
-        - 'Requests': "server-setup/limitation/requests.md"
+        - 'Requests': "advanced/limitation/requests.md"
 - Troubleshooting:
     - 'Troubleshooting': 'troubleshooting/troubleshooting.md'
     - 'Redis': 'troubleshooting/redis.md'

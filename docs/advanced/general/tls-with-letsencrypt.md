@@ -21,6 +21,8 @@ Let's Encrypt is an easy way to get https on your domain, with absolutely no mai
 vapor cloud create domain
 ```
 
+Read more about custom domains [here](./custom-domain.md)
+
 !!! info
     At the moment, after adding the domain, you need to redeploy your application, for our systems to recongnize it.
 
