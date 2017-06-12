@@ -68,4 +68,4 @@ pages:
     - 'Redis': 'troubleshooting/redis.md'
     - 'MySQL': 'troubleshooting/mysql.md'
 - Support:
-    - 'Basic support': 'support/basic-support.md'
+    - 'Contact support': 'support/contact-support.md'
