@@ -18,12 +18,13 @@ Contact us at:
 
 `support@vapor.cloud`
 
-**Subject:** Request MySQL server **[Application slug]**
+**Subject:** Request MySQL server **[Organisation name]**
 
 With the following information:
 
 - Size (See https://vapor.cloud for sizes possible)
-- Whitelist ips (Ips you need access to externally `0.0.0.0` for everywhere)
+- External access yes/no
+- [If external access] Whitelist ips (Ips you need access to externally `0.0.0.0` for everywhere)
 - Start date (When should it be setup)
 
 !!! Warning
