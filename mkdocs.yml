@@ -52,6 +52,7 @@ pages:
         - 'Running load tests': 'advanced/general/load-testing.md'
         - 'Custom domain': 'advanced/general/custom-domain.md'
         - 'TLS With Lets Encrypt': 'advanced/general/tls-with-letsencrypt.md'
+        - 'Your own database server': 'advanced/general/your-own-database-server.md'
     - Loadbalancer:
         - 'SSL/TLS': 'advanced/loadbalancer/ssl-tls.md'
     - Storage:
