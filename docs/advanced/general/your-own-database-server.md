@@ -23,6 +23,7 @@ Contact us at:
 With the following information:
 
 - Size (See https://vapor.cloud for sizes possible)
+- Server type (MySQL, PostgreSQL, Aurora or MariaDB)
 - External access yes/no
 - [If external access] Whitelist ips (Ips you need access to externally `0.0.0.0` for everywhere)
 - Start date (When should it be setup)
