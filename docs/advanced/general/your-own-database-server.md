@@ -31,7 +31,7 @@ With the following information:
 !!! Warning
     If you choose access `0.0.0.0` this will add possible vulnerability to the server
 
-## Databse server elsewhere
+## Database server elsewhere
 
 If you want to host your data outside of Vapor Cloud, you can easily to that.
 
