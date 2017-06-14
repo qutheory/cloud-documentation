@@ -1,12 +1,14 @@
 # Custom configuration
 
+## Cloud.yml
+
 If you want to add configuration variables in your vapor config files,
 you can do this by adding them to the .vcloud.yml file.
 
 You can both add environment specifics or variables accessible in all
 environments.
 
-## Basic structure
+### Basic structure
 
 The basic structure is:
 
@@ -21,7 +23,7 @@ config:
 
 `all:` will be available in all environments
 
-## Full example
+### Full example
 
 Here is a full example of how it could look:
 
@@ -42,6 +44,34 @@ config:
 
 The environment name will be the name you gave the environment when it
 was created.
+
+## CLI
+
+Sometimes, you have secret keys you don't want in GIT. These can be added through the toolbox.
+
+e.g.:
+
+```
+vapor cloud config modify VAR1=KEY1 VAR2=KEY2
+```
+
+If the key exists, it will be overwritten, if it doesn't, it will be created.
+
+## System settings
+
+Some keys are automatically added by Vapor Cloud. These can be overwritten with your own if you need to overwrite it.
+
+```
+AWS_ACCESS_KEY # Access key to AWS for S3
+AWS_SECRET_KEY # Secret key to AWS for S3
+AWS_S3_BUCKET # AWS Bucket for S3
+PROJECT_NAME # Application name
+ENVIRONMENT # Environment name
+DATABASE_USER # Database user
+DATABASE_PASSWORD # Database password
+DATABASE_DB # Database db
+DATABASE_HOSTNAME # Database hostname
+```
 
 ## Implementing in Vapor
 
