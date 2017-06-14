@@ -8,9 +8,13 @@ There are two methods to get basic support.
 |:-:|:----------:|:-------------:|:--------:|
 | **Slack** | Yes | Yes | Yes |
 | **E-mail** | Yes | Yes | Yes |
-| **Phone** | No | Basic | Priority |
+| **Phone** | Business hours | 24/5 | 24/7 |
 | **Email response** | < 24 hours | < 12 hours | < 3 hours |
-| **Price** | Free | TBA | TBA |
+| **Price** | Free | $500/month* | $1,000/month** |
+
+\* $500 or 10% of monthly usage
+
+** $1,000 or 20% of monthly usage
 
 ## Email support
 
