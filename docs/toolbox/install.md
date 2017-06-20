@@ -4,11 +4,15 @@ The toolbox will be available through homebrew at a future date. For now, instal
 
 ## macOS
 
+First make sure you have installed [Swift](https://docs.vapor.codes/2.0/getting-started/install-on-macos/)
+
 ```
 eval "$(curl -sL https://toolbox.vapor.cloud/mac.sh)"
 ```
 
 ## Linux
+
+First make sure you have installed [Swift](https://docs.vapor.codes/2.0/getting-started/install-on-ubuntu/)
 
 ```
 eval "$(curl -sL https://toolbox.vapor.cloud/linux.sh)"
