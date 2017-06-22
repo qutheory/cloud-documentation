@@ -33,6 +33,7 @@ pages:
 - Toolbox:
     - 'Install': 'toolbox/install.md'
     - 'Getting Started': 'toolbox/getting-started.md'
+    - 'Managing your apps': 'toolbox/managing-your-apps.md'
 - cloud.yml:
     - 'General': 'configuration/general.md'
     - Vapor:
