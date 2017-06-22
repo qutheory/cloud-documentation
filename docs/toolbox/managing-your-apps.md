@@ -140,3 +140,19 @@ When using your own domain, you can for **free** obtain a SSL/TLS certificate. F
 ```
 vapor cloud create tls
 ```
+
+## Custom environment variables
+
+You can create your own environment variables through the toolbox. To get more detailed documentation read [this](../configuration/vapor/custom-config.md)
+
+**Example**
+
+```
+# Create/update config variables
+vapor cloud config modify --app=my-app --env=staging VAR1=KEY1 VAR2=KEY2
+
+# List existing variables
+vapor cloud config dump --app=my-app --env=staging
+```
+
+If the key exists, it will be overwritten, if it doesn't, it will be created.
