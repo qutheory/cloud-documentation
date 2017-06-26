@@ -71,6 +71,10 @@ DATABASE_USER # Database user
 DATABASE_PASSWORD # Database password
 DATABASE_DB # Database db
 DATABASE_HOSTNAME # Database hostname
+REDIS_HOSTNAME # Redis server hostname if Redis is enabled
+REDIS_DATABASE # Redis server database if Redis is enabled
+PORT # Server port
+HOST # Server host 
 ```
 
 ## Implementing in Vapor
