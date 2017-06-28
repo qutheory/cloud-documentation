@@ -13,11 +13,15 @@ To get personal/private support, you can contact our support team on Email.
 !!! info
     For faster support, remember to give as much information as possible in the Email. Including repoName, environment, and any additional information you can give.
 
+We strive to answer all requests within 24 hours
 
-## Slack support
+## Slack community
 
-You can always contact us on Slack in the channel:
+To get in touch with the community, you can join our Slack on [http://vapor.team](http://vapor.team)
 
-`#cloud-closed-beta`
+Vapor Cloud is primarily the following channels:
 
-Do not post sensitive data, since this is a public channel, besides this, give as much information as possible.
+- `#cloud-help` | Get help from the Team or community
+- `#announcements` | Latest Vapor/Vapor Cloud announcements
+
+Never post sensitive information in Slack, since channels are public. Remember to give as much information as possible.
