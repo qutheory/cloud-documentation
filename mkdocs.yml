@@ -54,9 +54,6 @@ pages:
         - 'Your own database server': 'advanced/general/your-own-database-server.md'
     - Loadbalancer:
         - 'SSL/TLS': 'advanced/loadbalancer/ssl-tls.md'
-    - Storage:
-        - 'Store files on S3': 'advanced/storage/store-files-on-s3.md'
-        - 'Accessing files through CDN': 'advanced/storage/accessing-files-through-cdn.md'
     - Security:
         - 'Responsibilities': 'advanced/security/responsibilities.md'
         - 'Your responsibilities': 'advanced/security/your-responsibilities.md'
@@ -66,6 +63,9 @@ pages:
 - Domain:
     - 'Add custom domain': "custom-domain/add-domain.md"
     - 'Certificate manager': "custom-domain/certificate-manager.md"
+- Storage:
+    - 'Store files on S3': 'advanced/storage/store-files-on-s3.md'
+    - 'Accessing files through CDN': 'advanced/storage/accessing-files-through-cdn.md'
 - Troubleshooting:
     - 'Troubleshooting': 'troubleshooting/troubleshooting.md'
     - 'Redis': 'troubleshooting/redis.md'
