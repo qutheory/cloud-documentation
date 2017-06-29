@@ -1,15 +1,15 @@
-# TLS With Let's Encrypt
+# Vapor Cloud Certificate Manager (VCM)
 
-Let's Encrypt is a modern approach to SSL/TLS. They provide completely free certificates.
+To secure your app when using your own domain, you can use the Vapor Cloud Certificate Manager to get a **FREE** SSL/TLS certificate to your app.
 
-Let's Encrypt is an easy way to get https on your domain, with absolutely no maintenance. Our platform makes sure always to update your certificates.
+This type of certificate is managed by Vapor Cloud, so you never think about renewing it, or do anything, we handle everything for you.
 
 !!! info
-    You need to get your application up and running on Vapor Cloud, before you can use Let's Encrypt, you need to have it running on Vapor Cloud.
+    You need to get your application up and running on Vapor Cloud, before you can use the VCM, you need to have it running on Vapor Cloud.
     The reason for this, is we use this to verify ownership of the domain.
 
 !!! info
-    Let's Encrypt dosn't support wildcard certificates, so you will need to create a certificate for each domain e.g.:
+    VCM unfortunately don't support wildcard certificates, so you will need to create a certificate for each domain e.g.:
 
     test1.example.com
 
@@ -21,10 +21,10 @@ Let's Encrypt is an easy way to get https on your domain, with absolutely no mai
 vapor cloud create domain
 ```
 
-Read more about custom domains [here](./custom-domain.md)
+Read more about custom domains [here](./add-domain.md)
 
 !!! info
-    At the moment, after adding the domain, you need to redeploy your application, for our systems to recongnize it.
+    At the moment, after adding the domain, you need to redeploy your application, for our systems to recognize it.
 
 ## Step 2 - Add DNS record
 
@@ -34,11 +34,9 @@ Create a `CNAME` record. Your domain need to point to <your-app>.vapor.cloud
 
 Example:
 
-I want `example.com`, `www.example.com` to point to my application `my-example` on production
+I want `www.example.com` to point to my application `my-example` on production
 
 And `staging.example.com` to point to my application `my-example` on staging
-
-example.com CNAME my-example.vapor.cloud
 
 www.example.com CNAME my-example.vapor.cloud
 

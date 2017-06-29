@@ -51,8 +51,6 @@ pages:
         - 'Sending E-mails (SMTP)': 'advanced/general/sending-emails.md'
         - 'Using private git repository': 'advanced/general/using-private-git.md'
         - 'Running load tests': 'advanced/general/load-testing.md'
-        - 'Custom domain': 'advanced/general/custom-domain.md'
-        - 'TLS With Lets Encrypt': 'advanced/general/tls-with-letsencrypt.md'
         - 'Your own database server': 'advanced/general/your-own-database-server.md'
     - Loadbalancer:
         - 'SSL/TLS': 'advanced/loadbalancer/ssl-tls.md'
@@ -65,6 +63,9 @@ pages:
         - 'Vapor Cloud security': 'advanced/security/vapor-cloud-security.md'
     - Limitation:
         - 'Requests': "advanced/limitation/requests.md"
+- Domain:
+    - 'Add custom domain': "custom-domain/add-domain.md"
+    - 'Certificate manager': "custom-domain/certificate-manager.md"
 - Troubleshooting:
     - 'Troubleshooting': 'troubleshooting/troubleshooting.md'
     - 'Redis': 'troubleshooting/redis.md'

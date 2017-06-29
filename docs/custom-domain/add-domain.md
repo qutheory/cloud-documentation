@@ -1,4 +1,4 @@
-# Custom domain
+# Add custom domain
 
 All applications on Vapor Cloud is automatically added with a `app-name.vapor.cloud` domain.
 But often it can help to be able to have your own domain name to your application e.g. `example.com`.
@@ -49,4 +49,4 @@ These providers do support `ALIAS` record, and you can simply create an `ALIAS` 
 
 ## SSL/TLS for custom domains
 
-Read more about **free** SSL/TLS for custom domains Read more about custom domains [here](./tls-with-letsencrypt.md)
+Read more about **free** SSL/TLS for custom domains Read more about custom domains [here](./certificate-manager.md)

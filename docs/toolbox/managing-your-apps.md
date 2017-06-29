@@ -123,7 +123,7 @@ vapor cloud database --app=my-app --env=staging
 
 ## Create custom domain
 
-In the toolbox, you can attach your own domain to your application. For more information, and advice on DNS settings read the docs [here](../advanced/general/custom-domain.md)
+In the toolbox, you can attach your own domain to your application. For more information, and advice on DNS settings read the docs [here](../custom-domain/add-domain.md)
 
 **Example**
 
@@ -131,9 +131,9 @@ In the toolbox, you can attach your own domain to your application. For more inf
 vapor cloud create domain
 ```
 
-## Attach free Let's Encrypt SSL/TLS certificate
+## Attach free SSL/TLS certificate with VCM
 
-When using your own domain, you can for **free** obtain a SSL/TLS certificate. For more information about DNS settings etc. See [here](../advanced/general/tls-with-letsencrypt.md)
+When using your own domain, you can for **free** obtain a SSL/TLS certificate. For more information about DNS settings etc. See [here](../custom-domain/certificate-manager.md)
 
 **Example**
 
