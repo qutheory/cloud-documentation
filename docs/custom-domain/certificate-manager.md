@@ -4,6 +4,8 @@ To secure your app when using your own domain, you can use the Vapor Cloud Certi
 
 This type of certificate is managed by Vapor Cloud, so you never think about renewing it, or do anything, we handle everything for you.
 
+The VCM uses Let's Encrypt to supply free certificates. This service uses SNI (Server name indication), an extension of TLS. You can read more about SNI, and support for it [here](https://en.wikipedia.org/wiki/Server_Name_Indication)
+
 !!! info
     You need to get your application up and running on Vapor Cloud, before you can use the VCM, you need to have it running on Vapor Cloud.
     The reason for this, is we use this to verify ownership of the domain.
