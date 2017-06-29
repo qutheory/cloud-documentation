@@ -47,6 +47,7 @@ pages:
 - Advanced:
     - General:
         - 'About our server setup': 'advanced/general/about-our-server-setup.md'
+        - 'Timezone settings': 'advanced/general/timezone-settings.md'
         - 'How do cronjobs work': 'advanced/general/how-do-cronjobs-work.md'
         - 'Sending E-mails (SMTP)': 'advanced/general/sending-emails.md'
         - 'Using private git repository': 'advanced/general/using-private-git.md'
