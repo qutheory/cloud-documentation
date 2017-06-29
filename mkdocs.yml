@@ -64,8 +64,8 @@ pages:
     - 'Add custom domain': "custom-domain/add-domain.md"
     - 'Certificate manager': "custom-domain/certificate-manager.md"
 - Storage:
-    - 'Store files on S3': 'advanced/storage/store-files-on-s3.md'
-    - 'Accessing files through CDN': 'advanced/storage/accessing-files-through-cdn.md'
+    - 'Store files on S3': 'storage/store-files-on-s3.md'
+    - 'Accessing files through CDN': 'storage/accessing-files-through-cdn.md'
 - Troubleshooting:
     - 'Troubleshooting': 'troubleshooting/troubleshooting.md'
     - 'Redis': 'troubleshooting/redis.md'
