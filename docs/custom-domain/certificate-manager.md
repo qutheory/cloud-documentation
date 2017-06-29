@@ -1,17 +1,17 @@
-# Vapor Cloud Certificate Manager (VCM)
+# Vapor Cloud Certificate Manager (VCCM)
 
 To secure your app when using your own domain, you can use the Vapor Cloud Certificate Manager to get a **FREE** SSL/TLS certificate to your app.
 
 This type of certificate is managed by Vapor Cloud, so you never think about renewing it, or do anything, we handle everything for you.
 
-The VCM uses Let's Encrypt to supply free certificates. This service uses SNI (Server name indication), an extension of TLS. You can read more about SNI, and support for it [here](https://en.wikipedia.org/wiki/Server_Name_Indication)
+The VCCM uses Let's Encrypt to supply free certificates. This service uses SNI (Server name indication), an extension of TLS. You can read more about SNI, and support for it [here](https://en.wikipedia.org/wiki/Server_Name_Indication)
 
 !!! info
-    You need to get your application up and running on Vapor Cloud, before you can use the VCM, you need to have it running on Vapor Cloud.
+    You need to get your application up and running on Vapor Cloud, before you can use the VCCM, you need to have it running on Vapor Cloud.
     The reason for this, is we use this to verify ownership of the domain.
 
 !!! info
-    VCM unfortunately don't support wildcard certificates, so you will need to create a certificate for each domain e.g.:
+    VCCM unfortunately don't support wildcard certificates, so you will need to create a certificate for each domain e.g.:
 
     test1.example.com
 

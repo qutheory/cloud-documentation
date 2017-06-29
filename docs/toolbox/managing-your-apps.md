@@ -131,7 +131,7 @@ In the toolbox, you can attach your own domain to your application. For more inf
 vapor cloud create domain
 ```
 
-## Attach free SSL/TLS certificate with VCM
+## Attach free SSL/TLS certificate with VCCM
 
 When using your own domain, you can for **free** obtain a SSL/TLS certificate. For more information about DNS settings etc. See [here](../custom-domain/certificate-manager.md)
 
