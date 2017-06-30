@@ -73,3 +73,4 @@ pages:
     - 'MySQL': 'troubleshooting/mysql.md'
 - Support:
     - 'Contact support': 'support/contact-support.md'
+- 'FAQ': 'FAQ.md'
