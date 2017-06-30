@@ -1,14 +1,5 @@
-# Frequently Asked Questions (FAQ)
 
-[Can i store images inside my replicas?](#can-i-store-images-inside-my-replicas)
-
-[I really need feature X, how do i contact you?](#i-really-need-feature-x-how-do-i-contact-you)
-
-[Do you have a roadmap, so i know what features are planned?](#do-you-have-a-roadmap-so-i-know-what-features-are-planned)
-
-[The system is in beta, does that mean my app is unstable?](#the-system-is-in-beta-does-that-mean-my-app-is-unstable)
-
-[I want to start larger replicas than free during the beta, can i do that?](#i-want-to-start-larger-replicas-than-free-during-the-beta-can-i-do-that)
+[TOC]
 
 ## Can i store images inside my replicas?
 
@@ -29,3 +20,11 @@ No, the system have been in beta for a while, and we currently handle > 4,500,00
 ## I want to start larger replicas than free during the beta, can i do that?
 
 Our beta users are limited to using our free plan. If you want to host your production systems on Vapor Cloud, please contact us on support@vapor.cloud and we will figure something out.
+
+## Is my data secure on Vapor Cloud?
+
+Security is one of our absolute highest priorities. All data is hosted on AWS (Amazon Web Services), besides that, everything we have build on top, have been build with a security first principle. You can read more about security [here](./advanced/security/responsibilities.md)
+
+## On the free plan, can i still see requests and memory usage
+
+Yes, all our replicas support resource and request monitoring. We think it's important for people to be able to monitor and optimize their apps, even when using our free plans.
