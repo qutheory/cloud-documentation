@@ -1,10 +1,16 @@
 # Contact support
 
-There are two methods to contact our support.
+There are various methods to contact our support.
+
+## Chat
+
+Through our dashboard, you are able to contact our Support through the chat in the bottom corner.
+
+This will connect you to one of our technicians, who will be able to help you.
 
 ## Email support
 
-To get personal/private support, you can contact our support team on Email.
+You can contact our support team on Email.
 
 **Contact form:** [here](https://qutheory.freshdesk.com/support/tickets/new)
 
