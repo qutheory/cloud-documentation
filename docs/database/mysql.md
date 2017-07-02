@@ -2,13 +2,7 @@ All our clients are allowed to get a database on our MySQL servers, for a small 
 
 This is a cheap way to store your data.
 
-## Create database to your environment
-
-### Toolbox
-
-When running the deploy command through the toolbox, you will be asked if you want a database.
-
-Say yes, and select a server with `(MySQL)`. After deployment the database is created.
+## Vapor integration
 
 Set this up in a `mysql.json` file in your `Config` directory with the following content
 
@@ -22,4 +16,10 @@ Set this up in a `mysql.json` file in your `Config` directory with the following
 }
 ```
 
-This will then automatically be set by our systems.
+## Create database to your environment
+
+### Toolbox
+
+When running the deploy command through the toolbox, you will be asked if you want a database.
+
+Say yes, and select a server with `(MySQL)`. After deployment the database is created.
