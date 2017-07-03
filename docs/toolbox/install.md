@@ -7,7 +7,7 @@ The toolbox will be available through homebrew at a future date. For now, instal
 First make sure you have installed [Swift](https://docs.vapor.codes/2.0/getting-started/install-on-macos/)
 
 ```
-eval "$(curl -sL https://toolbox.vapor.cloud/mac.sh)"
+brew install vapor-beta
 ```
 
 ## Linux
@@ -15,7 +15,7 @@ eval "$(curl -sL https://toolbox.vapor.cloud/mac.sh)"
 First make sure you have installed [Swift](https://docs.vapor.codes/2.0/getting-started/install-on-ubuntu/)
 
 ```
-eval "$(curl -sL https://toolbox.vapor.cloud/linux.sh)"
+sudo apt-get install vapor-beta
 ```
 
 ## Windows
