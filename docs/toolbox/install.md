@@ -18,6 +18,12 @@ First make sure you have installed [Swift](https://docs.vapor.codes/2.0/getting-
 sudo apt-get install vapor-beta
 ```
 
+If you get an error, you might need to remove the old toolbox with:
+
+```
+sudo apt-get remove vapor
+```
+
 ## Windows
 
 The toolbox unfortunately can't run native on Windows, since our toolbox is developed in Swift, and swift is for the moment not supported on Windows.
