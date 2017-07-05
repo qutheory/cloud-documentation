@@ -28,6 +28,7 @@ extra_css:
 
 pages:
 - Overview: 'index.md'
+- Quick Start: 'quick-start.md'
 - Architecture:
     - 'Core principles': 'architecture/core-principles.md'
 - Toolbox:
