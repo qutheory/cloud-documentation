@@ -1,0 +1,914 @@
+{
+    "docs": [
+        {
+            "location": "/", 
+            "text": "Vapor Cloud\n\n\n\n\nImportant\n\n\nVapor Cloud is currently in beta.\n\n\n\n\nWelcome to the Vapor Cloud docs. Use the table of contents on the left to navigate the docs. You can also use the search bar at the top of the page to search the whole site.\n\n\nFor a general overview of Vapor Cloud's architcture and naming scheme, visit \nCore Principles\n.\n\n\nTo get started with your first deploy through the Vapor Toolbox, check out the \nGetting Started with the Toolbox\n section.\n\n\nHave an idea for Vapor Cloud?, submit it \nhere\n or take a look at our \nPublic roadmap", 
+            "title": "Overview"
+        }, 
+        {
+            "location": "/#vapor-cloud", 
+            "text": "Important  Vapor Cloud is currently in beta.   Welcome to the Vapor Cloud docs. Use the table of contents on the left to navigate the docs. You can also use the search bar at the top of the page to search the whole site.  For a general overview of Vapor Cloud's architcture and naming scheme, visit  Core Principles .  To get started with your first deploy through the Vapor Toolbox, check out the  Getting Started with the Toolbox  section.  Have an idea for Vapor Cloud?, submit it  here  or take a look at our  Public roadmap", 
+            "title": "Vapor Cloud"
+        }, 
+        {
+            "location": "/quick-start/", 
+            "text": "Quick Start\n\n\nThis tutorial will walk you through deploying your first Vapor app to Vapor Cloud.\n\n\nSignup for Beta\n\n\nIf you haven't already, sign up for a beta account at \nhttps://dashboard.vapor.cloud/signup\n.\n\n\nNew beta spots are opened on a rolling basis, so be sure to check back regularly if you are unable to signup.\n\n\nAs of this writing, Vapor Cloud is still in very early beta. Use this service for testing only as you will likely encounter some bugs and incomplete features. Please report all bugs in \nVapor's Slack\n or to bugs@vapor.cloud.\n\n\n\n\nWarning\n\n\nDuring the beta period, you will not be charged for any paid resources you use on Vapor Cloud. \nYou may notice a negative account balance if you use paid resources, like databases. \nYou can safely ignore any negative balances. \n\n\n\n\nInstall Vapor\n\n\nIf you don't already have Vapor installed on your computer, follow the guide at \nhttps://docs.vapor.codes/2.0/getting-started/install-on-macos/\n. Or for Ubuntu: \nhttps://docs.vapor.codes/2.0/getting-started/install-on-ubuntu/\n.\n\n\nInstall Beta Toolbox\n\n\nVapor Cloud applications are deployed through the \nVapor Toolbox\n.\n\n\nThere is a beta version of the toolbox available that includes the \ncloud\n commands. You can install this version\nof the toolbox through Homebrew.\n\n\nbrew install vapor-beta\n\n\n\n\n\nYou can also install through APT.\n\n\nsudo apt-get install vapor-beta\n\n\n\n\n\n\n\nNote\n\n\nIf you have not already configured Vapor's Homebrew or APT sources on your computer, visit \nhttps://docs.vapor.codes/2.0/getting-started/toolbox/\n.\nThis guide works for the beta version of the toolbox as well.\n\n\n\n\nVerify that the beta toolbox is correctly installed by calling the help command.\n\n\nvapor-beta cloud --help\n\n\n\n\n\n\n\nCreate an Organization\n\n\nIf you didn't already create an organization during the signup process, create one now.\n\n\nYou can do this through the toolbox \nvapor-beta cloud create org\n or through the dashboard.\n\n\n\n\nCreate a Project\n\n\nYou can do this through the toolbox \nvapor-beta cloud create proj\n or through the dashboard.\n\n\n\n\nProjects help organize related applications. \nYou can invite individual users to your projects and assign read, write, or admin permissions. \nYou can even create teams of users and add those to your projects.\n\n\nYou cannot assign different permissions to each application, only to a project. \nSo feel free to create as many projects as you want for your permissioning needs.\n\n\nFirst Deployment\n\n\nNow that we have created an Organization and Project, we can begin our first deployment.\n\n\nTo deploy your app, your code needs to be available through Git. The easiest way to do this is through GitHub.\n\n\nThe toolbox will automatically walk you through this process and the other required steps to deploy your first app.\n\n\nLet's get started.\n\n\nvapor-beta cloud deploy\n\n\n\n\n\nCreate Git Remote\n\n\nThe easiest way to host code for your deployed project is as a public repo on GitHub.\nIf you would like to use this method, respond \nyes\n to the first prompt. GitHub will be opened automatically.\n\n\nOnce you have created your new repository (or using an existing) copy the \nSSH\n (not HTTP) url into the next prompt.\n\n\nCreate Application\n\n\nAfter the Git remote has been added, you can create your first application. \nEach application can have multiple services, such as hosting, databases, caches, and more. \n\n\nNot every Vapor Cloud application needs to have hosting. For instance, you could create a Vapor Cloud application that\njust consists of a MySQL database for your own use. \n\n\nHowever, in this tutorial, we will be creating an application with hosting.\n\n\nRespond yes to the prompt to create an application. Give it a name, and a slug.\n\n\nSlug\n\n\nApplication slugs will be used to access your app on Vapor Cloud. If you use the slug \nfoo\n, then your application would\nbe accessible at \nhttps://foo.vapor.cloud\n. \n\n\nIf you create environments besides \nproduction\n, like \ndev\n, then you can access those separate environments using a \n-\n suffix. For example, \nhttps://foo-dev.vapor.cloud\n. \n\n\nAdd Hosting\n\n\nAs we mentioned in the previous section, we will be adding the hosting service to our application to host our Vapor app.\nRespond \nyes\n to the prompt to create hosting, and select the Git URL that we just added previously.\n\n\nCreate Environment\n\n\nThe hosting service can have unlimited environments. This is useful for creating environments like testing, staging, devlopment, and more. \n\n\nFor now, we will create our main \nproduction\n environment. This environment is special because it is not followed by a suffix in the \n*.vapor.cloud\n domain. \n\n\nTo create this special environment, ensure the environment name is exactly \nproduction\n. \n\n\nGit Branch\n\n\nAfter you have named your environment, choose the branch it will deploy from. This is usually the \nmaster\n branch for \nproduction\n.\n\n\nReplica Size\n\n\nDuring the beta account, all environments are limited to \nFree\n size replicas. This size has a monthly request limit, but is free forever. Select the \nFree\n size for this environment.\n\n\nAdd Database (Optional)\n\n\nNext you will be asked if you'd like to add a database. If your application will need a database, you can do this now.\nOtherwise, ignore the prompt. You can always add a database later using \nvapor cloud create db\n.\n\n\nIf you do add a database, the environment variables to accesso the database will be exposed to your Vapor application's config.\n\n\nSee https://docs.vapor.cloud/database/mysql/ for more information about accessing these variables.\n\n\nReplica Count\n\n\nFor high availability and throughput, Vapor Cloud allows you to deploy your application to multiple replicas. However,\nfor Free size replicas you are limited to \n0\n or \n1\n replicas. If you set the replica count to \n0\n your application will be taken offline. If you set it to \n1\n it will be online.\n\n\nSet the replica count to \n1\n so that our application will be online when we deploy.\n\n\nBuild Type\n\n\nThe Swift Package Manger 3.1 allows a few different ways to build your application. \n\n\nIncremental\n\n\nVapor Cloud simply runs \nswift build\n on your application. Dependencies are not updated. This is the fastest method for subsequent deploys.\n\n\nUpdate\n\n\nVapor Cloud runs \nswift package update\n before running \nswift build\n. This option is slightly slower than incremental, but required if you have modified your \nPackage.swift\n file.\n\n\nClean\n\n\nVapor Cloud deletes all build metadata (such as the \n.build\n folder) then runs \nswift build\n on your application. This option takes a considerably longer amount of time than update or incremental, but can sometimes fix strange build issues.\n\n\n\n\nNote\n\n\nThese build types will be simplified in SPM 4.0 and this question will likely go away.\n\n\n\n\nDeploy!\n\n\nVerify that the information is correct and deploy your application! \nOnce your app is deployed, you will get a URL to visit in your browser.\n\n\n\n\nCongratulations on deploying your first app through Vapor Cloud.\n\n\nPlease let us know if you have any ideas or feature requests through \nhttps://ideas.vapor.cloud\n. \n\n\nAlso free free to chat with one of us through the chat feature (blue bubble in lower right corner) in \nhttps://dashboard.vapor.cloud\n.", 
+            "title": "Quick Start"
+        }, 
+        {
+            "location": "/quick-start/#quick-start", 
+            "text": "This tutorial will walk you through deploying your first Vapor app to Vapor Cloud.", 
+            "title": "Quick Start"
+        }, 
+        {
+            "location": "/quick-start/#signup-for-beta", 
+            "text": "If you haven't already, sign up for a beta account at  https://dashboard.vapor.cloud/signup .  New beta spots are opened on a rolling basis, so be sure to check back regularly if you are unable to signup.  As of this writing, Vapor Cloud is still in very early beta. Use this service for testing only as you will likely encounter some bugs and incomplete features. Please report all bugs in  Vapor's Slack  or to bugs@vapor.cloud.   Warning  During the beta period, you will not be charged for any paid resources you use on Vapor Cloud. \nYou may notice a negative account balance if you use paid resources, like databases. \nYou can safely ignore any negative balances.", 
+            "title": "Signup for Beta"
+        }, 
+        {
+            "location": "/quick-start/#install-vapor", 
+            "text": "If you don't already have Vapor installed on your computer, follow the guide at  https://docs.vapor.codes/2.0/getting-started/install-on-macos/ . Or for Ubuntu:  https://docs.vapor.codes/2.0/getting-started/install-on-ubuntu/ .", 
+            "title": "Install Vapor"
+        }, 
+        {
+            "location": "/quick-start/#install-beta-toolbox", 
+            "text": "Vapor Cloud applications are deployed through the  Vapor Toolbox .  There is a beta version of the toolbox available that includes the  cloud  commands. You can install this version\nof the toolbox through Homebrew.  brew install vapor-beta  You can also install through APT.  sudo apt-get install vapor-beta   Note  If you have not already configured Vapor's Homebrew or APT sources on your computer, visit  https://docs.vapor.codes/2.0/getting-started/toolbox/ .\nThis guide works for the beta version of the toolbox as well.   Verify that the beta toolbox is correctly installed by calling the help command.  vapor-beta cloud --help", 
+            "title": "Install Beta Toolbox"
+        }, 
+        {
+            "location": "/quick-start/#create-an-organization", 
+            "text": "If you didn't already create an organization during the signup process, create one now.  You can do this through the toolbox  vapor-beta cloud create org  or through the dashboard.", 
+            "title": "Create an Organization"
+        }, 
+        {
+            "location": "/quick-start/#create-a-project", 
+            "text": "You can do this through the toolbox  vapor-beta cloud create proj  or through the dashboard.   Projects help organize related applications. \nYou can invite individual users to your projects and assign read, write, or admin permissions. \nYou can even create teams of users and add those to your projects.  You cannot assign different permissions to each application, only to a project. \nSo feel free to create as many projects as you want for your permissioning needs.", 
+            "title": "Create a Project"
+        }, 
+        {
+            "location": "/quick-start/#first-deployment", 
+            "text": "Now that we have created an Organization and Project, we can begin our first deployment.  To deploy your app, your code needs to be available through Git. The easiest way to do this is through GitHub.  The toolbox will automatically walk you through this process and the other required steps to deploy your first app.  Let's get started.  vapor-beta cloud deploy", 
+            "title": "First Deployment"
+        }, 
+        {
+            "location": "/quick-start/#create-git-remote", 
+            "text": "The easiest way to host code for your deployed project is as a public repo on GitHub.\nIf you would like to use this method, respond  yes  to the first prompt. GitHub will be opened automatically.  Once you have created your new repository (or using an existing) copy the  SSH  (not HTTP) url into the next prompt.", 
+            "title": "Create Git Remote"
+        }, 
+        {
+            "location": "/quick-start/#create-application", 
+            "text": "After the Git remote has been added, you can create your first application. \nEach application can have multiple services, such as hosting, databases, caches, and more.   Not every Vapor Cloud application needs to have hosting. For instance, you could create a Vapor Cloud application that\njust consists of a MySQL database for your own use.   However, in this tutorial, we will be creating an application with hosting.  Respond yes to the prompt to create an application. Give it a name, and a slug.", 
+            "title": "Create Application"
+        }, 
+        {
+            "location": "/quick-start/#slug", 
+            "text": "Application slugs will be used to access your app on Vapor Cloud. If you use the slug  foo , then your application would\nbe accessible at  https://foo.vapor.cloud .   If you create environments besides  production , like  dev , then you can access those separate environments using a  -  suffix. For example,  https://foo-dev.vapor.cloud .", 
+            "title": "Slug"
+        }, 
+        {
+            "location": "/quick-start/#add-hosting", 
+            "text": "As we mentioned in the previous section, we will be adding the hosting service to our application to host our Vapor app.\nRespond  yes  to the prompt to create hosting, and select the Git URL that we just added previously.", 
+            "title": "Add Hosting"
+        }, 
+        {
+            "location": "/quick-start/#create-environment", 
+            "text": "The hosting service can have unlimited environments. This is useful for creating environments like testing, staging, devlopment, and more.   For now, we will create our main  production  environment. This environment is special because it is not followed by a suffix in the  *.vapor.cloud  domain.   To create this special environment, ensure the environment name is exactly  production .", 
+            "title": "Create Environment"
+        }, 
+        {
+            "location": "/quick-start/#git-branch", 
+            "text": "After you have named your environment, choose the branch it will deploy from. This is usually the  master  branch for  production .", 
+            "title": "Git Branch"
+        }, 
+        {
+            "location": "/quick-start/#replica-size", 
+            "text": "During the beta account, all environments are limited to  Free  size replicas. This size has a monthly request limit, but is free forever. Select the  Free  size for this environment.", 
+            "title": "Replica Size"
+        }, 
+        {
+            "location": "/quick-start/#add-database-optional", 
+            "text": "Next you will be asked if you'd like to add a database. If your application will need a database, you can do this now.\nOtherwise, ignore the prompt. You can always add a database later using  vapor cloud create db .  If you do add a database, the environment variables to accesso the database will be exposed to your Vapor application's config.  See https://docs.vapor.cloud/database/mysql/ for more information about accessing these variables.", 
+            "title": "Add Database (Optional)"
+        }, 
+        {
+            "location": "/quick-start/#replica-count", 
+            "text": "For high availability and throughput, Vapor Cloud allows you to deploy your application to multiple replicas. However,\nfor Free size replicas you are limited to  0  or  1  replicas. If you set the replica count to  0  your application will be taken offline. If you set it to  1  it will be online.  Set the replica count to  1  so that our application will be online when we deploy.", 
+            "title": "Replica Count"
+        }, 
+        {
+            "location": "/quick-start/#build-type", 
+            "text": "The Swift Package Manger 3.1 allows a few different ways to build your application.", 
+            "title": "Build Type"
+        }, 
+        {
+            "location": "/quick-start/#incremental", 
+            "text": "Vapor Cloud simply runs  swift build  on your application. Dependencies are not updated. This is the fastest method for subsequent deploys.", 
+            "title": "Incremental"
+        }, 
+        {
+            "location": "/quick-start/#update", 
+            "text": "Vapor Cloud runs  swift package update  before running  swift build . This option is slightly slower than incremental, but required if you have modified your  Package.swift  file.", 
+            "title": "Update"
+        }, 
+        {
+            "location": "/quick-start/#clean", 
+            "text": "Vapor Cloud deletes all build metadata (such as the  .build  folder) then runs  swift build  on your application. This option takes a considerably longer amount of time than update or incremental, but can sometimes fix strange build issues.   Note  These build types will be simplified in SPM 4.0 and this question will likely go away.", 
+            "title": "Clean"
+        }, 
+        {
+            "location": "/quick-start/#deploy", 
+            "text": "Verify that the information is correct and deploy your application! \nOnce your app is deployed, you will get a URL to visit in your browser.   Congratulations on deploying your first app through Vapor Cloud.  Please let us know if you have any ideas or feature requests through  https://ideas.vapor.cloud .   Also free free to chat with one of us through the chat feature (blue bubble in lower right corner) in  https://dashboard.vapor.cloud .", 
+            "title": "Deploy!"
+        }, 
+        {
+            "location": "/architecture/core-principles/", 
+            "text": "Core principles\n\n\nProjects and applications\n\n\nIn Vapor Cloud we talk about \nProjects\n and \nApplications\n. This is intended to give you are short overview\nwhat the differences is.\n\n\nA project is a collection of one or more applications, and don't have a lot more functionality than you are able to group your applications.\n\n\nFor example:\n\n\n\n\nMy cool project (Project)\n\n\nmy-cool-backend (Application - Vapor APP)\n\n\nmy-cool-ios-app (Application - iOS APP)\n\n\nmy-cool-android-app (Application - Android APP)\n\n\n\n\n\n\n\n\nIn the above example, we have our project, and below that 3 apps (Vapor API, iOS app and Android app)\n\n\nApplications consists of:\n\n\n\n\nrepoName\n: This will be the URL e.g. \nrepo-name.vapor.cloud\n, and will usually be your git repository name\n\n\nUser friendly name\n: This is just a name, to make it easier to find.\n\n\ngitUrl\n: A URL for your git repository in SSH format e.g. \ngit@github.com:my-name/my-repo.git\n\n\n\n\n\n\nNote\n\n\nIf your GIT repository is private, read more about setup \nhere\n\n\n\n\nEnvironments\n\n\nWhen you use the \nHosting\n service you can setup different environments for your application. This is an easy way to push code to be tested before moved to production.\n\n\nYou can call your environment what you want.\n\n\nFor example:\nI have \nmy-cool-backend\n hosted on \nmy-cool-backend.vapor.cloud\n\n\nIf i create an environment called \nstaging\n the URL will be:\n\n\nmy-cool-backend-staging.vapor.cloud\n\n\nAll environments are mostly separated from each other. They have their own databases, and run inside their own containers.\n\n\nThe only thing shared is S3 bucket, we advice people to separate this by adding folders based on the environment, but it is possible to share uploaded files between environments.\n\n\n\n\nNote\n\n\nAll applications are automatically created with a \nProduction\n environment. This is accessible on the root domain e.g. \nmy-cool-backend.vapor.cloud", 
+            "title": "Core principles"
+        }, 
+        {
+            "location": "/architecture/core-principles/#core-principles", 
+            "text": "", 
+            "title": "Core principles"
+        }, 
+        {
+            "location": "/architecture/core-principles/#projects-and-applications", 
+            "text": "In Vapor Cloud we talk about  Projects  and  Applications . This is intended to give you are short overview\nwhat the differences is.  A project is a collection of one or more applications, and don't have a lot more functionality than you are able to group your applications.  For example:   My cool project (Project)  my-cool-backend (Application - Vapor APP)  my-cool-ios-app (Application - iOS APP)  my-cool-android-app (Application - Android APP)     In the above example, we have our project, and below that 3 apps (Vapor API, iOS app and Android app)  Applications consists of:   repoName : This will be the URL e.g.  repo-name.vapor.cloud , and will usually be your git repository name  User friendly name : This is just a name, to make it easier to find.  gitUrl : A URL for your git repository in SSH format e.g.  git@github.com:my-name/my-repo.git    Note  If your GIT repository is private, read more about setup  here", 
+            "title": "Projects and applications"
+        }, 
+        {
+            "location": "/architecture/core-principles/#environments", 
+            "text": "When you use the  Hosting  service you can setup different environments for your application. This is an easy way to push code to be tested before moved to production.  You can call your environment what you want.  For example:\nI have  my-cool-backend  hosted on  my-cool-backend.vapor.cloud  If i create an environment called  staging  the URL will be:  my-cool-backend-staging.vapor.cloud  All environments are mostly separated from each other. They have their own databases, and run inside their own containers.  The only thing shared is S3 bucket, we advice people to separate this by adding folders based on the environment, but it is possible to share uploaded files between environments.   Note  All applications are automatically created with a  Production  environment. This is accessible on the root domain e.g.  my-cool-backend.vapor.cloud", 
+            "title": "Environments"
+        }, 
+        {
+            "location": "/toolbox/install/", 
+            "text": "Install Vapor Cloud Toolbox\n\n\nThe toolbox will be available through homebrew at a future date. For now, install it using the following CLI script.\n\n\nmacOS\n\n\nFirst make sure you have installed \nSwift\n\n\nbrew install vapor-beta\n\n\n\n\n\nLinux\n\n\nFirst make sure you have installed \nSwift\n\n\nsudo apt-get install vapor-beta\n\n\n\n\n\nIf you get an error, you might need to remove the old toolbox with:\n\n\nsudo apt-get remove vapor\n\n\n\n\n\nWindows\n\n\nThe toolbox unfortunately can't run native on Windows, since our toolbox is developed in Swift, and swift is for the moment not supported on Windows.\n\n\nIf you need to be able to use the Toolbox features on Windows, we suggest using Virtualbox, and installing a Ubuntu virtual machine, to run the toolbox.\nTo make this easier, you can set up so you can SSH into the machine.\n\n\nYou can also setup a Docker image to run the Toolbox through Docker.\n\n\nUnsupported features\n\n\nIf you are running the Toolbox in a Virtual machine, you can't open phpMyAdmin from the Toolbox, since we can't connect to the host machine browser. For this feature, use the Dashboard to access the database.", 
+            "title": "Install"
+        }, 
+        {
+            "location": "/toolbox/install/#install-vapor-cloud-toolbox", 
+            "text": "The toolbox will be available through homebrew at a future date. For now, install it using the following CLI script.", 
+            "title": "Install Vapor Cloud Toolbox"
+        }, 
+        {
+            "location": "/toolbox/install/#macos", 
+            "text": "First make sure you have installed  Swift  brew install vapor-beta", 
+            "title": "macOS"
+        }, 
+        {
+            "location": "/toolbox/install/#linux", 
+            "text": "First make sure you have installed  Swift  sudo apt-get install vapor-beta  If you get an error, you might need to remove the old toolbox with:  sudo apt-get remove vapor", 
+            "title": "Linux"
+        }, 
+        {
+            "location": "/toolbox/install/#windows", 
+            "text": "The toolbox unfortunately can't run native on Windows, since our toolbox is developed in Swift, and swift is for the moment not supported on Windows.  If you need to be able to use the Toolbox features on Windows, we suggest using Virtualbox, and installing a Ubuntu virtual machine, to run the toolbox.\nTo make this easier, you can set up so you can SSH into the machine.  You can also setup a Docker image to run the Toolbox through Docker.", 
+            "title": "Windows"
+        }, 
+        {
+            "location": "/toolbox/install/#unsupported-features", 
+            "text": "If you are running the Toolbox in a Virtual machine, you can't open phpMyAdmin from the Toolbox, since we can't connect to the host machine browser. For this feature, use the Dashboard to access the database.", 
+            "title": "Unsupported features"
+        }, 
+        {
+            "location": "/toolbox/getting-started/", 
+            "text": "Getting Started with the Toolbox\n\n\nThe Vapor Cloud commands are provided in Vapor's \nToolbox\n CLI.\nYou likely already have this installed, but if not, head over to Vapor's \nGetting Started\n docs to install it.\n\n\nCloud Commands\n\n\nAll Vapor Cloud commands are available under the \ncloud\n command group.\n\n\nvapor cloud\n\n\n\n\n\nYou can view help using \nvapor cloud --help\n.\n\n\nLogin\n\n\nThe first step to getting started using Vapor Cloud commands is to login. \n\n\nvapor cloud login\n\n\n\n\n\nIf you don't have an account, you can signup.\n\n\nvapor cloud signup\n\n\n\n\n\n\n\nWarning\n\n\nSignup is currently invite only.\n\n\n\n\nDeploy\n\n\nOnce you've logged in, you can create your first deployment.\nIf you don't already have a project you want to deploy, you can create a new one.\n\n\nvapor new HelloWorld --branch\n=\nbeta\n\ncd\n HelloWorld\n\n\n\n\n\nMake sure you are in the root directory of your project (where the \nPackage.swift\n) file is, and run\nthe following command.\n\n\nvapor cloud deploy\n\n\n\n\n\nThe toolbox will automatically detect your Vapor project and guide you through your first deployment.\n\n\n\n\nTip\n\n\nYou can use the toolbox even while not inside of a Vapor project directory. You will instead be presented with\nmenus to choose which application, environment, etc you would like to deploy.\n\n\n\n\nAfter you have followed the prompts, and your deployment has finished, you can visit your project online!", 
+            "title": "Getting Started"
+        }, 
+        {
+            "location": "/toolbox/getting-started/#getting-started-with-the-toolbox", 
+            "text": "The Vapor Cloud commands are provided in Vapor's  Toolbox  CLI.\nYou likely already have this installed, but if not, head over to Vapor's  Getting Started  docs to install it.", 
+            "title": "Getting Started with the Toolbox"
+        }, 
+        {
+            "location": "/toolbox/getting-started/#cloud-commands", 
+            "text": "All Vapor Cloud commands are available under the  cloud  command group.  vapor cloud  You can view help using  vapor cloud --help .", 
+            "title": "Cloud Commands"
+        }, 
+        {
+            "location": "/toolbox/getting-started/#login", 
+            "text": "The first step to getting started using Vapor Cloud commands is to login.   vapor cloud login  If you don't have an account, you can signup.  vapor cloud signup   Warning  Signup is currently invite only.", 
+            "title": "Login"
+        }, 
+        {
+            "location": "/toolbox/getting-started/#deploy", 
+            "text": "Once you've logged in, you can create your first deployment.\nIf you don't already have a project you want to deploy, you can create a new one.  vapor new HelloWorld --branch = beta cd  HelloWorld  Make sure you are in the root directory of your project (where the  Package.swift ) file is, and run\nthe following command.  vapor cloud deploy  The toolbox will automatically detect your Vapor project and guide you through your first deployment.   Tip  You can use the toolbox even while not inside of a Vapor project directory. You will instead be presented with\nmenus to choose which application, environment, etc you would like to deploy.   After you have followed the prompts, and your deployment has finished, you can visit your project online!", 
+            "title": "Deploy"
+        }, 
+        {
+            "location": "/toolbox/managing-your-apps/", 
+            "text": "Managing your apps\n\n\nThe toolbox provides an easy way to manage your apps, both in terms of logging, deployment, running commands etc.\n\n\nYou can always see available commands and options by using \n--help\n\n\ne.g.\n\n\nvapor cloud --help\n\nvapor cloud deploy --help\n\n\n\n\n\nDeploy your application\n\n\nDeploying your application is easy through the toolbox, and it will automatically inform you in the terminal if something goes wrong.\n\n\n\n\nTip\n\n\nIf the project doesn't exist, you will be guided through the creation process before the deployment starts.\n\n\n\n\nOptions\n\n\napp The slug name of the application to deploy\n    This will be automatically detected if your are\n    in a Git controlled folder with a remote matching\n    the application\ns hosting Git URL.\nenv The name of the environment to deploy to.\n    This will always be required to deploy, however\n    omitting the flag will result in a selection menu.\nbranch The name of the Git branch to deploy from.\n    If not passed, the environment\ns default branch\n    will be used\nbuild The type of build to perform.\n    Options include: incremental, update, clean\n    This will always be required to deploy, however\n    omitting the flag will result in a selection menu.\nreplicas The number of replicas to deploy.\n    ex: 2\n    Hourly cost is based on the replica size and number of replicas.\nreplicaSize The size of replicas to deploy.\n    ex: small\n    Hourly cost is based on the replica size and number of replicas.\n\n\n\n\n\nExamples\n\n\n# Deploy, will autodetect or ask for app/env\nvapor cloud deploy\n\n# Will deploy my-app to staging environment\nvapor cloud deploy --app=my-app --env=staging\n\n# Will deploy my-app to staging with my-feature branch\nvapor cloud deploy --app=my-app --env=staging --branch=my-feature\n\n# Will change replicas to 3\nvapor cloud deploy --replicas=3\n\n# Will change replica size to medium\nvapor cloud deploy --replicaSize=medium\n\n\n\n\n\n\n\nTip\n\n\nIf you want to close down the project, set the replicas to \n0\n. We keep the data in your database and on S3, so you can always boot it up again.\n\n\n\n\n\n\nInfo\n\n\nWhen starting a deployment, it will inform you about the progress in the terminal. If you cancel \nCTRL+C\n the deployment will keep running, but not inform you in the terminal\n\n\n\n\nGet live log output\n\n\nIt can be a good debug tool to get the logs directly from your replicas. To do this, there is a simple log feature build into the toolbox. This will start a \ntail\n of the runtime Vapor logs as they come in.\n\n\nExamples\n\n\n# Start a tail of logs from my-app on staging\nvapor cloud logs --app=my-app --env=staging\n\n# Start a tail, and get logs for the last 20 minutes\nvapor cloud logs --app=my-app --env=staging --since=20m\n\n# Start a tail, and get logs for the last 2 hours\nvapor cloud logs --app=my-app --env=staging --since=2h\n\n# Start a tail, and get logs for the last 2 days\nvapor cloud logs --app=my-app --env=staging --since=2d\n\n\n\n\n\n\n\nInfo\n\n\nTo prevent cluttered terminal, logs will as default return logs for the past \n5 minutes\n. Use the \n--since\n option to get more log history\n\n\n\n\nRun command\n\n\nIf you want to run a command e.g. \nprepare\n in your replicas, you can use the \nrun\n command. The system will pick a replica of random to run it, if you have more than one replica.\n\n\nExamples\n\n\n# Run prepare on my-app on staging environment\nvapor cloud run --app=my-app --env=staging prepare\n\n# Run command with options on my-app on staging environment\nvapor cloud run --app=my-app --env=staging \nprepare --help\n\n\n\n\n\n\n\n\nInfo\n\n\nYou should not prefix your command with a path or Vapor, the system will do that, so only write the direct command e.g. \nprepare\n\n\n\n\n\n\nTip\n\n\nIf you need to add options e.g. \n--help\n, you can quote the command e.g. \nvapor cloud run \"prepare --help\"\n\n\n\n\nOpen phpMyAdmin\n\n\nTo get access to your database, you can open phpMyAdmin in your browser directly from the toolbox.\n\n\nExample\n\n\nvapor cloud database --app=my-app --env=staging\n\n\n\n\n\nCreate custom domain\n\n\nIn the toolbox, you can attach your own domain to your application. For more information, and advice on DNS settings read the docs \nhere\n\n\nExample\n\n\nvapor cloud create domain\n\n\n\n\n\nAttach free SSL/TLS certificate with VCCM\n\n\nWhen using your own domain, you can for \nfree\n obtain a SSL/TLS certificate. For more information about DNS settings etc. See \nhere\n\n\nExample\n\n\nvapor cloud create tls\n\n\n\n\n\nCustom environment variables\n\n\nYou can create your own environment variables through the toolbox. To get more detailed documentation read \nthis\n\n\nExample\n\n\n# Create/update config variables\nvapor cloud config modify --app=my-app --env=staging VAR1=KEY1 VAR2=KEY2\n\n# List existing variables\nvapor cloud config dump --app=my-app --env=staging\n\n\n\n\n\nIf the key exists, it will be overwritten, if it doesn't, it will be created.", 
+            "title": "Managing your apps"
+        }, 
+        {
+            "location": "/toolbox/managing-your-apps/#managing-your-apps", 
+            "text": "The toolbox provides an easy way to manage your apps, both in terms of logging, deployment, running commands etc.  You can always see available commands and options by using  --help  e.g.  vapor cloud --help\n\nvapor cloud deploy --help", 
+            "title": "Managing your apps"
+        }, 
+        {
+            "location": "/toolbox/managing-your-apps/#deploy-your-application", 
+            "text": "Deploying your application is easy through the toolbox, and it will automatically inform you in the terminal if something goes wrong.   Tip  If the project doesn't exist, you will be guided through the creation process before the deployment starts.   Options  app The slug name of the application to deploy\n    This will be automatically detected if your are\n    in a Git controlled folder with a remote matching\n    the application s hosting Git URL.\nenv The name of the environment to deploy to.\n    This will always be required to deploy, however\n    omitting the flag will result in a selection menu.\nbranch The name of the Git branch to deploy from.\n    If not passed, the environment s default branch\n    will be used\nbuild The type of build to perform.\n    Options include: incremental, update, clean\n    This will always be required to deploy, however\n    omitting the flag will result in a selection menu.\nreplicas The number of replicas to deploy.\n    ex: 2\n    Hourly cost is based on the replica size and number of replicas.\nreplicaSize The size of replicas to deploy.\n    ex: small\n    Hourly cost is based on the replica size and number of replicas.  Examples  # Deploy, will autodetect or ask for app/env\nvapor cloud deploy\n\n# Will deploy my-app to staging environment\nvapor cloud deploy --app=my-app --env=staging\n\n# Will deploy my-app to staging with my-feature branch\nvapor cloud deploy --app=my-app --env=staging --branch=my-feature\n\n# Will change replicas to 3\nvapor cloud deploy --replicas=3\n\n# Will change replica size to medium\nvapor cloud deploy --replicaSize=medium   Tip  If you want to close down the project, set the replicas to  0 . We keep the data in your database and on S3, so you can always boot it up again.    Info  When starting a deployment, it will inform you about the progress in the terminal. If you cancel  CTRL+C  the deployment will keep running, but not inform you in the terminal", 
+            "title": "Deploy your application"
+        }, 
+        {
+            "location": "/toolbox/managing-your-apps/#get-live-log-output", 
+            "text": "It can be a good debug tool to get the logs directly from your replicas. To do this, there is a simple log feature build into the toolbox. This will start a  tail  of the runtime Vapor logs as they come in.  Examples  # Start a tail of logs from my-app on staging\nvapor cloud logs --app=my-app --env=staging\n\n# Start a tail, and get logs for the last 20 minutes\nvapor cloud logs --app=my-app --env=staging --since=20m\n\n# Start a tail, and get logs for the last 2 hours\nvapor cloud logs --app=my-app --env=staging --since=2h\n\n# Start a tail, and get logs for the last 2 days\nvapor cloud logs --app=my-app --env=staging --since=2d   Info  To prevent cluttered terminal, logs will as default return logs for the past  5 minutes . Use the  --since  option to get more log history", 
+            "title": "Get live log output"
+        }, 
+        {
+            "location": "/toolbox/managing-your-apps/#run-command", 
+            "text": "If you want to run a command e.g.  prepare  in your replicas, you can use the  run  command. The system will pick a replica of random to run it, if you have more than one replica.  Examples  # Run prepare on my-app on staging environment\nvapor cloud run --app=my-app --env=staging prepare\n\n# Run command with options on my-app on staging environment\nvapor cloud run --app=my-app --env=staging  prepare --help    Info  You should not prefix your command with a path or Vapor, the system will do that, so only write the direct command e.g.  prepare    Tip  If you need to add options e.g.  --help , you can quote the command e.g.  vapor cloud run \"prepare --help\"", 
+            "title": "Run command"
+        }, 
+        {
+            "location": "/toolbox/managing-your-apps/#open-phpmyadmin", 
+            "text": "To get access to your database, you can open phpMyAdmin in your browser directly from the toolbox.  Example  vapor cloud database --app=my-app --env=staging", 
+            "title": "Open phpMyAdmin"
+        }, 
+        {
+            "location": "/toolbox/managing-your-apps/#create-custom-domain", 
+            "text": "In the toolbox, you can attach your own domain to your application. For more information, and advice on DNS settings read the docs  here  Example  vapor cloud create domain", 
+            "title": "Create custom domain"
+        }, 
+        {
+            "location": "/toolbox/managing-your-apps/#attach-free-ssltls-certificate-with-vccm", 
+            "text": "When using your own domain, you can for  free  obtain a SSL/TLS certificate. For more information about DNS settings etc. See  here  Example  vapor cloud create tls", 
+            "title": "Attach free SSL/TLS certificate with VCCM"
+        }, 
+        {
+            "location": "/toolbox/managing-your-apps/#custom-environment-variables", 
+            "text": "You can create your own environment variables through the toolbox. To get more detailed documentation read  this  Example  # Create/update config variables\nvapor cloud config modify --app=my-app --env=staging VAR1=KEY1 VAR2=KEY2\n\n# List existing variables\nvapor cloud config dump --app=my-app --env=staging  If the key exists, it will be overwritten, if it doesn't, it will be created.", 
+            "title": "Custom environment variables"
+        }, 
+        {
+            "location": "/configuration/general/", 
+            "text": "General\n\n\nAdding custom configurations to your project like cronjobs is made easy with \ncloud.yml\n.\n\n\n\n\nTip\n\n\nThe \ncloud.yml\n file is optional and not required for deployment.\n\n\n\n\nSetting up a cloud.yml\n\n\nAdd a file in your project root called: \ncloud.yml\n. Make sure to commit it to git.\n\n\nVapor Cloud will automatically detect the file and apply the settings on the next deploy.\n\n\nType\n\n\nIf you create your \ncloud.yml\n file, you need to set a type. Types right\nnow are:\n\n\n\n\nvapor\n\n\nblank\n\n\n\n\nForce HTTPS\n\n\nIf you want your project to force users on https setup:\n\n\nforce_tls\n:\n \ntrue\n\n\n\n\n\n\n\n\nWarning\n\n\nthis will make a 301 (permanent) redirect from http to https. So make sure your client can follow redirects before using this.\n\n\n\n\nCronjobs\n\n\nTo setup cronjobs, add the following to .vcloud.yml:\n\n\ncronjobs:     \n   \nenvironment\n:         \n        \nname\n:             \n             time: \ntime\n\n             command: \ncommand\n\n\n\n\n\n\nSo if i e.g. want to run \nvapor run prepare\n every 5 minutes in production, i am going to add:\n\n\ncronjobs\n:\n     \n   \nproduction\n:\n         \n        \nprepare\n:\n             \n             \ntime\n:\n \n*/5 * * * *\n\n             \ncommand\n:\n \nprepare", 
+            "title": "General"
+        }, 
+        {
+            "location": "/configuration/general/#general", 
+            "text": "Adding custom configurations to your project like cronjobs is made easy with  cloud.yml .   Tip  The  cloud.yml  file is optional and not required for deployment.", 
+            "title": "General"
+        }, 
+        {
+            "location": "/configuration/general/#setting-up-a-cloudyml", 
+            "text": "Add a file in your project root called:  cloud.yml . Make sure to commit it to git.  Vapor Cloud will automatically detect the file and apply the settings on the next deploy.", 
+            "title": "Setting up a cloud.yml"
+        }, 
+        {
+            "location": "/configuration/general/#type", 
+            "text": "If you create your  cloud.yml  file, you need to set a type. Types right\nnow are:   vapor  blank", 
+            "title": "Type"
+        }, 
+        {
+            "location": "/configuration/general/#force-https", 
+            "text": "If you want your project to force users on https setup:  force_tls :   true    Warning  this will make a 301 (permanent) redirect from http to https. So make sure your client can follow redirects before using this.", 
+            "title": "Force HTTPS"
+        }, 
+        {
+            "location": "/configuration/general/#cronjobs", 
+            "text": "To setup cronjobs, add the following to .vcloud.yml:  cronjobs:     \n    environment :         \n         name :             \n             time:  time \n             command:  command   So if i e.g. want to run  vapor run prepare  every 5 minutes in production, i am going to add:  cronjobs :      \n    production :          \n         prepare :              \n              time :   */5 * * * * \n              command :   prepare", 
+            "title": "Cronjobs"
+        }, 
+        {
+            "location": "/configuration/vapor/basic/", 
+            "text": "Vapor\n\n\nFor Vapor, you can specify:\n\n\n\n\n\n\nSwift version\n\n\n\n\n\n\nUnit tests\n\n\n\n\n\n\nWhen adding a .vcloud.yml file to your vapor project, always add:\n\n\ntype: \nvapor\n\n\n\n\n\n\nSwift version\n\n\nTo specify a swift version, add it like this:\n\n\nswift_version\n:\n \n3.0\n.\n2\n\n\n\n\n\n\ndefault is: 3.1.0\n\n\nCurrently supported versions:\n\n\n\n\n\n\n3.0.2\n\n\n\n\n\n\n3.1.0\n\n\n\n\n\n\nUnit tests\n\n\nYou can choose to run unit tests during deployments. Set it up like\nthis:\n\n\nunit_test\n:\n \ntrue", 
+            "title": "Basic"
+        }, 
+        {
+            "location": "/configuration/vapor/basic/#vapor", 
+            "text": "For Vapor, you can specify:    Swift version    Unit tests    When adding a .vcloud.yml file to your vapor project, always add:  type:  vapor", 
+            "title": "Vapor"
+        }, 
+        {
+            "location": "/configuration/vapor/basic/#swift-version", 
+            "text": "To specify a swift version, add it like this:  swift_version :   3.0 . 2   default is: 3.1.0  Currently supported versions:    3.0.2    3.1.0", 
+            "title": "Swift version"
+        }, 
+        {
+            "location": "/configuration/vapor/basic/#unit-tests", 
+            "text": "You can choose to run unit tests during deployments. Set it up like\nthis:  unit_test :   true", 
+            "title": "Unit tests"
+        }, 
+        {
+            "location": "/configuration/vapor/custom-config/", 
+            "text": "Custom configuration\n\n\nCloud.yml\n\n\nIf you want to add configuration variables in your vapor config files,\nyou can do this by adding them to the .vcloud.yml file.\n\n\nYou can both add environment specifics or variables accessible in all\nenvironments.\n\n\nBasic structure\n\n\nThe basic structure is:\n\n\nconfig:\n    \nenvironment\n:\n        \nKEY\n: \nVALUE\n\n\n    all:\n        \nKEY\n: \nVALUE\n\n\n\n\n\n\nall:\n will be available in all environments\n\n\nFull example\n\n\nHere is a full example of how it could look:\n\n\nconfig\n:\n\n    \nproduction\n:\n\n        \nVAR1\n:\n \nMy production variable\n\n        \nVAR2\n:\n \nMy production variable 2\n\n\n    \nstaging\n:\n\n        \nVAR1\n:\n \nMy staging variable\n\n        \nVAR2\n:\n \nMy staging variable 2\n\n\n    \nall\n:\n\n        \nVAR3\n:\n \nMy variable in all environments\n\n        \nVAR4\n:\n \nMy variable in all environments 2\n\n\n\n\n\n\nThe environment name will be the name you gave the environment when it\nwas created.\n\n\nCLI\n\n\nSometimes, you have secret keys you don't want in GIT. These can be added through the toolbox.\n\n\ne.g.:\n\n\nvapor cloud config modify VAR1=KEY1 VAR2=KEY2\n\n\n\n\n\nIf the key exists, it will be overwritten, if it doesn't, it will be created.\n\n\nSystem settings\n\n\nSome keys are automatically added by Vapor Cloud. These can be overwritten with your own if you need to overwrite it.\n\n\nAWS_ACCESS_KEY # Access key to AWS for S3\nAWS_SECRET_KEY # Secret key to AWS for S3\nAWS_S3_BUCKET # AWS Bucket for S3\nPROJECT_NAME # Application name\nENVIRONMENT # Environment name\nDATABASE_USER # Database user\nDATABASE_PASSWORD # Database password\nDATABASE_DB # Database db\nDATABASE_HOSTNAME # Database hostname\nREDIS_HOSTNAME # Redis server hostname if Redis is enabled\nREDIS_DATABASE # Redis server database if Redis is enabled\nPORT # Server port\nHOST # Server host \n\n\n\n\n\nImplementing in Vapor\n\n\nIf we take the full example, we need to add the \nVAR\n to a file in our \nConfig/\n folder\n\n\nLets take \nConfig/test.json\n as an example:\n\n\n{\n\n    \nvar1\n:\n \n$VAR1\n,\n\n    \nvar2\n:\n \n$VAR2\n,\n\n    \nvar3\n:\n \n$VAR3\n,\n\n    \nvar4\n:\n \n$VAR4\n\n\n}\n\n\n\n\n\n\nThis will allow us to do:\n\n\nlet var1 = drop.config[\ntest\n, \nvar1\n]?.string\nlet var2 = drop.config[\ntest\n, \nvar2\n]?.string\nlet var3 = drop.config[\ntest\n, \nvar3\n]?.string\nlet var4 = drop.config[\ntest\n, \nvar4\n]?.string", 
+            "title": "Custom config"
+        }, 
+        {
+            "location": "/configuration/vapor/custom-config/#custom-configuration", 
+            "text": "", 
+            "title": "Custom configuration"
+        }, 
+        {
+            "location": "/configuration/vapor/custom-config/#cloudyml", 
+            "text": "If you want to add configuration variables in your vapor config files,\nyou can do this by adding them to the .vcloud.yml file.  You can both add environment specifics or variables accessible in all\nenvironments.", 
+            "title": "Cloud.yml"
+        }, 
+        {
+            "location": "/configuration/vapor/custom-config/#basic-structure", 
+            "text": "The basic structure is:  config:\n     environment :\n         KEY :  VALUE \n\n    all:\n         KEY :  VALUE   all:  will be available in all environments", 
+            "title": "Basic structure"
+        }, 
+        {
+            "location": "/configuration/vapor/custom-config/#full-example", 
+            "text": "Here is a full example of how it could look:  config : \n     production : \n         VAR1 :   My production variable \n         VAR2 :   My production variable 2 \n\n     staging : \n         VAR1 :   My staging variable \n         VAR2 :   My staging variable 2 \n\n     all : \n         VAR3 :   My variable in all environments \n         VAR4 :   My variable in all environments 2   The environment name will be the name you gave the environment when it\nwas created.", 
+            "title": "Full example"
+        }, 
+        {
+            "location": "/configuration/vapor/custom-config/#cli", 
+            "text": "Sometimes, you have secret keys you don't want in GIT. These can be added through the toolbox.  e.g.:  vapor cloud config modify VAR1=KEY1 VAR2=KEY2  If the key exists, it will be overwritten, if it doesn't, it will be created.", 
+            "title": "CLI"
+        }, 
+        {
+            "location": "/configuration/vapor/custom-config/#system-settings", 
+            "text": "Some keys are automatically added by Vapor Cloud. These can be overwritten with your own if you need to overwrite it.  AWS_ACCESS_KEY # Access key to AWS for S3\nAWS_SECRET_KEY # Secret key to AWS for S3\nAWS_S3_BUCKET # AWS Bucket for S3\nPROJECT_NAME # Application name\nENVIRONMENT # Environment name\nDATABASE_USER # Database user\nDATABASE_PASSWORD # Database password\nDATABASE_DB # Database db\nDATABASE_HOSTNAME # Database hostname\nREDIS_HOSTNAME # Redis server hostname if Redis is enabled\nREDIS_DATABASE # Redis server database if Redis is enabled\nPORT # Server port\nHOST # Server host", 
+            "title": "System settings"
+        }, 
+        {
+            "location": "/configuration/vapor/custom-config/#implementing-in-vapor", 
+            "text": "If we take the full example, we need to add the  VAR  to a file in our  Config/  folder  Lets take  Config/test.json  as an example:  { \n     var1 :   $VAR1 , \n     var2 :   $VAR2 , \n     var3 :   $VAR3 , \n     var4 :   $VAR4  }   This will allow us to do:  let var1 = drop.config[ test ,  var1 ]?.string\nlet var2 = drop.config[ test ,  var2 ]?.string\nlet var3 = drop.config[ test ,  var3 ]?.string\nlet var4 = drop.config[ test ,  var4 ]?.string", 
+            "title": "Implementing in Vapor"
+        }, 
+        {
+            "location": "/configuration/blank/", 
+            "text": "Blank\n\n\nIf you just want a HTML project, you can use the blank type.\n\n\ntype: \nblank\n\nwebroot: \n/dist\n\n\n\n\n\n\nThis will create a simple webserver running\n\n\n\n\nNGinx\n\n\n\n\nAnd load a file from \n/dist\n\n\nThis can be useful if you want to make a static coming soon page, a Javascript frontend for your Vapor API or similar.", 
+            "title": "Blank"
+        }, 
+        {
+            "location": "/configuration/blank/#blank", 
+            "text": "If you just want a HTML project, you can use the blank type.  type:  blank \nwebroot:  /dist   This will create a simple webserver running   NGinx   And load a file from  /dist  This can be useful if you want to make a static coming soon page, a Javascript frontend for your Vapor API or similar.", 
+            "title": "Blank"
+        }, 
+        {
+            "location": "/advanced/general/about-our-server-setup/", 
+            "text": "About our server setup\n\n\nSetup in general\n\n\nOur setup is build on Amazon Web Services (AWS). Our core is using Docker to seperate applications. Our system will automatically rollout containers on Node servers with free capacity, we will never assign more containers to a Node server than there is capacity to handle.\n\n\nOur loadbalancers are configured with NGinx, and is terminating TLS, this way we only have the Vapor application running inside the container, this way we can limit the memory usage in each Vapor container to a minimal.\n\n\nWhat is a replica\n\n\nYou can see a replica as a Docker container. If you only spawn one, you will have one\ncontainer on one of our Node servers.\n\n\nIf you spin up two or more, our Replica Scheduler will try to the best of it's\nability to place them on different Node servers.\n\n\n\n\nNote\n\n\nWe always suggest two or more replicas for production workloads. If you only have one, and the Node server it's located on goes down, there might be 30-120 seconds downtime.\n\n\n\n\nDatabase and Cache\n\n\nWhen you start a database or cache server from the dashboard or toolbox,\nyou will be provisioned your own AWS RDS or AWS ElastiCache server.\nAnd this will never be shared with any other clients.\n\n\nSupported databases\n\n\n\n\nAWS Aurora (Compatible with MySQL 5.6)\n\n\nMySQL 5.6 and up\n\n\nPostgreSQL 9.5 and up\n\n\nMariaDB 10.0 and up\n\n\n\n\n\n\nNote\n\n\nPatch version is always the latest. When a new Patch is issued, we will make sure to update your server automatically.\n\n\n\n\nSupported Cache\n\n\n\n\nRedis", 
+            "title": "About our server setup"
+        }, 
+        {
+            "location": "/advanced/general/about-our-server-setup/#about-our-server-setup", 
+            "text": "", 
+            "title": "About our server setup"
+        }, 
+        {
+            "location": "/advanced/general/about-our-server-setup/#setup-in-general", 
+            "text": "Our setup is build on Amazon Web Services (AWS). Our core is using Docker to seperate applications. Our system will automatically rollout containers on Node servers with free capacity, we will never assign more containers to a Node server than there is capacity to handle.  Our loadbalancers are configured with NGinx, and is terminating TLS, this way we only have the Vapor application running inside the container, this way we can limit the memory usage in each Vapor container to a minimal.", 
+            "title": "Setup in general"
+        }, 
+        {
+            "location": "/advanced/general/about-our-server-setup/#what-is-a-replica", 
+            "text": "You can see a replica as a Docker container. If you only spawn one, you will have one\ncontainer on one of our Node servers.  If you spin up two or more, our Replica Scheduler will try to the best of it's\nability to place them on different Node servers.   Note  We always suggest two or more replicas for production workloads. If you only have one, and the Node server it's located on goes down, there might be 30-120 seconds downtime.", 
+            "title": "What is a replica"
+        }, 
+        {
+            "location": "/advanced/general/about-our-server-setup/#database-and-cache", 
+            "text": "When you start a database or cache server from the dashboard or toolbox,\nyou will be provisioned your own AWS RDS or AWS ElastiCache server.\nAnd this will never be shared with any other clients.", 
+            "title": "Database and Cache"
+        }, 
+        {
+            "location": "/advanced/general/about-our-server-setup/#supported-databases", 
+            "text": "AWS Aurora (Compatible with MySQL 5.6)  MySQL 5.6 and up  PostgreSQL 9.5 and up  MariaDB 10.0 and up    Note  Patch version is always the latest. When a new Patch is issued, we will make sure to update your server automatically.", 
+            "title": "Supported databases"
+        }, 
+        {
+            "location": "/advanced/general/about-our-server-setup/#supported-cache", 
+            "text": "Redis", 
+            "title": "Supported Cache"
+        }, 
+        {
+            "location": "/advanced/general/timezone-settings/", 
+            "text": "Timzone settings\n\n\nOur servers are configured to always use a global timezone, this is to simplify the use of our systems.\n\n\nThis means, you need to take the Timezone into account when running cronjobs, writing date to database etc.\n\n\nSettings\n\n\n\n\n\n\n\n\nLocation\n\n\nTimezone\n\n\n\n\n\n\n\n\n\n\nEurope\n\n\nUTC", 
+            "title": "Timezone settings"
+        }, 
+        {
+            "location": "/advanced/general/timezone-settings/#timzone-settings", 
+            "text": "Our servers are configured to always use a global timezone, this is to simplify the use of our systems.  This means, you need to take the Timezone into account when running cronjobs, writing date to database etc.", 
+            "title": "Timzone settings"
+        }, 
+        {
+            "location": "/advanced/general/timezone-settings/#settings", 
+            "text": "Location  Timezone      Europe  UTC", 
+            "title": "Settings"
+        }, 
+        {
+            "location": "/advanced/general/how-do-cronjobs-work/", 
+            "text": "How do Cronjobs work\n\n\nCronjobs is a way to run a job at a specified time. This can be every 5 minutes,\nevery hour or every monday at 9:00\n\n\nCronjobs is a good way to offload large tasks, so it dosn't slow down your website.\n\n\nHow cronjobs work in Vapor Cloud\n\n\nYou can easily setup your cronjob through either the \nToolbox\n or \nDashboard\n.\nThe time syntax is just as normal on Linux and Mac\n\n\nWhen your cronjob is starting, we will spin up a new replica and run the job\ninside that. After the job is finished, we will terminate the replica again.\n\n\nThis way you only pay for the time while the job is running. This replica\nwon't receive any web requests, so it won't slow down your requests.\n\n\n\n\nNote\n\n\nBe aware that when the job is starting, it might take 5-30 seconds for the job to start, because we need to spin up the replica.\n\n\n\n\nCronjob syntax\n\n\nCommand\n\n\n\n\nNote\n\n\nNever prefix your job with \nvapor\n or \nApp\n etc. We will do this for you.\n\n\n\n\nSo if i want to run \nprepare\n in a cronjob, simply set command to:\n\n\nprepare\n\n\n\n\n\nTime\n\n\nThe basic cronjob syntax is:\n\n\n*\n \n*\n \n*\n \n*\n \n*\n \ncommand\n \nto\n \nbe\n \nexecuted\n\n\n-\n \n-\n \n-\n \n-\n \n-\n\n\n|\n \n|\n \n|\n \n|\n \n|\n\n\n|\n \n|\n \n|\n \n|\n \n-----\n \nDay\n \nof\n \nweek\n \n(\n0\n \n-\n \n7\n)\n \n(\nSunday\n=\n0\n \nor\n \n7\n)\n\n\n|\n \n|\n \n|\n \n-------\n \nMonth\n \n(\n1\n \n-\n \n12\n)\n\n\n|\n \n|\n \n---------\n \nDay\n \nof\n \nmonth\n \n(\n1\n \n-\n \n31\n)\n\n\n|\n \n-----------\n \nHour\n \n(\n0\n \n-\n \n23\n)\n\n\n-------------\n \nMinute\n \n(\n0\n \n-\n \n59\n)\n\n\n\n\n\n\nSo if we want to run a cronjob every 5 minutes, we can do:\n\n\n*/5 * * * *", 
+            "title": "How do cronjobs work"
+        }, 
+        {
+            "location": "/advanced/general/how-do-cronjobs-work/#how-do-cronjobs-work", 
+            "text": "Cronjobs is a way to run a job at a specified time. This can be every 5 minutes,\nevery hour or every monday at 9:00  Cronjobs is a good way to offload large tasks, so it dosn't slow down your website.", 
+            "title": "How do Cronjobs work"
+        }, 
+        {
+            "location": "/advanced/general/how-do-cronjobs-work/#how-cronjobs-work-in-vapor-cloud", 
+            "text": "You can easily setup your cronjob through either the  Toolbox  or  Dashboard .\nThe time syntax is just as normal on Linux and Mac  When your cronjob is starting, we will spin up a new replica and run the job\ninside that. After the job is finished, we will terminate the replica again.  This way you only pay for the time while the job is running. This replica\nwon't receive any web requests, so it won't slow down your requests.   Note  Be aware that when the job is starting, it might take 5-30 seconds for the job to start, because we need to spin up the replica.", 
+            "title": "How cronjobs work in Vapor Cloud"
+        }, 
+        {
+            "location": "/advanced/general/how-do-cronjobs-work/#cronjob-syntax", 
+            "text": "", 
+            "title": "Cronjob syntax"
+        }, 
+        {
+            "location": "/advanced/general/how-do-cronjobs-work/#command", 
+            "text": "Note  Never prefix your job with  vapor  or  App  etc. We will do this for you.   So if i want to run  prepare  in a cronjob, simply set command to:  prepare", 
+            "title": "Command"
+        }, 
+        {
+            "location": "/advanced/general/how-do-cronjobs-work/#time", 
+            "text": "The basic cronjob syntax is:  *   *   *   *   *   command   to   be   executed  -   -   -   -   -  |   |   |   |   |  |   |   |   |   -----   Day   of   week   ( 0   -   7 )   ( Sunday = 0   or   7 )  |   |   |   -------   Month   ( 1   -   12 )  |   |   ---------   Day   of   month   ( 1   -   31 )  |   -----------   Hour   ( 0   -   23 )  -------------   Minute   ( 0   -   59 )   So if we want to run a cronjob every 5 minutes, we can do:  */5 * * * *", 
+            "title": "Time"
+        }, 
+        {
+            "location": "/advanced/general/sending-emails/", 
+            "text": "Sending E-mails (SMTP)\n\n\nVapor Cloud don't have an SMTP server for sending E-mails. But it's very\neasy to setup an external provider.\n\n\nExternal mail providers\n\n\nHere is an example list of providers that can be used, but is not\nlimited to this list.\n\n\n\n\nMailgun (10.000 free E-mails/month)\n\n\nSendGrid (From $9.95/month)\n\n\nAmazon SES ($0.10 per 1000 emails)\n\n\n\n\nSimply create an account, and setup the details from the provider in\nyour Vapor project\n\n\nUse E-mail provider through Vapor\n\n\nCreate the following file:\n\n\nConfig/mail.json\n\n\nAnd add the content below.\n\n\n{\n\n    \nsmtpHost\n:\n \nmy.smtp.host\n,\n\n    \nsmtpPort\n:\n \n465\n,\n\n    \nuser\n:\n \nmy@smtp.user\n,\n\n    \npassword\n:\n \nkjn4kj32n4jkn423\n,\n\n    \nfromEmail\n:\n \nmy@domain.com\n,\n\n    \nfromName\n:\n \nMy awesome APP\n\n\n}\n\n\n\n\n\n\nIt's also possible to use the custom configuration, see more under\n\nVapor\n documentation", 
+            "title": "Sending E-mails (SMTP)"
+        }, 
+        {
+            "location": "/advanced/general/sending-emails/#sending-e-mails-smtp", 
+            "text": "Vapor Cloud don't have an SMTP server for sending E-mails. But it's very\neasy to setup an external provider.", 
+            "title": "Sending E-mails (SMTP)"
+        }, 
+        {
+            "location": "/advanced/general/sending-emails/#external-mail-providers", 
+            "text": "Here is an example list of providers that can be used, but is not\nlimited to this list.   Mailgun (10.000 free E-mails/month)  SendGrid (From $9.95/month)  Amazon SES ($0.10 per 1000 emails)   Simply create an account, and setup the details from the provider in\nyour Vapor project", 
+            "title": "External mail providers"
+        }, 
+        {
+            "location": "/advanced/general/sending-emails/#use-e-mail-provider-through-vapor", 
+            "text": "Create the following file:  Config/mail.json  And add the content below.  { \n     smtpHost :   my.smtp.host , \n     smtpPort :   465 , \n     user :   my@smtp.user , \n     password :   kjn4kj32n4jkn423 , \n     fromEmail :   my@domain.com , \n     fromName :   My awesome APP  }   It's also possible to use the custom configuration, see more under Vapor  documentation", 
+            "title": "Use E-mail provider through Vapor"
+        }, 
+        {
+            "location": "/advanced/general/using-private-git/", 
+            "text": "Using private external git repository\n\n\nUsing a private GIT repository is quite simple. Depending on if you are using GitHub or another git provider.\n\n\nGitHub\n\n\nThere are 2 ways you can grant access to a private repository on Github\n\n\nInvite our Cloud API user\n\n\nYou can invite our API User to your repository/organisation, details below:\n\n\nUsername: vapor-cloud-api\n\n\nE-mail: github@vapor.codes\n\n\nLink to profile: https://github.com/vapor-cloud-api\n\n\nUse SSH Key\n\n\nYou can use the same SSH Key as in 'Another git provider'. This can be setup on either your own user or a user you create yourself.\n\n\nAnother git provider (Gitlab, Bitbucket or self hosted)\n\n\nIf you are using another provider than GitHub, this could be Gitlab, Bitbucket or a self hosted git server. You will need to create a user and give this user READ access to your repository.\n\n\nOn the user, add the public key below. This will allow our deployment servers to make a git clone of your projects. And you will maintain control over what projects we are allowed to use.\n\n\nssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCmDZvHHooUhlHuldTW5YVBy8QrUreyJJi6tT3H7st05Pl2VO8Xnj/2FGYct6nYo+N7jAN3AfFzWbVktcO9H/J2GdbOSWbCLKrDezftKsTmmznWT/hX7vVgVY1Rg4ExJYpXg+oHJK91ecwrR0a+i0i/Z/mfdkmrkSoZvz8zpapwgAO9YUSfUJBji31WeczXq/XxoaAy8x3ivVCEvUWyfLmt7G+WKp4uMCRQJhbNyo4L9ogoj4uhq8s1nr3ST2dVdh8waOEptjqI3aa2xTN2tamcKp7H2XEd3jZY5GwmmjXJ1T0uAAeOwOsm/wMw3MqvSJrXmz3IKHz8Wt9CTDeovxWzXZVDDLgcxHAnZx9wcZWogBFYWfYyqY5tpWxc2OiY50AFYf9nvOGzW4cP2yavKbXp9pAWlb28AtiL96A2ZSg4rQJbB1YQC0eobhjVZWUCCS+pg1KhVOLFSgK2QQ1OAnOAWYLPRrlbEUsJfNpb7iNRecxSvqCk1covZBr1c4F5Hu9SDvV5NDaiiFFX3oYXl+RpGQR2SoQoj2YxV/C9x6MgRn95RnioxZa58L+r98TJD08SdLMJgJ6LMSq6Lb4BQv0JD1aFlnTVYZLQOcXadIAtc027OuGeUPbFROld8Kl2HMPI3aYykNKjAM8KPba4pBSDX3ahr3JKlrq4pLGZvIL9ew==\n\n\n\n\n\nThe private key is kept safe inside our private network, and is under the same security as all other data in Vapor Cloud.", 
+            "title": "Using private git repository"
+        }, 
+        {
+            "location": "/advanced/general/using-private-git/#using-private-external-git-repository", 
+            "text": "Using a private GIT repository is quite simple. Depending on if you are using GitHub or another git provider.", 
+            "title": "Using private external git repository"
+        }, 
+        {
+            "location": "/advanced/general/using-private-git/#github", 
+            "text": "There are 2 ways you can grant access to a private repository on Github", 
+            "title": "GitHub"
+        }, 
+        {
+            "location": "/advanced/general/using-private-git/#invite-our-cloud-api-user", 
+            "text": "You can invite our API User to your repository/organisation, details below:  Username: vapor-cloud-api  E-mail: github@vapor.codes  Link to profile: https://github.com/vapor-cloud-api", 
+            "title": "Invite our Cloud API user"
+        }, 
+        {
+            "location": "/advanced/general/using-private-git/#use-ssh-key", 
+            "text": "You can use the same SSH Key as in 'Another git provider'. This can be setup on either your own user or a user you create yourself.", 
+            "title": "Use SSH Key"
+        }, 
+        {
+            "location": "/advanced/general/using-private-git/#another-git-provider-gitlab-bitbucket-or-self-hosted", 
+            "text": "If you are using another provider than GitHub, this could be Gitlab, Bitbucket or a self hosted git server. You will need to create a user and give this user READ access to your repository.  On the user, add the public key below. This will allow our deployment servers to make a git clone of your projects. And you will maintain control over what projects we are allowed to use.  ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCmDZvHHooUhlHuldTW5YVBy8QrUreyJJi6tT3H7st05Pl2VO8Xnj/2FGYct6nYo+N7jAN3AfFzWbVktcO9H/J2GdbOSWbCLKrDezftKsTmmznWT/hX7vVgVY1Rg4ExJYpXg+oHJK91ecwrR0a+i0i/Z/mfdkmrkSoZvz8zpapwgAO9YUSfUJBji31WeczXq/XxoaAy8x3ivVCEvUWyfLmt7G+WKp4uMCRQJhbNyo4L9ogoj4uhq8s1nr3ST2dVdh8waOEptjqI3aa2xTN2tamcKp7H2XEd3jZY5GwmmjXJ1T0uAAeOwOsm/wMw3MqvSJrXmz3IKHz8Wt9CTDeovxWzXZVDDLgcxHAnZx9wcZWogBFYWfYyqY5tpWxc2OiY50AFYf9nvOGzW4cP2yavKbXp9pAWlb28AtiL96A2ZSg4rQJbB1YQC0eobhjVZWUCCS+pg1KhVOLFSgK2QQ1OAnOAWYLPRrlbEUsJfNpb7iNRecxSvqCk1covZBr1c4F5Hu9SDvV5NDaiiFFX3oYXl+RpGQR2SoQoj2YxV/C9x6MgRn95RnioxZa58L+r98TJD08SdLMJgJ6LMSq6Lb4BQv0JD1aFlnTVYZLQOcXadIAtc027OuGeUPbFROld8Kl2HMPI3aYykNKjAM8KPba4pBSDX3ahr3JKlrq4pLGZvIL9ew==  The private key is kept safe inside our private network, and is under the same security as all other data in Vapor Cloud.", 
+            "title": "Another git provider (Gitlab, Bitbucket or self hosted)"
+        }, 
+        {
+            "location": "/advanced/general/load-testing/", 
+            "text": "Load testing\n\n\nWhen running production workloads, you can find yourself in a situation where you need to run a load test. This describes the general requirements when running load tests on applications in the Vapor Cloud environment.\n\n\n\n\nNote\n\n\nIt is NOT allowed to do load tests when using \"Get started\" database.\n\n\n\n\nTest types\n\n\nWe have different test types, depending on the scale of your load test, see below, for the different requirements.\n\n\nLow/medium tests\n\n\nRequests:\n \n 20.000 requests/min.\n\n\nAllowed replicas:\n Small and higher\n\n\nRequires permission:\n No\n\n\nOur low/medium test, allows you to always run a load test against your application for up to \n10.000 requests/min\n. This does not require prior acceptance from Vapor Cloud.\n\n\nHigh tests\n\n\nRequests:\n \n 20.000 requests/min.\n\n\nAllowed replicas:\n Medium and higher\n\n\nRequres permission:\n Yes\n\n\nOur high test, is meant if you run larger production workloads. There is in theory no top level of how large these can be. \nBUT\n they require prior permission from Vapor Cloud. To be allowed to run this test, contact our support, and tell us why you require the test, how many requests, and other useful details.\n\n\n\n\nNote\n\n\nRunning High tests without prior permission can result in your account be deactivated, and all your applications to be terminated.", 
+            "title": "Running load tests"
+        }, 
+        {
+            "location": "/advanced/general/load-testing/#load-testing", 
+            "text": "When running production workloads, you can find yourself in a situation where you need to run a load test. This describes the general requirements when running load tests on applications in the Vapor Cloud environment.   Note  It is NOT allowed to do load tests when using \"Get started\" database.", 
+            "title": "Load testing"
+        }, 
+        {
+            "location": "/advanced/general/load-testing/#test-types", 
+            "text": "We have different test types, depending on the scale of your load test, see below, for the different requirements.", 
+            "title": "Test types"
+        }, 
+        {
+            "location": "/advanced/general/load-testing/#lowmedium-tests", 
+            "text": "Requests:    20.000 requests/min.  Allowed replicas:  Small and higher  Requires permission:  No  Our low/medium test, allows you to always run a load test against your application for up to  10.000 requests/min . This does not require prior acceptance from Vapor Cloud.", 
+            "title": "Low/medium tests"
+        }, 
+        {
+            "location": "/advanced/general/load-testing/#high-tests", 
+            "text": "Requests:    20.000 requests/min.  Allowed replicas:  Medium and higher  Requres permission:  Yes  Our high test, is meant if you run larger production workloads. There is in theory no top level of how large these can be.  BUT  they require prior permission from Vapor Cloud. To be allowed to run this test, contact our support, and tell us why you require the test, how many requests, and other useful details.   Note  Running High tests without prior permission can result in your account be deactivated, and all your applications to be terminated.", 
+            "title": "High tests"
+        }, 
+        {
+            "location": "/advanced/loadbalancer/ssl-tls/", 
+            "text": "SSL/TLS\n\n\nSSL/TLS Settings\n\n\nOur setup is built with security in mind, all our vapor.cloud domains automatically have https enabled. With the option of forcing all users on https.\n\n\nWe also provide the feature of adding free certificate for custom domains for all our clients, even on our free plan.\nWe strongly believe in encrypt everything, so we always recommend our clients to force HTTPS.\n\n\nSupport\n\n\nEnabled versions\n\n\nWe have enabled the following versions:\n\n\n\n\nTLSv1\n\n\nTLSv1.1\n\n\nTLSv1.2\n\n\n\n\nThe following is disabled, because they are found insecure:\n\n\n\n\nSSLv1\n\n\nSSLv2\n\n\nSSLv3\n\n\n\n\nAll our certificates are encrypted with SHA256 and uses a Diffie Hellman key length of 4096 bits.\n\n\nSSL Termination\n\n\nTo keep load on the replicas low, our load balancers will terminate the SSL connection. So when your app receives the request, it will be read as HTTP.\n\n\nIf you need to know if the request was served on HTTPS, you can always read the \nX-Forwarded-Proto\n header. This will be set with either \nhttp\n or \nhttps\n\n\nVapor example:\n\n\nif drop.request.headers[\nX-Forwarded-Proto\n] == \nhttps\n {\n    print(\nSecure connection\n)\n} else {\n    print(\nInsecure connection\n)\n}\n\n\n\n\n\nAll requests from the loadbalancers are served on our internal network, and can't be accessed from the outside, so the security is the same even when we terminate the SSL connection.", 
+            "title": "SSL/TLS"
+        }, 
+        {
+            "location": "/advanced/loadbalancer/ssl-tls/#ssltls", 
+            "text": "", 
+            "title": "SSL/TLS"
+        }, 
+        {
+            "location": "/advanced/loadbalancer/ssl-tls/#ssltls-settings", 
+            "text": "Our setup is built with security in mind, all our vapor.cloud domains automatically have https enabled. With the option of forcing all users on https.  We also provide the feature of adding free certificate for custom domains for all our clients, even on our free plan.\nWe strongly believe in encrypt everything, so we always recommend our clients to force HTTPS.", 
+            "title": "SSL/TLS Settings"
+        }, 
+        {
+            "location": "/advanced/loadbalancer/ssl-tls/#support", 
+            "text": "Enabled versions  We have enabled the following versions:   TLSv1  TLSv1.1  TLSv1.2   The following is disabled, because they are found insecure:   SSLv1  SSLv2  SSLv3   All our certificates are encrypted with SHA256 and uses a Diffie Hellman key length of 4096 bits.", 
+            "title": "Support"
+        }, 
+        {
+            "location": "/advanced/loadbalancer/ssl-tls/#ssl-termination", 
+            "text": "To keep load on the replicas low, our load balancers will terminate the SSL connection. So when your app receives the request, it will be read as HTTP.  If you need to know if the request was served on HTTPS, you can always read the  X-Forwarded-Proto  header. This will be set with either  http  or  https  Vapor example:  if drop.request.headers[ X-Forwarded-Proto ] ==  https  {\n    print( Secure connection )\n} else {\n    print( Insecure connection )\n}  All requests from the loadbalancers are served on our internal network, and can't be accessed from the outside, so the security is the same even when we terminate the SSL connection.", 
+            "title": "SSL Termination"
+        }, 
+        {
+            "location": "/advanced/security/responsibilities/", 
+            "text": "Responsibilities\n\n\nWhen looking at security, the responsibilities are split between\n\n\n\n\nYou as a developer\n\n\nVapor Cloud as a provider\n\n\nOur provider AWS\n\n\n\n\nWe will here outline shortly what this means to you as a developer, and will go further into details on the next pages.\n\n\nYou as a developer\n\n\nAs a developer you are responsible to ensure the security in your app on the application layer.\n\n\nSome examples:\n\n\n\n\nSanitize data before doing database operations\n\n\nEnforce good password policy\n\n\nPrevent XSS (Cross-site scripting)\n\n\n\n\nVapor Cloud as a provider\n\n\nWe are responsible to ensure the security on the servers including load balancers, webservers, database servers etc.\n\n\nWe will also handle all monitoring on the server side, but won't monitor each individual app. If uptime is critical, we suggest you setup monitoring on your own application. https://statuscake.com is an example of a free stable monitoring system to monitor URLs\n\n\nAWS\n\n\nEverything on Vapor Cloud is hosted on AWS (Amazon Web Services). AWS have a good reputation when it comes to security, and they handle the more low-level physical security. You can read more about AWS securit here: https://aws.amazon.com/security/", 
+            "title": "Responsibilities"
+        }, 
+        {
+            "location": "/advanced/security/responsibilities/#responsibilities", 
+            "text": "When looking at security, the responsibilities are split between   You as a developer  Vapor Cloud as a provider  Our provider AWS   We will here outline shortly what this means to you as a developer, and will go further into details on the next pages.", 
+            "title": "Responsibilities"
+        }, 
+        {
+            "location": "/advanced/security/responsibilities/#you-as-a-developer", 
+            "text": "As a developer you are responsible to ensure the security in your app on the application layer.  Some examples:   Sanitize data before doing database operations  Enforce good password policy  Prevent XSS (Cross-site scripting)", 
+            "title": "You as a developer"
+        }, 
+        {
+            "location": "/advanced/security/responsibilities/#vapor-cloud-as-a-provider", 
+            "text": "We are responsible to ensure the security on the servers including load balancers, webservers, database servers etc.  We will also handle all monitoring on the server side, but won't monitor each individual app. If uptime is critical, we suggest you setup monitoring on your own application. https://statuscake.com is an example of a free stable monitoring system to monitor URLs", 
+            "title": "Vapor Cloud as a provider"
+        }, 
+        {
+            "location": "/advanced/security/responsibilities/#aws", 
+            "text": "Everything on Vapor Cloud is hosted on AWS (Amazon Web Services). AWS have a good reputation when it comes to security, and they handle the more low-level physical security. You can read more about AWS securit here: https://aws.amazon.com/security/", 
+            "title": "AWS"
+        }, 
+        {
+            "location": "/advanced/security/your-responsibilities/", 
+            "text": "Your responsibilities\n\n\nAs a developer you have some responsibilities to ensure your application.\n\n\nSSL/TLS\n\n\nMake sure to encrypt the connection to your application when possible. All \n*.vapor.cloud\n domains automatically have a certificate. If you use your own domain, we provide a free and easy system to attach a certificate to your domain, with only one command you are running with HTTPS on your domain.\n\n\nOur servers are configured for highest security when it comes to SSL/TLS.\n\n\nEnabled SSL/TLS versions\n\n\nWe have enabled the following versions:\n\n\n\n\nTLSv1\n\n\nTLSv1.1\n\n\nTLSv1.2\n\n\n\n\nThe following is disabled, because they are found insecure:\n\n\n\n\nSSLv1\n\n\nSSLv2\n\n\nSSLv3\n\n\n\n\nAll domains with HTTPS on our servers score an \nA+\n rating in ssllabs.com test.\n\n\nAccess to Vapor Cloud\n\n\nYour account on Vapor Cloud, have a lot of access, so always make sure to use a strong password, to ensure your account.", 
+            "title": "Your responsibilities"
+        }, 
+        {
+            "location": "/advanced/security/your-responsibilities/#your-responsibilities", 
+            "text": "As a developer you have some responsibilities to ensure your application.", 
+            "title": "Your responsibilities"
+        }, 
+        {
+            "location": "/advanced/security/your-responsibilities/#ssltls", 
+            "text": "Make sure to encrypt the connection to your application when possible. All  *.vapor.cloud  domains automatically have a certificate. If you use your own domain, we provide a free and easy system to attach a certificate to your domain, with only one command you are running with HTTPS on your domain.  Our servers are configured for highest security when it comes to SSL/TLS.  Enabled SSL/TLS versions  We have enabled the following versions:   TLSv1  TLSv1.1  TLSv1.2   The following is disabled, because they are found insecure:   SSLv1  SSLv2  SSLv3   All domains with HTTPS on our servers score an  A+  rating in ssllabs.com test.", 
+            "title": "SSL/TLS"
+        }, 
+        {
+            "location": "/advanced/security/your-responsibilities/#access-to-vapor-cloud", 
+            "text": "Your account on Vapor Cloud, have a lot of access, so always make sure to use a strong password, to ensure your account.", 
+            "title": "Access to Vapor Cloud"
+        }, 
+        {
+            "location": "/advanced/security/vapor-cloud-security/", 
+            "text": "Vapor Cloud security\n\n\nAt Vapor Cloud we strive to provide the best possible security, without making it more difficult for our users to use the system.\n\n\nAccess control\n\n\nEveryone in our Operations team is highly trained, and have many years experience in building secure systems. Everyone with server access have strict encryption on their computers, and can be wiped remotely if the hardware should be stolen.\n\n\nAll access to our systems go through a Bastion host (jump-host) server, through the persons personal account with individual 4096-bit encrypted SSH key. Access also requires a password to keep a 2-factor setup.\n\n\nAll access are logged both locally and remotely, and undergoes regular audits\n\n\nNetwork layer\n\n\nOur network is secured after best practices. We only have very few servers with Internet access, the rest is in a private network with no internet access.\n\n\nBesides this, all our servers have strong firewall, with a minimal allowed ports on each server. This helps secure no external access to systems with sensitive data (Database, Cache, Web servers etc.)\n\n\nAudits\n\n\nAll our systems is logging both internally and externally, and everything is audited regularly, to catch potential inconsistencies, these are investigated by our highly trained team.\n\n\nBackup\n\n\nWe perform regular backups of all our systems, both internally and externally, we perform backups of the entire servers, and custom backup e.g. Each applications databases individually. These backups can be provided upon request.\n\n\nAWS Certified\n\n\nOur team is highly trained in using AWS in a secure way. All our Operations team are AWS certified, and regularly tested in using and securing AWS systems. Our team have been setting up production work loads on AWS for many years, and know the system inside and out.", 
+            "title": "Vapor Cloud security"
+        }, 
+        {
+            "location": "/advanced/security/vapor-cloud-security/#vapor-cloud-security", 
+            "text": "At Vapor Cloud we strive to provide the best possible security, without making it more difficult for our users to use the system.", 
+            "title": "Vapor Cloud security"
+        }, 
+        {
+            "location": "/advanced/security/vapor-cloud-security/#access-control", 
+            "text": "Everyone in our Operations team is highly trained, and have many years experience in building secure systems. Everyone with server access have strict encryption on their computers, and can be wiped remotely if the hardware should be stolen.  All access to our systems go through a Bastion host (jump-host) server, through the persons personal account with individual 4096-bit encrypted SSH key. Access also requires a password to keep a 2-factor setup.  All access are logged both locally and remotely, and undergoes regular audits", 
+            "title": "Access control"
+        }, 
+        {
+            "location": "/advanced/security/vapor-cloud-security/#network-layer", 
+            "text": "Our network is secured after best practices. We only have very few servers with Internet access, the rest is in a private network with no internet access.  Besides this, all our servers have strong firewall, with a minimal allowed ports on each server. This helps secure no external access to systems with sensitive data (Database, Cache, Web servers etc.)", 
+            "title": "Network layer"
+        }, 
+        {
+            "location": "/advanced/security/vapor-cloud-security/#audits", 
+            "text": "All our systems is logging both internally and externally, and everything is audited regularly, to catch potential inconsistencies, these are investigated by our highly trained team.", 
+            "title": "Audits"
+        }, 
+        {
+            "location": "/advanced/security/vapor-cloud-security/#backup", 
+            "text": "We perform regular backups of all our systems, both internally and externally, we perform backups of the entire servers, and custom backup e.g. Each applications databases individually. These backups can be provided upon request.", 
+            "title": "Backup"
+        }, 
+        {
+            "location": "/advanced/security/vapor-cloud-security/#aws-certified", 
+            "text": "Our team is highly trained in using AWS in a secure way. All our Operations team are AWS certified, and regularly tested in using and securing AWS systems. Our team have been setting up production work loads on AWS for many years, and know the system inside and out.", 
+            "title": "AWS Certified"
+        }, 
+        {
+            "location": "/advanced/limitation/requests/", 
+            "text": "Requests\n\n\nWe always try to adjust our infrastructure to keep up with increase in load automatically.\n\n\nBut if you know you are going to have a large increase in requests above the normal, please give us notice, as we might need to pre-warm our Loadbalancers to match the requests, and make sure our security systems won't mark it as a DDoS attack. Examples can be scheduled events, tv appearance etc.\n\n\nBesides scaling your application through the Toolbox, please give us notice by sending an E-mail to:\n\n\nsupport@vapor.cloud\n\n\nWith at least the following information:\n\n\nSubject:\n Increased requests for: \n[Application slug]\n\n\n\n\nEnvironment\n\n\nDomains (If custom domain) the requests will be directed at\n\n\nDate and time frame for the event\n\n\nExpected requests during the time frame\n\n\nReason for increase\n\n\n\n\nThis will help prevent your application from timeouts during the course of the event.", 
+            "title": "Requests"
+        }, 
+        {
+            "location": "/advanced/limitation/requests/#requests", 
+            "text": "We always try to adjust our infrastructure to keep up with increase in load automatically.  But if you know you are going to have a large increase in requests above the normal, please give us notice, as we might need to pre-warm our Loadbalancers to match the requests, and make sure our security systems won't mark it as a DDoS attack. Examples can be scheduled events, tv appearance etc.  Besides scaling your application through the Toolbox, please give us notice by sending an E-mail to:  support@vapor.cloud  With at least the following information:  Subject:  Increased requests for:  [Application slug]   Environment  Domains (If custom domain) the requests will be directed at  Date and time frame for the event  Expected requests during the time frame  Reason for increase   This will help prevent your application from timeouts during the course of the event.", 
+            "title": "Requests"
+        }, 
+        {
+            "location": "/database/mysql/", 
+            "text": "All our clients are allowed to get a database on our MySQL servers, for a small fee.\n\n\nThis is a cheap way to store your data.\n\n\nVapor integration\n\n\nSet this up in a \nmysql.json\n file in your \nConfig\n directory with the following content\n\n\n{       \n    \nhost\n: \n$DATABASE_HOSTNAME\n,\n    \nuser\n: \n$DATABASE_USER\n,\n    \npassword\n: \n$DATABASE_PASSWORD\n,\n    \ndatabase\n: \n$DATABASE_DB\n,\n    \nencoding\n: \nutf8mb4\n\n}\n\n\n\n\n\nCreate database to your environment\n\n\nToolbox\n\n\nWhen running the deploy command through the toolbox, you will be asked if you want a database.\n\n\nSay yes, and select a server with \n(MySQL)\n. After deployment the database is created.", 
+            "title": "MySQL"
+        }, 
+        {
+            "location": "/database/mysql/#vapor-integration", 
+            "text": "Set this up in a  mysql.json  file in your  Config  directory with the following content  {       \n     host :  $DATABASE_HOSTNAME ,\n     user :  $DATABASE_USER ,\n     password :  $DATABASE_PASSWORD ,\n     database :  $DATABASE_DB ,\n     encoding :  utf8mb4 \n}", 
+            "title": "Vapor integration"
+        }, 
+        {
+            "location": "/database/mysql/#create-database-to-your-environment", 
+            "text": "", 
+            "title": "Create database to your environment"
+        }, 
+        {
+            "location": "/database/mysql/#toolbox", 
+            "text": "When running the deploy command through the toolbox, you will be asked if you want a database.  Say yes, and select a server with  (MySQL) . After deployment the database is created.", 
+            "title": "Toolbox"
+        }, 
+        {
+            "location": "/database/mongodb/", 
+            "text": "All our clients are allowed to get a database on our MongoDB servers, for a small fee.\n\n\nThis is a cheap way to store your data.\n\n\nVapor integration\n\n\nSet this up in a \nmongodb.json\n file in your \nConfig\n directory with the following content\n\n\n{\n    \nserver\n: \n$MONGODB_SERVER\n\n}\n\n\n\n\n\nThis will then automatically be set by our systems.\n\n\nIn your project using \nMongoKitten\n connect to the server with the following in your code:\n\n\nlet config = try Config()\nlet mongoConfig = config[\nmongodb\n, \nserver\n]?.string ?? \ndefault\n\nlet db = try Database(mongoConfig)\n\n\n\n\n\nCreate database to your environment\n\n\nToolbox\n\n\nWhen running the deploy command through the toolbox, you will be asked if you want a database.\n\n\nSay yes, and select a server with \n(MongoDB)\n. After deployment the database is created.", 
+            "title": "MongoDB"
+        }, 
+        {
+            "location": "/database/mongodb/#vapor-integration", 
+            "text": "Set this up in a  mongodb.json  file in your  Config  directory with the following content  {\n     server :  $MONGODB_SERVER \n}  This will then automatically be set by our systems.  In your project using  MongoKitten  connect to the server with the following in your code:  let config = try Config()\nlet mongoConfig = config[ mongodb ,  server ]?.string ??  default \nlet db = try Database(mongoConfig)", 
+            "title": "Vapor integration"
+        }, 
+        {
+            "location": "/database/mongodb/#create-database-to-your-environment", 
+            "text": "", 
+            "title": "Create database to your environment"
+        }, 
+        {
+            "location": "/database/mongodb/#toolbox", 
+            "text": "When running the deploy command through the toolbox, you will be asked if you want a database.  Say yes, and select a server with  (MongoDB) . After deployment the database is created.", 
+            "title": "Toolbox"
+        }, 
+        {
+            "location": "/database/your-own-database-server/", 
+            "text": "Your own database server\n\n\nVapor Cloud provides a cheap way to get started using databases, giving you a database cheap for your project on our shared servers.\n\n\nBut for various reasons, you might want your own database server. We provide this option, but still managed and maintained by the Vapor Cloud team.\n\n\nWhy have your own database server\n\n\nSome good reasons to get your own database server.\n\n\n\n\nYou can have as many projects on it as you want, without being charged extra\n\n\nFull use of the hardware (No shared servers)\n\n\nOption to have external administrator access\n\n\n\n\nExternal access\n\n\nAs default our servers is closed from Internet access. This improves security. But in some use cases, it can be helpful to be able to get access, for example MySQL CLI access, access through application Sequel Pro etc.\n\n\nIt can also be you have an application in another server setup you want to connect to the database.\n\n\nIf you choose to have a database server with external access, you would still have all the automation from Vapor Cloud, setting up databases, auto connect your applications etc.\nBut you also get both administrator account, and accounts for each application, making it easy to connect to the DB server\n\n\n\n\nTip\n\n\nTo improve security, we advice the DB server only is accessible from trusted IP addresses, for example from your office or home. You can give a list of IPs when requesting the DB server. These can always be changed without any sort of downtime.\n\n\n\n\nGet a database server\n\n\nContact us at:\n\n\nsupport@vapor.cloud\n\n\nSubject:\n Request MySQL server \n[Organisation name]\n\n\nWith the following information:\n\n\n\n\nSize (See https://vapor.cloud for sizes possible)\n\n\nServer type (MySQL, PostgreSQL, Aurora or MariaDB)\n\n\nExternal access yes/no\n\n\n[If external access] Whitelist ips (IPs you need access to externally \n0.0.0.0\n for everywhere)\n\n\nStart date (When should it be setup)\n\n\n\n\n\n\nWarning\n\n\nIf you choose access \n0.0.0.0\n this will add possible vulnerability to the server\n\n\n\n\n\n\nTip\n\n\nExternal access and size can always be changed, but would result in downtime on your database server. If you request changes to this, you will be advised on this. We will try to the best of our ability to make changes at a time you think would fit best (Off peak hours).\n\n\n\n\nDatabase server elsewhere\n\n\nIf you want to host your data outside of Vapor Cloud, you can easily to that.\n\n\nJust overwrite the database variables in the configuration with your own.", 
+            "title": "Your own database server"
+        }, 
+        {
+            "location": "/database/your-own-database-server/#your-own-database-server", 
+            "text": "Vapor Cloud provides a cheap way to get started using databases, giving you a database cheap for your project on our shared servers.  But for various reasons, you might want your own database server. We provide this option, but still managed and maintained by the Vapor Cloud team.", 
+            "title": "Your own database server"
+        }, 
+        {
+            "location": "/database/your-own-database-server/#why-have-your-own-database-server", 
+            "text": "Some good reasons to get your own database server.   You can have as many projects on it as you want, without being charged extra  Full use of the hardware (No shared servers)  Option to have external administrator access", 
+            "title": "Why have your own database server"
+        }, 
+        {
+            "location": "/database/your-own-database-server/#external-access", 
+            "text": "As default our servers is closed from Internet access. This improves security. But in some use cases, it can be helpful to be able to get access, for example MySQL CLI access, access through application Sequel Pro etc.  It can also be you have an application in another server setup you want to connect to the database.  If you choose to have a database server with external access, you would still have all the automation from Vapor Cloud, setting up databases, auto connect your applications etc.\nBut you also get both administrator account, and accounts for each application, making it easy to connect to the DB server   Tip  To improve security, we advice the DB server only is accessible from trusted IP addresses, for example from your office or home. You can give a list of IPs when requesting the DB server. These can always be changed without any sort of downtime.", 
+            "title": "External access"
+        }, 
+        {
+            "location": "/database/your-own-database-server/#get-a-database-server", 
+            "text": "Contact us at:  support@vapor.cloud  Subject:  Request MySQL server  [Organisation name]  With the following information:   Size (See https://vapor.cloud for sizes possible)  Server type (MySQL, PostgreSQL, Aurora or MariaDB)  External access yes/no  [If external access] Whitelist ips (IPs you need access to externally  0.0.0.0  for everywhere)  Start date (When should it be setup)    Warning  If you choose access  0.0.0.0  this will add possible vulnerability to the server    Tip  External access and size can always be changed, but would result in downtime on your database server. If you request changes to this, you will be advised on this. We will try to the best of our ability to make changes at a time you think would fit best (Off peak hours).", 
+            "title": "Get a database server"
+        }, 
+        {
+            "location": "/database/your-own-database-server/#database-server-elsewhere", 
+            "text": "If you want to host your data outside of Vapor Cloud, you can easily to that.  Just overwrite the database variables in the configuration with your own.", 
+            "title": "Database server elsewhere"
+        }, 
+        {
+            "location": "/custom-domain/add-domain/", 
+            "text": "Add custom domain\n\n\nAll applications on Vapor Cloud is automatically added with a \napp-name.vapor.cloud\n domain.\nBut often it can help to be able to have your own domain name to your application e.g. \nexample.com\n.\n\n\nTo accomplish this, there are a couple of small steps you need to go through.\n\n\n1 Create domain in Vapor Cloud\n\n\nTo tell our loadbalancers where to direct the traffic, you can create the domain through the toolbox e.g.:\n\n\nvapor cloud create domain\n\n\n\n\n\nAfter this, deploy the application, and the domain is created.\n\n\n2 Create DNS\n\n\nDNS can be a bit different depending on if it's a subdomain or root domain.\n\n\nSubdomain\n a subdomain is e.g. \nwww.example.com\n\n\nroot domain\n a root domain is e.g. \nexample.com\n\n\n2.1 Setup subdomain\n\n\nMake a CNAME record with your DNS provider. Let's say you have \nwww.example.com\n and want to point it to the app on Vapor Cloud called \nmy-app\n\n\nYou should create a CNAME record pointing:\n\nwww.example.com\n to \nmy-app.vapor.cloud\n\n\n\n\nInfo\n\n\nSome DNS providers require a \n.\n after the ending domain e.g. \nmy-app.vapor.cloud.\n check this with your DNS provider.\n\n\n\n\n2.2 Root domain\n\n\nBecause Root domains need to point as an \nA\n record, and this need to be a IP address, the process is a bit different. Since we don't have fixed ip adresses.\n\n\nSome DNS providers support \nALIAS\n record, if your provider don't support this, and you can't move the domain, you would need to setup a redirect to e.g. \nwww.example.com\n.\n\n\nIf you can move your domain, or you need to register a new domain, we suggest using one of the following:\n\n\n\n\ndnsimple.com\n (Personal plan including 5 domains for $5/month)\n\n\n\n\nThese providers do support \nALIAS\n record, and you can simply create an \nALIAS\n record e.g.\n\n\nexample.com\n to \nmy-app.vapor.cloud\n\n\nSSL/TLS for custom domains\n\n\nRead more about \nfree\n SSL/TLS for custom domains Read more about custom domains \nhere", 
+            "title": "Add custom domain"
+        }, 
+        {
+            "location": "/custom-domain/add-domain/#add-custom-domain", 
+            "text": "All applications on Vapor Cloud is automatically added with a  app-name.vapor.cloud  domain.\nBut often it can help to be able to have your own domain name to your application e.g.  example.com .  To accomplish this, there are a couple of small steps you need to go through.", 
+            "title": "Add custom domain"
+        }, 
+        {
+            "location": "/custom-domain/add-domain/#1-create-domain-in-vapor-cloud", 
+            "text": "To tell our loadbalancers where to direct the traffic, you can create the domain through the toolbox e.g.:  vapor cloud create domain  After this, deploy the application, and the domain is created.", 
+            "title": "1 Create domain in Vapor Cloud"
+        }, 
+        {
+            "location": "/custom-domain/add-domain/#2-create-dns", 
+            "text": "DNS can be a bit different depending on if it's a subdomain or root domain.  Subdomain  a subdomain is e.g.  www.example.com  root domain  a root domain is e.g.  example.com", 
+            "title": "2 Create DNS"
+        }, 
+        {
+            "location": "/custom-domain/add-domain/#21-setup-subdomain", 
+            "text": "Make a CNAME record with your DNS provider. Let's say you have  www.example.com  and want to point it to the app on Vapor Cloud called  my-app  You should create a CNAME record pointing: www.example.com  to  my-app.vapor.cloud   Info  Some DNS providers require a  .  after the ending domain e.g.  my-app.vapor.cloud.  check this with your DNS provider.", 
+            "title": "2.1 Setup subdomain"
+        }, 
+        {
+            "location": "/custom-domain/add-domain/#22-root-domain", 
+            "text": "Because Root domains need to point as an  A  record, and this need to be a IP address, the process is a bit different. Since we don't have fixed ip adresses.  Some DNS providers support  ALIAS  record, if your provider don't support this, and you can't move the domain, you would need to setup a redirect to e.g.  www.example.com .  If you can move your domain, or you need to register a new domain, we suggest using one of the following:   dnsimple.com  (Personal plan including 5 domains for $5/month)   These providers do support  ALIAS  record, and you can simply create an  ALIAS  record e.g.  example.com  to  my-app.vapor.cloud", 
+            "title": "2.2 Root domain"
+        }, 
+        {
+            "location": "/custom-domain/add-domain/#ssltls-for-custom-domains", 
+            "text": "Read more about  free  SSL/TLS for custom domains Read more about custom domains  here", 
+            "title": "SSL/TLS for custom domains"
+        }, 
+        {
+            "location": "/custom-domain/certificate-manager/", 
+            "text": "Vapor Cloud Certificate Manager (VCCM)\n\n\nTo secure your app when using your own domain, you can use the Vapor Cloud Certificate Manager to get a \nFREE\n SSL/TLS certificate to your app.\n\n\nThis type of certificate is managed by Vapor Cloud, so you never think about renewing it, or do anything, we handle everything for you.\n\n\nThe VCCM uses Let's Encrypt to supply free certificates. This service uses SNI (Server name indication), an extension of TLS. You can read more about SNI, and support for it \nhere\n\n\n\n\nInfo\n\n\nYou need to get your application up and running on Vapor Cloud, before you can use the VCCM, you need to have it running on Vapor Cloud.\nThe reason for this, is we use this to verify ownership of the domain.\n\n\n\n\n\n\nInfo\n\n\nVCCM unfortunately don't support wildcard certificates, so you will need to create a certificate for each domain e.g.:\n\n\ntest1.example.com\n\n\ntest2.example.com\n\n\n\n\nStep 1 - Attach domain to application\n\n\nvapor cloud create domain\n\n\n\n\n\nRead more about custom domains \nhere\n\n\n\n\nInfo\n\n\nAt the moment, after adding the domain, you need to redeploy your application, for our systems to recognize it.\n\n\n\n\nStep 2 - Add DNS record\n\n\nYou need to point your domain to your Vapor Cloud application. To do this, go to the DNS management for your domain.\n\n\nCreate a \nCNAME\n record. Your domain need to point to \n.vapor.cloud\n\n\nExample:\n\n\nI want \nwww.example.com\n to point to my application \nmy-example\n on production\n\n\nAnd \nstaging.example.com\n to point to my application \nmy-example\n on staging\n\n\nwww.example.com CNAME my-example.vapor.cloud\n\n\nstaging.example.com CNAME my-example-staging.vapor.cloud\n\n\nStep 3 - Setup certificate\n\n\nWe will now setup certificates for the domains we setup in previous step. Go to your terminal, and run the following commands:\n\n\nvapor cloud create tls\n\n\n\n\n\n\n\nInfo\n\n\nUse \nvapor cloud create tls --force\n if you wan't it to force https with a 301 redirect", 
+            "title": "Certificate manager"
+        }, 
+        {
+            "location": "/custom-domain/certificate-manager/#vapor-cloud-certificate-manager-vccm", 
+            "text": "To secure your app when using your own domain, you can use the Vapor Cloud Certificate Manager to get a  FREE  SSL/TLS certificate to your app.  This type of certificate is managed by Vapor Cloud, so you never think about renewing it, or do anything, we handle everything for you.  The VCCM uses Let's Encrypt to supply free certificates. This service uses SNI (Server name indication), an extension of TLS. You can read more about SNI, and support for it  here   Info  You need to get your application up and running on Vapor Cloud, before you can use the VCCM, you need to have it running on Vapor Cloud.\nThe reason for this, is we use this to verify ownership of the domain.    Info  VCCM unfortunately don't support wildcard certificates, so you will need to create a certificate for each domain e.g.:  test1.example.com  test2.example.com", 
+            "title": "Vapor Cloud Certificate Manager (VCCM)"
+        }, 
+        {
+            "location": "/custom-domain/certificate-manager/#step-1-attach-domain-to-application", 
+            "text": "vapor cloud create domain  Read more about custom domains  here   Info  At the moment, after adding the domain, you need to redeploy your application, for our systems to recognize it.", 
+            "title": "Step 1 - Attach domain to application"
+        }, 
+        {
+            "location": "/custom-domain/certificate-manager/#step-2-add-dns-record", 
+            "text": "You need to point your domain to your Vapor Cloud application. To do this, go to the DNS management for your domain.  Create a  CNAME  record. Your domain need to point to  .vapor.cloud  Example:  I want  www.example.com  to point to my application  my-example  on production  And  staging.example.com  to point to my application  my-example  on staging  www.example.com CNAME my-example.vapor.cloud  staging.example.com CNAME my-example-staging.vapor.cloud", 
+            "title": "Step 2 - Add DNS record"
+        }, 
+        {
+            "location": "/custom-domain/certificate-manager/#step-3-setup-certificate", 
+            "text": "We will now setup certificates for the domains we setup in previous step. Go to your terminal, and run the following commands:  vapor cloud create tls   Info  Use  vapor cloud create tls --force  if you wan't it to force https with a 301 redirect", 
+            "title": "Step 3 - Setup certificate"
+        }, 
+        {
+            "location": "/storage/store-files-on-s3/", 
+            "text": "Store files on S3\n\n\nOur replicas does not support persistent storage of files. So if you save a file in side the replica, it will eventually be purged.\nfiles are furthermore not shared between replicas.\n\n\nBut in some cases, persistent storage are needed. For this, you can save the files on S3. All applications have access to save files in a folder\non our system.\n\n\nEach applications files can only be modified/deleted/added by that particular application.\n\n\nTo store files on S3, you need the following details: \nBucket\n, \nAccess key\n, \nregion\n and \nSecret key\n.\n\n\nThese can be accessed as environment variables in a JSON file like this:\n\n\n{\n  \nbucket\n: \n$AWS_S3_BUCKET\n,\n  \naccessKey\n: \n$AWS_ACCESS_KEY\n,\n  \nsecretKey\n: \n$AWS_SECRET_KEY\n,\n  \nregion\n: \neu-west-1\n,\n}\n\n\n\n\n\nFor now region is always \neu-west-1\n\n\nWhen you upload the files, you should always start with adding your application slug e.g.:\n\n\nmy-cool-app/my-folder/my-file.txt\n\n\nIf you don't prefix with your application slug, it will get a permission denied.", 
+            "title": "Store files on S3"
+        }, 
+        {
+            "location": "/storage/store-files-on-s3/#store-files-on-s3", 
+            "text": "Our replicas does not support persistent storage of files. So if you save a file in side the replica, it will eventually be purged.\nfiles are furthermore not shared between replicas.  But in some cases, persistent storage are needed. For this, you can save the files on S3. All applications have access to save files in a folder\non our system.  Each applications files can only be modified/deleted/added by that particular application.  To store files on S3, you need the following details:  Bucket ,  Access key ,  region  and  Secret key .  These can be accessed as environment variables in a JSON file like this:  {\n   bucket :  $AWS_S3_BUCKET ,\n   accessKey :  $AWS_ACCESS_KEY ,\n   secretKey :  $AWS_SECRET_KEY ,\n   region :  eu-west-1 ,\n}  For now region is always  eu-west-1  When you upload the files, you should always start with adding your application slug e.g.:  my-cool-app/my-folder/my-file.txt  If you don't prefix with your application slug, it will get a permission denied.", 
+            "title": "Store files on S3"
+        }, 
+        {
+            "location": "/storage/accessing-files-through-cdn/", 
+            "text": "Accessing files through CDN\n\n\nVapor Cloud provides users with a easy to use CDN to access files stored on S3.\n\n\nThere are multiple ways to expose the files depending on the type.\n\n\nImages\n\n\nOur CDN support multiple image types. When uploading a file as an Image, it gives the option to to real-time resizing of files.\n\n\nTo make sure this is stable, you need to upload your files to a folder called \nimages\n on S3.\n\n\nSo e.g.:\n\n\nmy-app/images/my-folder/my-sub-folder/my-image.png\n\n\nI will then be able to access the file in the browser:\n\n\nhttps://cdn.vapor.cloud/my-app/images/my-folder/my-sub-folder/my-image.png\n\n\nTo resize or crop the image, i can do:\n\n\n# Resize to 50px width\nhttps://cdn.vapor.cloud/my-app/images/my-folder/my-sub-folder/my-image.png?w=50\n\n# Resize to 50px height\nhttps://cdn.vapor.cloud/my-app/images/my-folder/my-sub-folder/my-image.png?h=50\n\n# Crop to 50x50px\nhttps://cdn.vapor.cloud/my-app/images/my-folder/my-sub-folder/my-image.png?w=50\nh=50\ntype=crop\n\n\n\n\n\nOther files \n Large files\n\n\nTo access other file types (PDF, docx etc.) you can use \ncdn-raw.vapor.cloud\n raw means it will access S3 directly, and by then not have problems with larger files.", 
+            "title": "Accessing files through CDN"
+        }, 
+        {
+            "location": "/storage/accessing-files-through-cdn/#accessing-files-through-cdn", 
+            "text": "Vapor Cloud provides users with a easy to use CDN to access files stored on S3.  There are multiple ways to expose the files depending on the type.", 
+            "title": "Accessing files through CDN"
+        }, 
+        {
+            "location": "/storage/accessing-files-through-cdn/#images", 
+            "text": "Our CDN support multiple image types. When uploading a file as an Image, it gives the option to to real-time resizing of files.  To make sure this is stable, you need to upload your files to a folder called  images  on S3.  So e.g.:  my-app/images/my-folder/my-sub-folder/my-image.png  I will then be able to access the file in the browser:  https://cdn.vapor.cloud/my-app/images/my-folder/my-sub-folder/my-image.png  To resize or crop the image, i can do:  # Resize to 50px width\nhttps://cdn.vapor.cloud/my-app/images/my-folder/my-sub-folder/my-image.png?w=50\n\n# Resize to 50px height\nhttps://cdn.vapor.cloud/my-app/images/my-folder/my-sub-folder/my-image.png?h=50\n\n# Crop to 50x50px\nhttps://cdn.vapor.cloud/my-app/images/my-folder/my-sub-folder/my-image.png?w=50 h=50 type=crop", 
+            "title": "Images"
+        }, 
+        {
+            "location": "/storage/accessing-files-through-cdn/#other-files-large-files", 
+            "text": "To access other file types (PDF, docx etc.) you can use  cdn-raw.vapor.cloud  raw means it will access S3 directly, and by then not have problems with larger files.", 
+            "title": "Other files &amp; Large files"
+        }, 
+        {
+            "location": "/troubleshooting/troubleshooting/", 
+            "text": "Troubleshooting\n\n\nSometimes problems can occur in your application. Here is some pages with the often reported problems.\n\n\nGet log details\n\n\nIt can often help to look at the application logs. To do this, the toolbox allows you to tail the log files live.\n\n\nUse:\n\n\nvapor cloud logs\n\n\n\n\n\nThis will only show logs for the last \n5 minutes\n, to avoid clutter in the terminal. To get a larger timeframe, use the \n--since\n option.\n\n\n# For 20 minutes\nvapor cloud logs --since=20m\n\n# For 2 hours\nvapor cloud logs --since=2h\n\n\n\n\n\nGet support\n\n\nYou can always contact our support team at:\n\n\nsupport@vapor.cloud\n\n\nMake sure to inform us of the \nApplication slug\n and \nEnvironment\n to get faster support", 
+            "title": "Troubleshooting"
+        }, 
+        {
+            "location": "/troubleshooting/troubleshooting/#troubleshooting", 
+            "text": "Sometimes problems can occur in your application. Here is some pages with the often reported problems.", 
+            "title": "Troubleshooting"
+        }, 
+        {
+            "location": "/troubleshooting/troubleshooting/#get-log-details", 
+            "text": "It can often help to look at the application logs. To do this, the toolbox allows you to tail the log files live.  Use:  vapor cloud logs  This will only show logs for the last  5 minutes , to avoid clutter in the terminal. To get a larger timeframe, use the  --since  option.  # For 20 minutes\nvapor cloud logs --since=20m\n\n# For 2 hours\nvapor cloud logs --since=2h", 
+            "title": "Get log details"
+        }, 
+        {
+            "location": "/troubleshooting/troubleshooting/#get-support", 
+            "text": "You can always contact our support team at:  support@vapor.cloud  Make sure to inform us of the  Application slug  and  Environment  to get faster support", 
+            "title": "Get support"
+        }, 
+        {
+            "location": "/troubleshooting/redis/", 
+            "text": "Troubleshooting Redis\n\n\nCan't connect to Redis\n\n\nIf your application can't connect to Redis, is often caused by one of to reasons.\n\n\n1 Redis DB is not created\n\n\nMake sure you have created a Redis database for the application on the environment.\n\n\n1: Go to https://dashboard.vapor.cloud and find your application.\n\n\n2: Choose Hosting service\n\n\n3: Select the environment e.g. \nproduction\n\n\n4: Add the bottom of the page, click \nAdd cache\n and create Redis DB\n\n\n5: Redeploy your project\n\n\n2 Redis is not setup in the project\n\n\n1: Add Redis package to your \nPackage.swift\n file:\n\n\n.Package\n(\nurl\n:\n \nhttps://github.com/vapor/redis-provider.git\n,\n \nmajorVersion\n:\n \n1\n)\n\n\n\n\n\n\n2: Make sure you have a \nredis.json\n file in your application\n\n\n3: with the following content:\n\n\n{\n    \naddress\n: \n$REDIS_HOSTNAME\n,\n    \nport\n: \n6379\n,\n    \ndatabase\n: \n$REDIS_DATABASE\n\n}", 
+            "title": "Redis"
+        }, 
+        {
+            "location": "/troubleshooting/redis/#troubleshooting-redis", 
+            "text": "", 
+            "title": "Troubleshooting Redis"
+        }, 
+        {
+            "location": "/troubleshooting/redis/#cant-connect-to-redis", 
+            "text": "If your application can't connect to Redis, is often caused by one of to reasons.", 
+            "title": "Can't connect to Redis"
+        }, 
+        {
+            "location": "/troubleshooting/redis/#1-redis-db-is-not-created", 
+            "text": "Make sure you have created a Redis database for the application on the environment.  1: Go to https://dashboard.vapor.cloud and find your application.  2: Choose Hosting service  3: Select the environment e.g.  production  4: Add the bottom of the page, click  Add cache  and create Redis DB  5: Redeploy your project", 
+            "title": "1 Redis DB is not created"
+        }, 
+        {
+            "location": "/troubleshooting/redis/#2-redis-is-not-setup-in-the-project", 
+            "text": "1: Add Redis package to your  Package.swift  file:  .Package ( url :   https://github.com/vapor/redis-provider.git ,   majorVersion :   1 )   2: Make sure you have a  redis.json  file in your application  3: with the following content:  {\n     address :  $REDIS_HOSTNAME ,\n     port :  6379 ,\n     database :  $REDIS_DATABASE \n}", 
+            "title": "2 Redis is not setup in the project"
+        }, 
+        {
+            "location": "/troubleshooting/mysql/", 
+            "text": "Troubleshooting MySQL\n\n\nCan't connect to MySQL\n\n\nIf your application can't connect to MySQL, is often caused by one of to reasons.\n\n\n1 MySQL DB is not created\n\n\nMake sure you have created a MySQL database for the application on the environment.\n\n\n1: Go to https://dashboard.vapor.cloud and find your application.\n\n\n2: Choose Hosting service\n\n\n3: Select the environment e.g. \nproduction\n\n\n4: Add the bottom of the page, click \nAdd database\n and create MySQL DB\n\n\n5: Redeploy your project\n\n\n2 MySQL is not setup in the project\n\n\n1: Add MySQL package to your \nPackage.swift\n file:\n\n\n.Package\n(\nurl\n:\n \nhttps://github.com/vapor/mysql-provider.git\n,\n \nmajorVersion\n:\n \n1\n)\n\n\n\n\n\n\n2: Make sure you have a \nmysql.json\n file in your application\n\n\n3: with the following content:\n\n\n{       \n    \nhost\n: \n$DATABASE_HOSTNAME\n,\n    \nuser\n: \n$DATABASE_USER\n,\n    \npassword\n: \n$DATABASE_PASSWORD\n,\n    \ndatabase\n: \n$DATABASE_DB\n,\n    \nencoding\n: \nutf8mb4\n\n}\n\n\n\n\n\nRoot/External access to MySQL\n\n\nWhen using our \nclients\n databases, it's not possible to get external/administrator access to the database.\n\n\nBut it is possible to get your own MySQL server, with external/administrator access.\n\n\nFor now to get this, please contact us at:\n\n\nsupport@vapor.cloud\n\n\nSubject:\n Request MySQL server \n[Application slug]\n\n\nWith the following information:\n\n\n\n\nSize (See https://vapor.cloud for sizes possible)\n\n\nWhitelist ips (Ips you need access to externally \n0.0.0.0\n for everywhere)\n\n\nStart date (When should it be setup)\n\n\n\n\n\n\nWarning\n\n\nIf you choose access \n0.0.0.0\n this will add possible vulnerability to the server", 
+            "title": "MySQL"
+        }, 
+        {
+            "location": "/troubleshooting/mysql/#troubleshooting-mysql", 
+            "text": "", 
+            "title": "Troubleshooting MySQL"
+        }, 
+        {
+            "location": "/troubleshooting/mysql/#cant-connect-to-mysql", 
+            "text": "If your application can't connect to MySQL, is often caused by one of to reasons.", 
+            "title": "Can't connect to MySQL"
+        }, 
+        {
+            "location": "/troubleshooting/mysql/#1-mysql-db-is-not-created", 
+            "text": "Make sure you have created a MySQL database for the application on the environment.  1: Go to https://dashboard.vapor.cloud and find your application.  2: Choose Hosting service  3: Select the environment e.g.  production  4: Add the bottom of the page, click  Add database  and create MySQL DB  5: Redeploy your project", 
+            "title": "1 MySQL DB is not created"
+        }, 
+        {
+            "location": "/troubleshooting/mysql/#2-mysql-is-not-setup-in-the-project", 
+            "text": "1: Add MySQL package to your  Package.swift  file:  .Package ( url :   https://github.com/vapor/mysql-provider.git ,   majorVersion :   1 )   2: Make sure you have a  mysql.json  file in your application  3: with the following content:  {       \n     host :  $DATABASE_HOSTNAME ,\n     user :  $DATABASE_USER ,\n     password :  $DATABASE_PASSWORD ,\n     database :  $DATABASE_DB ,\n     encoding :  utf8mb4 \n}", 
+            "title": "2 MySQL is not setup in the project"
+        }, 
+        {
+            "location": "/troubleshooting/mysql/#rootexternal-access-to-mysql", 
+            "text": "When using our  clients  databases, it's not possible to get external/administrator access to the database.  But it is possible to get your own MySQL server, with external/administrator access.  For now to get this, please contact us at:  support@vapor.cloud  Subject:  Request MySQL server  [Application slug]  With the following information:   Size (See https://vapor.cloud for sizes possible)  Whitelist ips (Ips you need access to externally  0.0.0.0  for everywhere)  Start date (When should it be setup)    Warning  If you choose access  0.0.0.0  this will add possible vulnerability to the server", 
+            "title": "Root/External access to MySQL"
+        }, 
+        {
+            "location": "/support/contact-support/", 
+            "text": "Contact support\n\n\nThere are various methods to contact our support.\n\n\nChat\n\n\nThrough our dashboard, you are able to contact our Support through the chat in the bottom corner.\n\n\nThis will connect you to one of our technicians, who will be able to help you.\n\n\nEmail support\n\n\nYou can contact our support team on Email.\n\n\nContact form:\n \nhere\n\n\nEmail:\n support@vapor.cloud\n\n\n\n\nInfo\n\n\nFor faster support, remember to give as much information as possible in the Email. Including repoName, environment, and any additional information you can give.\n\n\n\n\nWe strive to answer all requests within 24 hours\n\n\nSlack community\n\n\nTo get in touch with the community, you can join our Slack on \nhttp://vapor.team\n\n\nVapor Cloud is primarily the following channels:\n\n\n\n\n#cloud-help\n | Get help from the Team or community\n\n\n#announcements\n | Latest Vapor/Vapor Cloud announcements\n\n\n\n\nNever post sensitive information in Slack, since channels are public. Remember to give as much information as possible.", 
+            "title": "Contact support"
+        }, 
+        {
+            "location": "/support/contact-support/#contact-support", 
+            "text": "There are various methods to contact our support.", 
+            "title": "Contact support"
+        }, 
+        {
+            "location": "/support/contact-support/#chat", 
+            "text": "Through our dashboard, you are able to contact our Support through the chat in the bottom corner.  This will connect you to one of our technicians, who will be able to help you.", 
+            "title": "Chat"
+        }, 
+        {
+            "location": "/support/contact-support/#email-support", 
+            "text": "You can contact our support team on Email.  Contact form:   here  Email:  support@vapor.cloud   Info  For faster support, remember to give as much information as possible in the Email. Including repoName, environment, and any additional information you can give.   We strive to answer all requests within 24 hours", 
+            "title": "Email support"
+        }, 
+        {
+            "location": "/support/contact-support/#slack-community", 
+            "text": "To get in touch with the community, you can join our Slack on  http://vapor.team  Vapor Cloud is primarily the following channels:   #cloud-help  | Get help from the Team or community  #announcements  | Latest Vapor/Vapor Cloud announcements   Never post sensitive information in Slack, since channels are public. Remember to give as much information as possible.", 
+            "title": "Slack community"
+        }, 
+        {
+            "location": "/FAQ/", 
+            "text": "Can i store images inside my replicas?\n\n\nI really need feature X, how do i contact you?\n\n\nDo you have a roadmap, so i know what features are planned?\n\n\nThe system is in beta, does that mean my app is unstable?\n\n\nI want to start larger replicas than free during the beta, can i do that?\n\n\nIs my data secure on Vapor Cloud?\n\n\nOn the free plan, can i still see requests and memory usage\n\n\n\n\n\n\nCan i store images inside my replicas?\n\n\nYou can, but we don't recommend it, since data in the replicas might be wiped. For persistent file storage, please use S3, you can use S3/CDN through Vapor Cloud, look \nhere\n\n\nI really need feature X, how do i contact you?\n\n\nIf you have an idea for a feature, we would love to hear about it. Please add it \nhere\n this would allow other users to see, comment and vote for your idea.\n\n\nDo you have a roadmap, so i know what features are planned?\n\n\nYes we have. You can find our public roadmap \nhere\n\n\nThe system is in beta, does that mean my app is unstable?\n\n\nNo, the system have been in beta for a while, and we currently handle \n 4,500,000 requests/day, but problems can occur, just like they can do in production systems. But you shouldn't be nervous about hosting your production sites in our beta.\n\n\nI want to start larger replicas than free during the beta, can i do that?\n\n\nOur beta users are limited to using our free plan. If you want to host your production systems on Vapor Cloud, please contact us on support@vapor.cloud and we will figure something out.\n\n\nIs my data secure on Vapor Cloud?\n\n\nSecurity is one of our absolute highest priorities. All data is hosted on AWS (Amazon Web Services), besides that, everything we have build on top, have been build with a security first principle. You can read more about security \nhere\n\n\nOn the free plan, can i still see requests and memory usage\n\n\nYes, all our replicas support resource and request monitoring. We think it's important for people to be able to monitor and optimize their apps, even when using our free plans.", 
+            "title": "FAQ"
+        }, 
+        {
+            "location": "/FAQ/#can-i-store-images-inside-my-replicas", 
+            "text": "You can, but we don't recommend it, since data in the replicas might be wiped. For persistent file storage, please use S3, you can use S3/CDN through Vapor Cloud, look  here", 
+            "title": "Can i store images inside my replicas?"
+        }, 
+        {
+            "location": "/FAQ/#i-really-need-feature-x-how-do-i-contact-you", 
+            "text": "If you have an idea for a feature, we would love to hear about it. Please add it  here  this would allow other users to see, comment and vote for your idea.", 
+            "title": "I really need feature X, how do i contact you?"
+        }, 
+        {
+            "location": "/FAQ/#do-you-have-a-roadmap-so-i-know-what-features-are-planned", 
+            "text": "Yes we have. You can find our public roadmap  here", 
+            "title": "Do you have a roadmap, so i know what features are planned?"
+        }, 
+        {
+            "location": "/FAQ/#the-system-is-in-beta-does-that-mean-my-app-is-unstable", 
+            "text": "No, the system have been in beta for a while, and we currently handle   4,500,000 requests/day, but problems can occur, just like they can do in production systems. But you shouldn't be nervous about hosting your production sites in our beta.", 
+            "title": "The system is in beta, does that mean my app is unstable?"
+        }, 
+        {
+            "location": "/FAQ/#i-want-to-start-larger-replicas-than-free-during-the-beta-can-i-do-that", 
+            "text": "Our beta users are limited to using our free plan. If you want to host your production systems on Vapor Cloud, please contact us on support@vapor.cloud and we will figure something out.", 
+            "title": "I want to start larger replicas than free during the beta, can i do that?"
+        }, 
+        {
+            "location": "/FAQ/#is-my-data-secure-on-vapor-cloud", 
+            "text": "Security is one of our absolute highest priorities. All data is hosted on AWS (Amazon Web Services), besides that, everything we have build on top, have been build with a security first principle. You can read more about security  here", 
+            "title": "Is my data secure on Vapor Cloud?"
+        }, 
+        {
+            "location": "/FAQ/#on-the-free-plan-can-i-still-see-requests-and-memory-usage", 
+            "text": "Yes, all our replicas support resource and request monitoring. We think it's important for people to be able to monitor and optimize their apps, even when using our free plans.", 
+            "title": "On the free plan, can i still see requests and memory usage"
+        }
+    ]
+}
