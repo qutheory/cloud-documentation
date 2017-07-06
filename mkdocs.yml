@@ -61,6 +61,7 @@ pages:
 - Database:
   - 'MySQL': 'database/mysql.md'
   - 'MongoDB': 'database/mongodb.md'
+  - 'PostgreSQL': 'database/postgresql.md'
   - 'Your own database server': 'database/your-own-database-server.md'
 - Domain:
     - 'Add custom domain': "custom-domain/add-domain.md"
