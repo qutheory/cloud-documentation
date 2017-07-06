@@ -29,6 +29,7 @@ extra_css:
 pages:
 - Overview: 'index.md'
 - Quick Start: 'quick-start.md'
+- Beta: 'beta.md'
 - Architecture:
     - 'Core principles': 'architecture/core-principles.md'
 - Toolbox:
