@@ -8,7 +8,7 @@ Set this up in a `mysql.json` file in your `Config` directory with the following
 
 ```
 {       
-    "host": "$DATABASE_HOSTNAME",
+    "hostname": "$DATABASE_HOSTNAME",
     "user": "$DATABASE_USER",
     "password": "$DATABASE_PASSWORD",
     "database": "$DATABASE_DB",
