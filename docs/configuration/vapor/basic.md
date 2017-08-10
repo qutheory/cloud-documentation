@@ -40,6 +40,8 @@ swift_version: "3.1.0"
 docker_template: "vapor-3.1.0-http2"
 ```
 
+At this point, this might cause slight delay in deployment time.
+
 ## Unit tests
 
 You can choose to run unit tests during deployments. Set it up like
