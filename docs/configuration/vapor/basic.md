@@ -28,6 +28,18 @@ Currently supported versions:
 
 - 3.1.0
 
+## Adding cURL HTTP/2 Support
+
+Currently cURL with HTTP/2 is in beta support, so it's optional to add. This will be default at a later point.
+
+To add this, add the following to your .yml file:
+
+```
+type: "vapor"
+swift_version: "3.1.0"
+docker_template: "vapor-3.1.0-http2"
+```
+
 ## Unit tests
 
 You can choose to run unit tests during deployments. Set it up like
