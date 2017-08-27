@@ -1,5 +1,5 @@
 site_name: 'Vapor Cloud Docs'
-site_url: 'documentation-staging.vapor.cloud'
+site_url: 'https://documentation-staging.vapor.cloud'
 copyright: 'Copyright &copy; 2017 Qutheory, LLC'
 markdown_extensions:
       - admonition
