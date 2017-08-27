@@ -22,6 +22,7 @@ extra:
       font:
         text: 'Roboto Slab'
         code: 'Source Code Pro'
+      disqus: 'staging-vapor-cloud-docs'
 
 extra_css:
   - 'stylesheets/extra.css'
