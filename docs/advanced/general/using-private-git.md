@@ -20,7 +20,7 @@ Link to profile: https://github.com/vapor-cloud-api
 ## Add your SSH Key to Vapor Cloud
 
 !!! info
-    This will not be online before September 17 23:45 UTC. You can already now send your key in, and it will be onlien when we roll the system out.
+    This will not be online before September 17 23:45 UTC. You can already now send your key in, and it will be online when we roll the system out.
 
 !!! info
     SSH Keys will be linked to the organization, so they are automatically available to all users and projects under your organization.
