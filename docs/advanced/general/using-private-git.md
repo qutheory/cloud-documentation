@@ -2,11 +2,12 @@
 
 Using a private GIT repository is quite simple. Depending on if you are using GitHub or another git provider.
 
-## GitHub
-
 There are 2 ways you can grant access to a private repository on Github
 
-### Invite our Cloud API user
+## Invite our GitHub Cloud API user
+
+!!! info
+    This is only temporary. And only works for GitHub
 
 You can invite our API User to your repository/organisation, details below:
 
@@ -16,18 +17,34 @@ E-mail: github@vapor.codes
 
 Link to profile: https://github.com/vapor-cloud-api
 
-### Use SSH Key
+## Add your SSH Key to Vapor Cloud
 
-You can use the same SSH Key as in 'Another git provider'. This can be setup on either your own user or a user you create yourself.
+!!! info
+    This will not be online before September 17 23:45 UTC. You can already now send your key in, and it will be online when we roll the system out.
 
-## Another git provider (Gitlab, Bitbucket or self hosted)
+!!! info
+    SSH Keys will be linked to the organization, so they are automatically available to all users and projects under your organization.
 
-If you are using another provider than GitHub, this could be Gitlab, Bitbucket or a self hosted git server. You will need to create a user and give this user READ access to your repository.
+!!! warning
+    You need to send us your private key. We will always suggest you create a new key, specific for Vapor Cloud. You can see how to create a new SSH key here: [here](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)
 
-On the user, add the public key below. This will allow our deployment servers to make a git clone of your projects. And you will maintain control over what projects we are allowed to use.
+### Add your SSH Key.
 
-```
-ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCmDZvHHooUhlHuldTW5YVBy8QrUreyJJi6tT3H7st05Pl2VO8Xnj/2FGYct6nYo+N7jAN3AfFzWbVktcO9H/J2GdbOSWbCLKrDezftKsTmmznWT/hX7vVgVY1Rg4ExJYpXg+oHJK91ecwrR0a+i0i/Z/mfdkmrkSoZvz8zpapwgAO9YUSfUJBji31WeczXq/XxoaAy8x3ivVCEvUWyfLmt7G+WKp4uMCRQJhbNyo4L9ogoj4uhq8s1nr3ST2dVdh8waOEptjqI3aa2xTN2tamcKp7H2XEd3jZY5GwmmjXJ1T0uAAeOwOsm/wMw3MqvSJrXmz3IKHz8Wt9CTDeovxWzXZVDDLgcxHAnZx9wcZWogBFYWfYyqY5tpWxc2OiY50AFYf9nvOGzW4cP2yavKbXp9pAWlb28AtiL96A2ZSg4rQJbB1YQC0eobhjVZWUCCS+pg1KhVOLFSgK2QQ1OAnOAWYLPRrlbEUsJfNpb7iNRecxSvqCk1covZBr1c4F5Hu9SDvV5NDaiiFFX3oYXl+RpGQR2SoQoj2YxV/C9x6MgRn95RnioxZa58L+r98TJD08SdLMJgJ6LMSq6Lb4BQv0JD1aFlnTVYZLQOcXadIAtc027OuGeUPbFROld8Kl2HMPI3aYykNKjAM8KPba4pBSDX3ahr3JKlrq4pLGZvIL9ew==
-```
+As this system is still in beta, you need to send your key to our support system, and they will manually add it to the system. Be aware, there can be a slight delay in adding the key. You will get a reply once it's added.
 
-The private key is kept safe inside our private network, and is under the same security as all other data in Vapor Cloud.
+We will later create an automatic system to manage the keys.
+
+Send an Email to `support@vapor.cloud`
+
+**Subject:** Add SSH Key: **[Organization name]**
+
+Attach the SSH private key as a file to the Email.
+
+!!! info
+    It's important that the key you send us, is the one you have setup at GitHub, BitBucket, GitLab etc.
+
+### Modify/remove SSH Key
+
+Send us an Email to `support@vapor.cloud`
+
+**Subject:** Modify/remove SSH Key: **[Organization name]**
