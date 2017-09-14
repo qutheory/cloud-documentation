@@ -50,6 +50,7 @@ pages:
         - 'Sending E-mails (SMTP)': 'advanced/general/sending-emails.md'
         - 'Using private git repository': 'advanced/general/using-private-git.md'
         - 'Running load tests': 'advanced/general/load-testing.md'
+        - 'Performing penetration test': 'advanced/general/performing-penetration-test.md'
     - Loadbalancer:
         - 'SSL/TLS': 'advanced/loadbalancer/ssl-tls.md'
     - Security:
