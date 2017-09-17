@@ -34,7 +34,7 @@ You can call your environment what you want.
 For example:
 I have `my-cool-backend` hosted on `my-cool-backend.vapor.cloud`
 
-If i create an environment called `staging` the URL will be:
+If I create an environment called `staging` the URL will be:
 
 `my-cool-backend-staging.vapor.cloud`
 
