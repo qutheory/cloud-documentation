@@ -1,26 +1,6 @@
 # Using private external git repository
 
-Using a private GIT repository is quite simple. Depending on if you are using GitHub or another git provider.
-
-There are 2 ways you can grant access to a private repository on Github
-
-## Invite our GitHub Cloud API user
-
-!!! info
-    This is only temporary. And only works for GitHub
-
-You can invite our API User to your repository/organisation, details below:
-
-Username: vapor-cloud-api
-
-E-mail: github@vapor.codes
-
-Link to profile: https://github.com/vapor-cloud-api
-
 ## Add your SSH Key to Vapor Cloud
-
-!!! info
-    This will not be online before September 17 23:45 UTC. You can already now send your key in, and it will be online when we roll the system out.
 
 !!! info
     SSH Keys will be linked to the organization, so they are automatically available to all users and projects under your organization.
