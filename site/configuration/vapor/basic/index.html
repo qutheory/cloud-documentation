@@ -11,7 +11,7 @@
       
         <link rel="shortcut icon" href="../../../assets/images/favicon.png">
       
-      <meta name="generator" content="mkdocs-0.16.2, mkdocs-material-1.1.1">
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.1.1">
     
     
       
@@ -118,7 +118,7 @@
   
 
 
-  <a href="https://github.com/vapor/vapor" title="Go to repository" class="md-source" data-md-source="github">
+  <a href="https://github.com/vapor-cloud/documentation" title="Go to repository" class="md-source" data-md-source="github">
     
       <div class="md-source__icon">
         <svg viewBox="0 0 24 24" width="24" height="24">
@@ -165,7 +165,7 @@
   
 
 
-  <a href="https://github.com/vapor/vapor" title="Go to repository" class="md-source" data-md-source="github">
+  <a href="https://github.com/vapor-cloud/documentation" title="Go to repository" class="md-source" data-md-source="github">
     
       <div class="md-source__icon">
         <svg viewBox="0 0 24 24" width="24" height="24">
@@ -391,6 +391,13 @@
         <li class="md-nav__item">
   <a href="#swift-version" title="Swift version" class="md-nav__link">
     Swift version
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-curl-http2-support" title="Adding cURL HTTP/2 Support" class="md-nav__link">
+    Adding cURL HTTP/2 Support
   </a>
   
 </li>
@@ -744,6 +751,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../../database/postgresql/" title="PostgreSQL" class="md-nav__link">
+      PostgreSQL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../../database/your-own-database-server/" title="Your own database server" class="md-nav__link">
       Your own database server
     </a>
@@ -987,6 +1006,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#adding-curl-http2-support" title="Adding cURL HTTP/2 Support" class="md-nav__link">
+    Adding cURL HTTP/2 Support
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#unit-tests" title="Unit tests" class="md-nav__link">
     Unit tests
   </a>
@@ -1004,7 +1030,7 @@
           <div class="md-content">
             <article class="md-content__inner md-typeset">
                
-                 <a href="https://github.com/vapor/vapor/edit/master/docs/configuration/vapor/basic.md" title="Edit this page" class="md-icon md-content__edit">edit</a>
+                 <a href="https://github.com/vapor-cloud/documentation/edit/master/docs/configuration/vapor/basic.md" title="Edit this page" class="md-icon md-content__edit">edit</a>
                
               
                 
@@ -1039,6 +1065,16 @@
 <p>3.1.0</p>
 </li>
 </ul>
+<h2 id="adding-curl-http2-support">Adding cURL HTTP/2 Support<a class="headerlink" href="#adding-curl-http2-support" title="Permanent link">&para;</a></h2>
+<p>Currently cURL with HTTP/2 is in beta support, so it's optional to add. This will be default at a later point.</p>
+<p>To add this, add the following to your .yml file:</p>
+<div class="codehilite"><pre><span></span>type: &quot;vapor&quot;
+swift_version: &quot;3.1.0&quot;
+docker_template: &quot;vapor-3.1.0-http2&quot;
+</pre></div>
+
+
+<p>At this point, this might cause slight delay in deployment time.</p>
 <h2 id="unit-tests">Unit tests<a class="headerlink" href="#unit-tests" title="Permanent link">&para;</a></h2>
 <p>You can choose to run unit tests during deployments. Set it up like
 this:</p>
