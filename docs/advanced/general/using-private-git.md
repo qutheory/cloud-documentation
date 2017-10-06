@@ -10,7 +10,7 @@
 
 ### Add your SSH Key.
 
-As this system is still in beta, you need to send your key to our support system, and they will manually add it to the system. Be aware, there can be a slight delay in adding the key. You will get a reply once it's added.
+You need to send your key to our support system, and they will manually add it to the system. Be aware, there can be a slight delay in adding the key. You will get a reply once it's added.
 
 We will later create an automatic system to manage the keys.
 
