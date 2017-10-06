@@ -6,7 +6,9 @@ This tutorial will walk you through deploying your first Vapor app to Vapor Clou
 
 Run `vapor cloud deploy` inside your Vapor project (in the same folder as `Package.swift`) and follow the instructions.
 
-## Signup
+![Vapor Toolbox Deploy](https://user-images.githubusercontent.com/1342803/31300850-14d7d8b0-aac4-11e7-8e42-84d406ffb76b.png)
+
+## Step-by-step Guide
 
 If you haven't already, sign up for a Vapor Cloud account at [https://dashboard.vapor.cloud/signup](https://dashboard.vapor.cloud/signup).
 
