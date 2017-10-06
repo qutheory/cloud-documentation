@@ -117,16 +117,16 @@ You can host your project for free with the `Free` size replicas. This size has 
 Next you will be asked if you'd like to add a database. If your application will need a database, you can do this now.
 Otherwise, ignore the prompt. You can always add a database later using `vapor cloud create db`.
 
-If you do add a database, the environment variables to accesso the database will be exposed to your Vapor application's config.
+If you do add a database, the environment variables to access the database will be exposed to your Vapor application's config.
 
-See https://docs.vapor.cloud/database/mysql/ for more information about accessing these variables.
+See the [MySQL Guide](database/mysql.md) for more information about accessing these variables.
 
 ### Replica Count
 
 For high availability and throughput, Vapor Cloud allows you to deploy your application to multiple replicas. However,
 for Free size replicas you are limited to `0` or `1` replicas. If you set the replica count to `0` your application will be taken offline. If you set it to `1` it will be online.
 
-Set the replica count to `1` so that our application will be online when we deploy.
+The replica count will automatically be set to `1` for a new application. You can use the `--replicas=` flag to change this in future deployments.
 
 ### Build Type
 
@@ -144,8 +144,6 @@ Vapor Cloud runs `swift package update` before running `swift build`. This optio
 
 Vapor Cloud deletes all build metadata (such as the `.build` folder) then runs `swift build` on your application. This option takes a considerably longer amount of time than update or incremental, but can sometimes fix strange build issues.
 
-!!! note
-	These build types will be simplified in SPM 4.0 and this question will likely go away.
 
 ### Deploy!
 

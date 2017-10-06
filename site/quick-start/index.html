@@ -1389,12 +1389,12 @@ Respond <code>yes</code> to the prompt to create hosting, and select the Git URL
 <h3 id="add-database-optional">Add Database (Optional)<a class="headerlink" href="#add-database-optional" title="Permanent link">&para;</a></h3>
 <p>Next you will be asked if you'd like to add a database. If your application will need a database, you can do this now.
 Otherwise, ignore the prompt. You can always add a database later using <code>vapor cloud create db</code>.</p>
-<p>If you do add a database, the environment variables to accesso the database will be exposed to your Vapor application's config.</p>
-<p>See https://docs.vapor.cloud/database/mysql/ for more information about accessing these variables.</p>
+<p>If you do add a database, the environment variables to access the database will be exposed to your Vapor application's config.</p>
+<p>See the <a href="../database/mysql/">MySQL Guide</a> for more information about accessing these variables.</p>
 <h3 id="replica-count">Replica Count<a class="headerlink" href="#replica-count" title="Permanent link">&para;</a></h3>
 <p>For high availability and throughput, Vapor Cloud allows you to deploy your application to multiple replicas. However,
 for Free size replicas you are limited to <code>0</code> or <code>1</code> replicas. If you set the replica count to <code>0</code> your application will be taken offline. If you set it to <code>1</code> it will be online.</p>
-<p>Set the replica count to <code>1</code> so that our application will be online when we deploy.</p>
+<p>The replica count will automatically be set to <code>1</code> for a new application. You can use the <code>--replicas=</code> flag to change this in future deployments.</p>
 <h3 id="build-type">Build Type<a class="headerlink" href="#build-type" title="Permanent link">&para;</a></h3>
 <p>The Swift Package Manger 3.1 allows a few different ways to build your application. </p>
 <h4 id="incremental">Incremental<a class="headerlink" href="#incremental" title="Permanent link">&para;</a></h4>
@@ -1403,10 +1403,6 @@ for Free size replicas you are limited to <code>0</code> or <code>1</code> repli
 <p>Vapor Cloud runs <code>swift package update</code> before running <code>swift build</code>. This option is slightly slower than incremental, but required if you have modified your <code>Package.swift</code> file.</p>
 <h4 id="clean">Clean<a class="headerlink" href="#clean" title="Permanent link">&para;</a></h4>
 <p>Vapor Cloud deletes all build metadata (such as the <code>.build</code> folder) then runs <code>swift build</code> on your application. This option takes a considerably longer amount of time than update or incremental, but can sometimes fix strange build issues.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>These build types will be simplified in SPM 4.0 and this question will likely go away.</p>
-</div>
 <h3 id="deploy">Deploy!<a class="headerlink" href="#deploy" title="Permanent link">&para;</a></h3>
 <p>Verify that the information is correct and deploy your application! 
 Once your app is deployed, you will get a URL to visit in your browser.</p>
