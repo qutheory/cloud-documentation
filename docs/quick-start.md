@@ -10,28 +10,15 @@ Run `vapor cloud deploy` inside your Vapor project (in the same folder as `Packa
 
 ## Step-by-step Guide
 
-If you haven't already, sign up for a Vapor Cloud account at [https://dashboard.vapor.cloud/signup](https://dashboard.vapor.cloud/signup).
+If you haven't already, sign up for a Vapor Cloud account [here](https://dashboard.vapor.cloud/signup).
 
 ## Install Vapor
 
-If you don't already have Vapor installed on your computer, follow the guide at [https://docs.vapor.codes/2.0/getting-started/install-on-macos/](https://docs.vapor.codes/2.0/getting-started/install-on-macos/). Or for Ubuntu: [https://docs.vapor.codes/2.0/getting-started/install-on-ubuntu/](https://docs.vapor.codes/2.0/getting-started/install-on-ubuntu/).
+If you don't already have Vapor installed on your development computer, follow the guides for [macOS](https://docs.vapor.codes/2.0/getting-started/install-on-macos/) or [ubuntu](https://docs.vapor.codes/2.0/getting-started/install-on-ubuntu/).
 
 ## Install Toolbox
 
-Vapor Cloud applications are deployed through the [Vapor Toolbox](https://github.com/vapor/toolbox).
-
-```sh
-brew install vapor
-```
-
-You can also install through APT.
-
-```sh
-sudo apt-get install vapor
-```
-
-!!! note
-	If you have not already configured Vapor's Homebrew or APT sources on your computer, visit [https://docs.vapor.codes/2.0/getting-started/toolbox/](https://docs.vapor.codes/2.0/getting-started/toolbox/).
+Vapor Cloud applications are deployed through the [Vapor Toolbox](https://docs.vapor.codes/2.0/getting-started/toolbox/).
 
 Verify that the toolbox is correctly installed by calling the help command.
 
