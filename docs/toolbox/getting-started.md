@@ -1,7 +1,7 @@
 # Getting Started with the Toolbox
 
-The Vapor Cloud commands are provided in Vapor's [Toolbox](http://beta.docs.vapor.codes/getting-started/toolbox/) CLI.
-You likely already have this installed, but if not, head over to Vapor's [Getting Started](http://beta.docs.vapor.codes/getting-started/toolbox/) docs to install it.
+The Vapor Cloud commands are provided in Vapor's [Toolbox](http://docs.vapor.codes/2.0/getting-started/toolbox/) CLI.
+You likely already have this installed, but if not, head over to Vapor's [Getting Started](http://docs.vapor.codes/2.0/getting-started/toolbox/) docs to install it.
 
 ## Cloud Commands
 
@@ -26,9 +26,6 @@ If you don't have an account, you can signup.
 ```sh
 vapor cloud signup
 ```
-
-!!! warning
-	Signup is currently invite only.
 
 ## Deploy
 

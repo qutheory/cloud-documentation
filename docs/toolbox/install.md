@@ -7,7 +7,7 @@ The toolbox will be available through homebrew at a future date. For now, instal
 First make sure you have installed [Swift](https://docs.vapor.codes/2.0/getting-started/install-on-macos/)
 
 ```
-brew install vapor-beta
+brew install vapor
 ```
 
 ## Linux
@@ -15,7 +15,7 @@ brew install vapor-beta
 First make sure you have installed [Swift](https://docs.vapor.codes/2.0/getting-started/install-on-ubuntu/)
 
 ```
-sudo apt-get install vapor-beta
+sudo apt-get install vapor
 ```
 
 If you get an error, you might need to remove the old toolbox with:

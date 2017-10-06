@@ -2,48 +2,39 @@
 
 This tutorial will walk you through deploying your first Vapor app to Vapor Cloud.
 
-## Signup for Beta
+## TL;DR
 
-If you haven't already, sign up for a beta account at [https://dashboard.vapor.cloud/signup](https://dashboard.vapor.cloud/signup).
+Run `vapor cloud deploy` inside your Vapor project (in the same folder as `Package.swift`) and follow the instructions.
 
-New beta spots are opened on a rolling basis, so be sure to check back regularly if you are unable to signup.
+## Signup
 
-As of this writing, Vapor Cloud is still in very early beta. Use this service for testing only as you will likely encounter some bugs and incomplete features. Please report all bugs in [Vapor's Slack](http://vapor.team) or to bugs@vapor.cloud.
-
-!!! warning
-	During the beta period, you will not be charged for any paid resources you use on Vapor Cloud. 
-	You may notice a negative account balance if you use paid resources, like databases. 
-	You can safely ignore any negative balances. 
+If you haven't already, sign up for a Vapor Cloud account at [https://dashboard.vapor.cloud/signup](https://dashboard.vapor.cloud/signup).
 
 ## Install Vapor
 
 If you don't already have Vapor installed on your computer, follow the guide at [https://docs.vapor.codes/2.0/getting-started/install-on-macos/](https://docs.vapor.codes/2.0/getting-started/install-on-macos/). Or for Ubuntu: [https://docs.vapor.codes/2.0/getting-started/install-on-ubuntu/](https://docs.vapor.codes/2.0/getting-started/install-on-ubuntu/).
 
-## Install Beta Toolbox
+## Install Toolbox
 
 Vapor Cloud applications are deployed through the [Vapor Toolbox](https://github.com/vapor/toolbox).
 
-There is a beta version of the toolbox available that includes the `cloud` commands. You can install this version
-of the toolbox through Homebrew.
-
 ```sh
-brew install vapor-beta
+brew install vapor
 ```
 
 You can also install through APT.
 
 ```sh
-sudo apt-get install vapor-beta
+sudo apt-get install vapor
 ```
 
 !!! note
 	If you have not already configured Vapor's Homebrew or APT sources on your computer, visit [https://docs.vapor.codes/2.0/getting-started/toolbox/](https://docs.vapor.codes/2.0/getting-started/toolbox/).
-	This guide works for the beta version of the toolbox as well.
 
-Verify that the beta toolbox is correctly installed by calling the help command.
+Verify that the toolbox is correctly installed by calling the help command.
 
 ```sh
-vapor-beta cloud --help
+vapor cloud --help
 ```
 
 <img width="682" alt="screen shot 2017-07-05 at 6 17 39 pm" src="https://user-images.githubusercontent.com/1342803/27888580-cd8b44c2-61b4-11e7-93eb-97abe4202895.png">
@@ -53,13 +44,13 @@ vapor-beta cloud --help
 
 If you didn't already create an organization during the signup process, create one now.
 
-You can do this through the toolbox `vapor-beta cloud create org` or through the dashboard.
+You can do this through the toolbox `vapor cloud create org` or through the dashboard.
 
 ![screen shot 2017-07-05 at 6 35 05 pm](https://user-images.githubusercontent.com/1342803/27887817-b56b3e8c-61b0-11e7-8196-8e67398f772c.png)
 
 ## Create a Project
 
-You can do this through the toolbox `vapor-beta cloud create proj` or through the dashboard.
+You can do this through the toolbox `vapor cloud create proj` or through the dashboard.
 
 ![screen shot 2017-07-05 at 6 39 24 pm](https://user-images.githubusercontent.com/1342803/27887943-522b9c58-61b1-11e7-856c-4bdbc68016e5.png)
 
@@ -82,7 +73,7 @@ The toolbox will automatically walk you through this process and the other requi
 Let's get started.
 
 ```sh
-vapor-beta cloud deploy
+vapor cloud deploy
 ```
 
 ### Create Git Remote
@@ -130,7 +121,7 @@ After you have named your environment, choose the branch it will deploy from. Th
 
 #### Replica Size
 
-During the beta account, all environments are limited to `Free` size replicas. This size has a monthly request limit, but is free forever. Select the `Free` size for this environment.
+You can host your project for free with the `Free` size replicas. This size has a monthly request limit, but is free forever. Select the `Free` size for this environment.
 
 ### Add Database (Optional)
 
