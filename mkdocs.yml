@@ -62,6 +62,7 @@ pages:
   - 'MongoDB': 'database/mongodb.md'
   - 'PostgreSQL': 'database/postgresql.md'
   - 'Your own database server': 'database/your-own-database-server.md'
+  - 'Beta': 'database/beta.md'
 - Domain:
     - 'Add custom domain': "custom-domain/add-domain.md"
     - 'Certificate manager': "custom-domain/certificate-manager.md"
