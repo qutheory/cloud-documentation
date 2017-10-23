@@ -62,7 +62,13 @@ pages:
   - 'MongoDB': 'database/mongodb.md'
   - 'PostgreSQL': 'database/postgresql.md'
   - 'Your own database server': 'database/your-own-database-server.md'
-  - 'Beta': 'database/beta.md'
+  - Beta:
+      - 'Database general': 'database/beta/database-general.md'
+      - 'Getting started': 'database/beta/getting-started.md'
+      - 'External access': 'database/beta/external-access.md'
+      - 'Features': 'database/beta/features.md'
+      - 'Backups': 'database/beta/backups.md'
+      - 'Technical information': 'database/beta/technical-information.md'
 - Domain:
     - 'Add custom domain': "custom-domain/add-domain.md"
     - 'Certificate manager': "custom-domain/certificate-manager.md"
