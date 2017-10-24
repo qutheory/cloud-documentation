@@ -7,7 +7,7 @@ Vapor Cloud databases are build to be supported by Vapor Cloud applications. So 
 To connect from your local computer, you can get the connect information with:
 
 ```
-vapor-beta cloud database inspect
+vapor-beta cloud database inspect --token=<ENGINE>_URL
 ```
 
 This will show information for all environments.
@@ -15,7 +15,7 @@ This will show information for all environments.
 If you want to connect through the CLI (mysql, psql or mongo) you can just run:
 
 ```
-vapor-beta cloud database login
+vapor-beta cloud database login --token=<ENGINE>_URL
 ```
 
 this is a shortcut to run the login command on your local computer.
