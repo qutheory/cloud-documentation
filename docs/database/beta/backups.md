@@ -61,7 +61,7 @@ vapor-beta cloud backup-list --token=<ENGINE>_URL
 To download a backup, run
 
 ```
-vapor-beta cloud backup-download --token=<ENGINE>_URL
+vapor-beta cloud backup-download --id=<backup-id>
 ```
 
 This will show a link where to download the backup. The link will only be available for `60 minutes`
