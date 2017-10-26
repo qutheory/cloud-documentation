@@ -1,5 +1,8 @@
 # Backups
 
+!!! warning
+    Backup features are not implemented yet.
+
 Backups are a vital part of data hosting. We basically have 2 ways of managing backups. `Continuous Backups` and `On-demand backups`. There are some core differences explained here.
 
 ## Continuous Backups
@@ -13,13 +16,13 @@ Backups are stored on Amazon S3, distributed to multiple datacenters, to secure 
 If you want to restore a Continuous backup, you can use:
 
 ```
-vapor-beta cloud database --token=<ENGINE>_URL cb-list
+vapor cloud database --token=<TOKEN> cb-list
 ```
 
 To see a list of backups. If you want to restore to a previous backup, just run
 
 ```
-vapor-beta cloud database cb-restore --token=<ENGINE>_URL --id=<backup-id>
+vapor cloud database cb-restore --token=<TOKEN> --id=<backup-id>
 ```
 
 This will spin up a new database server, added as a secondary, so you can test the backup before promoting it to primary.
@@ -37,7 +40,7 @@ You On-demand backups can be downloaded, so it's a good way to for example get t
 To schedule on-demand backup, you need to provide the time. The timezone is always UTC. This example will schedule a backup for my application every night at 3am UTC. It should always be in 24 hour format.
 
 ```
-vapor-beta cloud backup-schedule --token=<ENGINE>_URL --time="02:00"
+vapor cloud backup-schedule --token=<TOKEN> --time="02:00"
 ```
 
 ### Manual on-demand backup
@@ -45,7 +48,7 @@ vapor-beta cloud backup-schedule --token=<ENGINE>_URL --time="02:00"
 To perform a manual backup, simply run
 
 ```
-vapor-beta cloud backup --token=<ENGINE>_URL
+vapor cloud backup --token=<TOKEN>
 ```
 
 ### List manual backups
@@ -53,7 +56,7 @@ vapor-beta cloud backup --token=<ENGINE>_URL
 If you want a list of the backups, you can just run
 
 ```
-vapor-beta cloud backup-list --token=<ENGINE>_URL
+vapor cloud backup-list --token=<TOKEN>
 ```
 
 ### Download a backup
@@ -61,7 +64,7 @@ vapor-beta cloud backup-list --token=<ENGINE>_URL
 To download a backup, run
 
 ```
-vapor-beta cloud backup-download --id=<backup-id>
+vapor cloud backup-download --id=<backup-id>
 ```
 
 This will show a link where to download the backup. The link will only be available for `60 minutes`
