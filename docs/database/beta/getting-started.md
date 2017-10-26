@@ -36,18 +36,4 @@ Most database commands will require this name to be sent, for example:
 vapor-beta cloud database inspect --token=<TOKEN>
 ```
 
-### Multiple databases with same engine
-
-Let's say you want to have 2 database servers both PostgreSQL.
-
-The name you sent, will be added to the secondary database, so if i give it the name `test`
-
-The secondary will have the token `DB_MYSQL_TEST`
-
-You can always promote the secondary database to primary by running
-
-```
-vapor-beta cloud database promote DB_MYSQL_TEST
-```
-
-This will promote our secondary and demote our primary.
+You can easily spin up multiple databases, both of same type, and different type databases.

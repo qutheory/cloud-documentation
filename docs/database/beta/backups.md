@@ -3,11 +3,11 @@
 !!! warning
     Backup features are not implemented yet.
 
-Backups are a vital part of data hosting. We basically have 2 ways of managing backups. `Continuous Backups` and `On-demand backups`. There are some core differences explained here.
+Backups are a vital part of data hosting. We basically have 2 ways of managing backups. **Continuous Backups** and **On-demand backups**. There are some core differences explained here.
 
 ## Continuous Backups
 
-Continuous backups, are backups on the harddrive level. And are running automatically on `Standard` and `Premium` database plans. A snapshot of the harddrive containing the data will be performed **every 4 hours**. Continuous backups are only for restore within Vapor Cloud. Due to the nature of the backup, you can't copy this backup outside of Vapor Cloud.
+Continuous backups, are backups on the hard drive level. And are running automatically on **Standard** and **Premium** database plans. A snapshot of the hard drive containing the data will be performed **every 4 hours**. Continuous backups are only for restore within Vapor Cloud. Due to the nature of the backup, you can't copy this backup outside of Vapor Cloud.
 
 Backups are stored on Amazon S3, distributed to multiple datacenters, to secure for major outages.
 
@@ -40,7 +40,7 @@ You On-demand backups can be downloaded, so it's a good way to for example get t
 To schedule on-demand backup, you need to provide the time. The timezone is always UTC. This example will schedule a backup for my application every night at 3am UTC. It should always be in 24 hour format.
 
 ```
-vapor cloud backup-schedule --token=<TOKEN> --time="02:00"
+vapor cloud database backup-schedule --token=<TOKEN> --time="02:00"
 ```
 
 ### Manual on-demand backup
@@ -48,7 +48,7 @@ vapor cloud backup-schedule --token=<TOKEN> --time="02:00"
 To perform a manual backup, simply run
 
 ```
-vapor cloud backup --token=<TOKEN>
+vapor cloud database backup --token=<TOKEN>
 ```
 
 ### List manual backups
@@ -56,7 +56,7 @@ vapor cloud backup --token=<TOKEN>
 If you want a list of the backups, you can just run
 
 ```
-vapor cloud backup-list --token=<TOKEN>
+vapor cloud database backup-list --token=<TOKEN>
 ```
 
 ### Download a backup
@@ -64,7 +64,7 @@ vapor cloud backup-list --token=<TOKEN>
 To download a backup, run
 
 ```
-vapor cloud backup-download --id=<backup-id>
+vapor cloud database backup-download --id=<backup-id>
 ```
 
 This will show a link where to download the backup. The link will only be available for `60 minutes`
