@@ -4,24 +4,20 @@
 
 As we are still in beta, we are slowly opening access, so ensure we can provide the best quality possible.
 
-To get into the database beta program, send us an Email to:
+To get into the database beta program, sign up for the Beta from the Toolbox:
 
-`support@vapor.cloud`
+```
+vapor cloud database beta
+```
 
-**Subject:** Database beta
-
-With the following information:
-
-- Email added in Vapor Cloud
-- What database engines you want to use
-- Number of database servers you will be starting
+Once you are through the Queue, you will receive an Email.
 
 ## Create your database
 
 To create your new database, you can simply run.
 
 ```
-vapor-beta cloud database create
+vapor cloud database create
 ```
 
 This will create a full database server, and a database for each environment.
@@ -33,7 +29,7 @@ In your project config file, you can simply read it with `$<TOKEN>`.
 Most database commands will require this name to be sent, for example:
 
 ```
-vapor-beta cloud database inspect --token=<TOKEN>
+vapor cloud database inspect --token=<TOKEN>
 ```
 
 You can easily spin up multiple databases, both of same type, and different type databases.
