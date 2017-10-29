@@ -17,7 +17,7 @@ Memory                  | 256 mb    | 256 mb
 Connections             | 20        | 20
 Continuous backup       | No        | No
 Saved on-demand backups | 1         | 2
-Max rows saved          | 10,000    | 5,000,000
+Max rows                | 10,000    | 5,000,000
 Price                   | $0/month  | $9/month
 
 ## Planned plans
