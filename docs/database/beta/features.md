@@ -29,6 +29,14 @@ vapor cloud database logs --token=<TOKEN> --since=20m
 vapor cloud database logs --token=<TOKEN> --since=2h
 ```
 
+## Resize server
+
+You can easily resize your database server on the fly. Meaning, your database server won't restart, or be down during scaling.
+
+```
+vapor cloud database resize --token=<TOKEN>
+```
+
 ## Restart server
 
 If you ever need to restart your database server, you can easily run the restart command:

@@ -64,6 +64,7 @@ pages:
   - 'Your own database server': 'database/your-own-database-server.md'
   - Beta:
       - 'Database general': 'database/beta/database-general.md'
+      - 'Plans': 'database/beta/plans.md'
       - 'Getting started': 'database/beta/getting-started.md'
       - 'External access': 'database/beta/external-access.md'
       - 'Features': 'database/beta/features.md'
