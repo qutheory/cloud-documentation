@@ -7,7 +7,7 @@ Vapor Cloud databases are build to be supported by Vapor Cloud applications. So 
 To connect from your local computer, you can get the connect information with:
 
 ```
-vapor cloud db inspect --token=<TOKEN>
+vapor cloud db credentials --token=<TOKEN>
 ```
 
 This will show information for all environments.
