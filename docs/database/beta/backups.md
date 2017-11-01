@@ -16,13 +16,13 @@ Backups are stored on Amazon S3, distributed to multiple datacenters, to secure 
 If you want to restore a Continuous backup, you can use:
 
 ```
-vapor cloud db --token=<TOKEN> cb-list
+vapor cloud db cb-list
 ```
 
 To see a list of backups. If you want to restore to a previous backup, just run
 
 ```
-vapor cloud db cb-restore --token=<TOKEN> --id=<backup-id>
+vapor cloud db cb-restore --id=<backup-id>
 ```
 
 This will spin up a new database server, added as a secondary, so you can test the backup before promoting it to primary.

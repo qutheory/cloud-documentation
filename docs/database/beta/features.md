@@ -18,15 +18,15 @@ vapor cloud db list
 To tail the database logs, you can run:
 
 ```
-vapor cloud db logs --token=<TOKEN>
+vapor cloud db logs
 ```
 
 It will default to past `5 minutes`. To get more history, you can pass `--since` e.g.:
 
 ```
-vapor cloud db logs --token=<TOKEN> --since=20m
+vapor cloud db logs --since=20m
 
-vapor cloud db logs --token=<TOKEN> --since=2h
+vapor cloud db logs --since=2h
 ```
 
 ## Resize server
