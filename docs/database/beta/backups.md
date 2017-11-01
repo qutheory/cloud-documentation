@@ -40,7 +40,7 @@ You On-demand backups can be downloaded, so it's a good way to for example get t
 To schedule on-demand backup, you need to provide the time. The timezone is always UTC. This example will schedule a backup for my application every night at 3am UTC. It should always be in 24 hour format.
 
 ```
-vapor cloud db backup-schedule --token=<TOKEN> --time="02:00"
+vapor cloud db backup-schedule --time="02:00"
 ```
 
 ### Manual on-demand backup
@@ -48,7 +48,7 @@ vapor cloud db backup-schedule --token=<TOKEN> --time="02:00"
 To perform a manual backup, simply run
 
 ```
-vapor cloud db backup --token=<TOKEN>
+vapor cloud db backup
 ```
 
 ### List manual backups
@@ -56,7 +56,7 @@ vapor cloud db backup --token=<TOKEN>
 If you want a list of the backups, you can just run
 
 ```
-vapor cloud db backup-list --token=<TOKEN>
+vapor cloud db backup-list
 ```
 
 ### Download a backup
