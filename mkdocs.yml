@@ -69,6 +69,7 @@ pages:
       - 'External access': 'database/beta/external-access.md'
       - 'Features': 'database/beta/features.md'
       - 'Backups': 'database/beta/backups.md'
+      - 'Config files': 'database/beta/config-files.md'
       - 'Technical information': 'database/beta/technical-information.md'
 - Domain:
     - 'Add custom domain': "custom-domain/add-domain.md"
