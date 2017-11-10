@@ -7,7 +7,7 @@ Cronjobs is a good way to offload large tasks, so it dosn't slow down your websi
 
 ## How cronjobs work in Vapor Cloud
 
-You can easily setup your cronjob through either the `Toolbox` or `Dashboard`.
+You can easily setup your cronjob in your `cloud.yml` (See [this page](https://docs.vapor.cloud/configuration/general/#cronjobs) about cloud.yml).
 The time syntax is just as normal on Linux and Mac
 
 When your cronjob is starting, we will spin up a new replica and run the job
