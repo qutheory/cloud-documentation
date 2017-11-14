@@ -2,7 +2,7 @@
 
 Welcome to the Vapor Cloud docs. Use the table of contents on the left to navigate the docs. You can also use the search bar at the top of the page to search the whole site.
 
-For a general overview of Vapor Cloud's architcture and naming scheme, visit [Core Principles](architecture/core-principles.md).
+For a general overview of Vapor Cloud's architecture and naming scheme, visit [Core Principles](architecture/core-principles.md).
 
 To get started with your first deploy through the Vapor Toolbox, check out the [Getting Started with the Toolbox](toolbox/getting-started.md) section.
 
