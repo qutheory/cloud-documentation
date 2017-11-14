@@ -2,7 +2,7 @@
 
 ## Projects and applications
 
-In Vapor Cloud we talk about `Projects` and `Applications`. This is intended to give you are short overview
+In Vapor Cloud we talk about `Projects` and `Applications`. This is intended to give you a short overview
 what the differences is.
 
 A project is a collection of one or more applications, and don't have a lot more functionality than you are able to group your applications.
