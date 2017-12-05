@@ -9,11 +9,14 @@ markdown_extensions:
 
 theme: 
     name: 'material'
-    custom_dir: 'vapor-material'
+    palette:
+        primary: 'blue'
+        accent: 'purple'
+    logo: 'images/white-cloud-icon.svg'
 
-repo_name: vapor-cloud/documentation
-repo_url: https://github.com/vapor-cloud/documentation
-edit_uri: ""
+repo_url: http://github.com/vapor-cloud/documentation
+edit_uri: https://github.com/vapor-cloud/documentation/edit/master/docs/
+
 
 extra:
       logo: 'images/white-cloud-icon.svg'
