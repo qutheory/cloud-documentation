@@ -10,7 +10,8 @@ markdown_extensions:
 theme: 'material'
 theme_dir: 'vapor-material'
 
-repo_url: https://github.com/vapor-cloud/documentation
+repo_name: 'vapor-cloud/documentation'
+repo_url: 'https://github.com/vapor-cloud/documentation'
 
 extra:
       logo: 'images/white-cloud-icon.svg'
