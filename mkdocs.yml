@@ -7,11 +7,13 @@ markdown_extensions:
       - meta
       - toc(permalink=true)
 
-theme: 'material'
-theme_dir: 'vapor-material'
+theme: 
+    name: 'material'
+    custom_dir: 'vapor-material'
 
-repo_name: 'vapor-cloud/documentation'
-repo_url: 'https://github.com/vapor-cloud/documentation'
+repo_name: vapor-cloud/documentation
+repo_url: https://github.com/vapor-cloud/documentation
+edit_uri: ""
 
 extra:
       logo: 'images/white-cloud-icon.svg'
