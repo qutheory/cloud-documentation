@@ -6,7 +6,7 @@ For Vapor, you can specify:
 
 - Unit tests
 
-When adding a .vcloud.yml file to your vapor project, always add:
+When adding a `cloud.yml` file to your vapor project, always add:
 
 ```
 type: "vapor"
