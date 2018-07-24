@@ -7,7 +7,7 @@ markdown_extensions:
       - meta
       - toc(permalink=true)
 
-theme: 
+theme:
     name: 'material'
     palette:
         primary: 'blue'
@@ -84,6 +84,9 @@ pages:
     - 'Troubleshooting': 'troubleshooting/troubleshooting.md'
     - 'Redis': 'troubleshooting/redis.md'
     - 'MySQL': 'troubleshooting/mysql.md'
+- Delete:
+    - 'Application': 'delete/delete-application.md'
+    - 'Database': 'delete/delete-database.md'
 - Support:
     - 'Contact support': 'support/contact-support.md'
 - 'FAQ': 'FAQ.md'
