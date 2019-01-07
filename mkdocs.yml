@@ -2,10 +2,12 @@ site_name: 'Vapor Cloud Docs'
 copyright: 'Copyright &copy; 2017 Qutheory, LLC'
 markdown_extensions:
       - admonition
-      - codehilite(guess_lang=true)
       - footnotes
+      - codehilite:
+          guess_lang: false
       - meta
-      - toc(permalink=true)
+      - toc:
+          permalink: true
 
 theme:
     name: 'material'
