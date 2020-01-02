@@ -92,3 +92,6 @@ pages:
 - Support:
     - 'Contact support': 'support/contact-support.md'
 - 'FAQ': 'FAQ.md'
+- Shutdown:
+    - 'Shutdown': 'shutdown/index.md'
+    - 'Migrate to Heroku': 'shutdown/migrate-to-heroku.md'
