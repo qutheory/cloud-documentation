@@ -1,6 +1,6 @@
 # Sending E-mails (SMTP)
 
-Vapor Cloud don't have an SMTP server for sending E-mails. But it's very
+Vapor Cloud doesn't have an SMTP server for sending E-mails. But it's very
 easy to setup an external provider.
 
 ## External mail providers
