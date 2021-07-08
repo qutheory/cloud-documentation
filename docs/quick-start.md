@@ -98,7 +98,7 @@ Respond `yes` to the prompt to create hosting, and select the Git URL that we ju
 
 ### Create Environment
 
-The hosting service can have unlimited environments. This is useful for creating environments like testing, staging, devlopment, and more. 
+The hosting service can have unlimited environments. This is useful for creating environments like testing, staging, development, and more. 
 
 For now, we will create our main `production` environment. This environment is special because it is not followed by a suffix in the `*.vapor.cloud` domain. 
 
